@@ -1,0 +1,3219 @@
+BCSymbolMap Version: 1.0
++[STPCardValidator sanitizedNumericStringForString:]
++[STPCardValidator stringByRemovingSpacesFromString:]
++[STPCardValidator stringIsNumeric:]
++[STPCardValidator validationStateForExpirationMonth:]
++[STPCardValidator validationStateForExpirationYear:inMonth:inCurrentYear:currentMonth:]
++[STPCardValidator validationStateForExpirationYear:inMonth:]
++[STPCardValidator validationStateForCVC:cardBrand:]
++[STPCardValidator validationStateForNumber:validatingCardBrand:]
++[STPCardValidator validationStateForCard:inCurrentYear:currentMonth:]
++[STPCardValidator validationStateForCard:]
++[STPCardValidator minCVCLength]
++[STPCardValidator maxCVCLengthForCardBrand:]
++[STPCardValidator brandForNumber:]
++[STPCardValidator possibleBrandsForNumber:]
++[STPCardValidator allValidBrands]
++[STPCardValidator lengthForCardBrand:]
++[STPCardValidator fragmentLengthForCardBrand:]
++[STPCardValidator prefixMatches:digits:]
++[STPCardValidator validBeginningDigits:]
++[STPCardValidator stringIsValidLuhn:]
++[STPCardValidator currentYear]
++[STPCardValidator currentMonth]
+OBJC_CLASSLIST_REFERENCES_$_
+OBJC_METH_VAR_NAME_
+OBJC_SELECTOR_REFERENCES_
+OBJC_METH_VAR_NAME_1
+OBJC_SELECTOR_REFERENCES_2
+OBJC_METH_VAR_NAME_3
+OBJC_SELECTOR_REFERENCES_4
+.str
+_unnamed_cfstring_
+OBJC_METH_VAR_NAME_5
+OBJC_SELECTOR_REFERENCES_6
+OBJC_METH_VAR_NAME_7
+OBJC_SELECTOR_REFERENCES_8
+OBJC_METH_VAR_NAME_9
+OBJC_SELECTOR_REFERENCES_10
+OBJC_METH_VAR_NAME_11
+OBJC_SELECTOR_REFERENCES_12
+OBJC_METH_VAR_NAME_13
+OBJC_SELECTOR_REFERENCES_14
+OBJC_METH_VAR_NAME_15
+OBJC_SELECTOR_REFERENCES_16
+OBJC_METH_VAR_NAME_17
+OBJC_SELECTOR_REFERENCES_18
+.str19
+_unnamed_cfstring_20
+.str21
+_unnamed_cfstring_22
+OBJC_METH_VAR_NAME_23
+OBJC_SELECTOR_REFERENCES_24
+OBJC_METH_VAR_NAME_25
+OBJC_SELECTOR_REFERENCES_26
+OBJC_METH_VAR_NAME_27
+OBJC_SELECTOR_REFERENCES_28
+OBJC_METH_VAR_NAME_29
+OBJC_SELECTOR_REFERENCES_30
+OBJC_METH_VAR_NAME_31
+OBJC_SELECTOR_REFERENCES_32
+OBJC_METH_VAR_NAME_33
+OBJC_SELECTOR_REFERENCES_34
+OBJC_METH_VAR_NAME_35
+OBJC_SELECTOR_REFERENCES_36
+OBJC_METH_VAR_NAME_37
+OBJC_SELECTOR_REFERENCES_38
+OBJC_METH_VAR_NAME_39
+OBJC_SELECTOR_REFERENCES_40
+OBJC_METH_VAR_NAME_41
+OBJC_SELECTOR_REFERENCES_42
+OBJC_METH_VAR_NAME_43
+OBJC_SELECTOR_REFERENCES_44
+OBJC_METH_VAR_NAME_45
+OBJC_SELECTOR_REFERENCES_46
+OBJC_METH_VAR_NAME_47
+OBJC_SELECTOR_REFERENCES_48
+OBJC_CLASSLIST_REFERENCES_$_49
+.str50
+_unnamed_cfstring_51
+OBJC_METH_VAR_NAME_52
+OBJC_SELECTOR_REFERENCES_53
+OBJC_METH_VAR_NAME_54
+OBJC_SELECTOR_REFERENCES_55
+OBJC_METH_VAR_NAME_56
+OBJC_SELECTOR_REFERENCES_57
+OBJC_METH_VAR_NAME_58
+OBJC_SELECTOR_REFERENCES_59
+OBJC_METH_VAR_NAME_60
+OBJC_SELECTOR_REFERENCES_61
+OBJC_METH_VAR_NAME_62
+OBJC_SELECTOR_REFERENCES_63
+OBJC_METH_VAR_NAME_64
+OBJC_SELECTOR_REFERENCES_65
+OBJC_CLASSLIST_REFERENCES_$_66
+OBJC_METH_VAR_NAME_67
+OBJC_SELECTOR_REFERENCES_68
+OBJC_CLASSLIST_REFERENCES_$_69
+OBJC_METH_VAR_NAME_70
+OBJC_SELECTOR_REFERENCES_71
+OBJC_METH_VAR_NAME_72
+OBJC_SELECTOR_REFERENCES_73
+OBJC_METH_VAR_NAME_74
+OBJC_SELECTOR_REFERENCES_75
+OBJC_METH_VAR_NAME_76
+OBJC_SELECTOR_REFERENCES_77
+OBJC_METH_VAR_NAME_78
+OBJC_SELECTOR_REFERENCES_79
+OBJC_METH_VAR_NAME_80
+OBJC_SELECTOR_REFERENCES_81
+OBJC_METH_VAR_NAME_82
+OBJC_SELECTOR_REFERENCES_83
+OBJC_METH_VAR_NAME_84
+OBJC_SELECTOR_REFERENCES_85
+OBJC_METH_VAR_NAME_86
+OBJC_SELECTOR_REFERENCES_87
+OBJC_METH_VAR_NAME_88
+OBJC_SELECTOR_REFERENCES_89
+.str90
+_unnamed_cfstring_91
+.str92
+_unnamed_cfstring_93
+.str94
+_unnamed_cfstring_95
+.str96
+_unnamed_cfstring_97
+.str98
+_unnamed_cfstring_99
+.str100
+_unnamed_cfstring_101
+.str102
+_unnamed_cfstring_103
+.str104
+_unnamed_cfstring_105
+.str106
+_unnamed_cfstring_107
+.str108
+_unnamed_cfstring_109
+.str110
+_unnamed_cfstring_111
+.str112
+_unnamed_cfstring_113
+.str114
+_unnamed_cfstring_115
+.str116
+_unnamed_cfstring_117
+.str118
+_unnamed_cfstring_119
+.str120
+_unnamed_cfstring_121
+.str122
+_unnamed_cfstring_123
+.str124
+_unnamed_cfstring_125
+.str126
+_unnamed_cfstring_127
+.str128
+_unnamed_cfstring_129
+.str130
+_unnamed_cfstring_131
+.str132
+_unnamed_cfstring_133
+.str134
+_unnamed_cfstring_135
+.str136
+_unnamed_cfstring_137
+.str138
+_unnamed_cfstring_139
+.str140
+_unnamed_cfstring_141
+.str142
+_unnamed_cfstring_143
+.str144
+_unnamed_cfstring_145
+.str146
+_unnamed_cfstring_147
+.str148
+_unnamed_cfstring_149
+.str150
+_unnamed_cfstring_151
+OBJC_CLASSLIST_REFERENCES_$_152
+OBJC_METH_VAR_NAME_153
+OBJC_SELECTOR_REFERENCES_154
+OBJC_METH_VAR_NAME_155
+OBJC_SELECTOR_REFERENCES_156
+OBJC_METH_VAR_NAME_157
+OBJC_SELECTOR_REFERENCES_158
+OBJC_METH_VAR_NAME_159
+OBJC_SELECTOR_REFERENCES_160
+OBJC_CLASSLIST_REFERENCES_$_161
+OBJC_METH_VAR_NAME_162
+OBJC_SELECTOR_REFERENCES_163
+OBJC_METH_VAR_NAME_164
+OBJC_SELECTOR_REFERENCES_165
+OBJC_CLASSLIST_REFERENCES_$_166
+OBJC_METH_VAR_NAME_167
+OBJC_SELECTOR_REFERENCES_168
+OBJC_METH_VAR_NAME_169
+OBJC_SELECTOR_REFERENCES_170
+OBJC_METH_VAR_NAME_171
+OBJC_SELECTOR_REFERENCES_172
+OBJC_METH_VAR_NAME_173
+OBJC_SELECTOR_REFERENCES_174
+OBJC_CLASS_NAME_
+OBJC_METH_VAR_TYPE_
+OBJC_METH_VAR_TYPE_175
+OBJC_METH_VAR_TYPE_176
+OBJC_METH_VAR_TYPE_177
+OBJC_METH_VAR_NAME_178
+OBJC_METH_VAR_TYPE_179
+OBJC_METH_VAR_TYPE_180
+OBJC_METH_VAR_TYPE_181
+OBJC_METH_VAR_TYPE_182
+OBJC_METH_VAR_NAME_183
+OBJC_METH_VAR_TYPE_184
+OBJC_METH_VAR_TYPE_185
+OBJC_METH_VAR_TYPE_186
+OBJC_METH_VAR_TYPE_187
+OBJC_METH_VAR_NAME_188
+OBJC_METH_VAR_TYPE_189
+OBJC_METH_VAR_TYPE_190
+OBJC_METH_VAR_TYPE_191
+l_OBJC_$_CLASS_METHODS_STPCardValidator
+l_OBJC_METACLASS_RO_$_STPCardValidator
+l_OBJC_CLASS_RO_$_STPCardValidator
+OBJC_LABEL_CLASS_$
+Apple LLVM version 7.0.2 (clang-700.1.81)
+/Users/mirco/Library/Developer/Xcode/DerivedData/ModuleCache/T78I7L3N6UU6/ObjectiveC-2CD0WTQVXITO7.pcm
+ObjectiveC
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/usr/include/objc
+/Users/mirco/Library/Developer/Xcode/DerivedData/ModuleCache/T78I7L3N6UU6/Foundation-A3SOD99KJ0S9.pcm
+Foundation
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework
+NSMakeRange
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios
++[STPCardValidator currentMonth]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/STPCardValidator.m
++[STPCardValidator currentYear]
++[STPCardValidator stringIsValidLuhn:]
++[STPCardValidator validBeginningDigits:]
++[STPCardValidator prefixMatches:digits:]
++[STPCardValidator fragmentLengthForCardBrand:]
++[STPCardValidator lengthForCardBrand:]
++[STPCardValidator allValidBrands]
++[STPCardValidator possibleBrandsForNumber:]
++[STPCardValidator brandForNumber:]
++[STPCardValidator maxCVCLengthForCardBrand:]
++[STPCardValidator minCVCLength]
++[STPCardValidator validationStateForCard:]
++[STPCardValidator validationStateForCard:inCurrentYear:currentMonth:]
++[STPCardValidator validationStateForNumber:validatingCardBrand:]
++[STPCardValidator validationStateForCVC:cardBrand:]
++[STPCardValidator validationStateForExpirationYear:inMonth:]
++[STPCardValidator validationStateForExpirationYear:inMonth:inCurrentYear:currentMonth:]
++[STPCardValidator validationStateForExpirationMonth:]
++[STPCardValidator stringIsNumeric:]
++[STPCardValidator stringByRemovingSpacesFromString:]
++[STPCardValidator sanitizedNumericStringForString:]
+-[STPFormTextField setFormDelegate:]
+-[STPFormTextField deleteBackward]
+-[STPFormTextField measureTextSize]
+-[STPFormTextField setText:]
+-[STPFormTextField setPlaceholder:]
+-[STPFormTextField attributedStringForString:attributes:]
+-[STPFormTextField safeDefaultTextAttributes]
+-[STPFormTextField setDefaultColor:]
+-[STPFormTextField setErrorColor:]
+-[STPFormTextField setValidText:]
+-[STPFormTextField setPlaceholderColor:]
+-[STPFormTextField updateColor]
+-[STPFormTextField editingRectForBounds:]
+-[STPFormTextField keyCommands]
+-[STPFormTextField commandDeleteBackwards]
+-[STPFormTextField placeholderColor]
+-[STPFormTextField defaultColor]
+-[STPFormTextField errorColor]
+-[STPFormTextField formatsCardNumbers]
+-[STPFormTextField setFormatsCardNumbers:]
+-[STPFormTextField validText]
+-[STPFormTextField formDelegate]
+-[STPFormTextField .cxx_destruct]
+OBJC_IVAR_$_STPFormTextField._formDelegate
+OBJC_METH_VAR_NAME_19
+OBJC_SELECTOR_REFERENCES_20
+OBJC_METH_VAR_NAME_21
+OBJC_SELECTOR_REFERENCES_22
+OBJC_CLASSLIST_REFERENCES_$_43
+OBJC_METH_VAR_NAME_44
+OBJC_SELECTOR_REFERENCES_45
+OBJC_METH_VAR_NAME_46
+OBJC_SELECTOR_REFERENCES_47
+OBJC_METH_VAR_NAME_48
+OBJC_SELECTOR_REFERENCES_49
+OBJC_CLASSLIST_REFERENCES_$_50
+OBJC_METH_VAR_NAME_51
+OBJC_SELECTOR_REFERENCES_52
+OBJC_CLASSLIST_REFERENCES_$_53
+OBJC_METH_VAR_NAME_69
+OBJC_SELECTOR_REFERENCES_70
+OBJC_METH_VAR_NAME_71
+OBJC_SELECTOR_REFERENCES_72
+OBJC_IVAR_$_STPFormTextField._defaultColor
+OBJC_METH_VAR_NAME_73
+OBJC_SELECTOR_REFERENCES_74
+OBJC_IVAR_$_STPFormTextField._errorColor
+OBJC_IVAR_$_STPFormTextField._validText
+OBJC_IVAR_$_STPFormTextField._placeholderColor
+OBJC_METH_VAR_NAME_75
+OBJC_SELECTOR_REFERENCES_76
+OBJC_METH_VAR_NAME_77
+OBJC_SELECTOR_REFERENCES_78
+OBJC_METH_VAR_NAME_79
+OBJC_SELECTOR_REFERENCES_80
+OBJC_METH_VAR_NAME_81
+OBJC_SELECTOR_REFERENCES_82
+OBJC_METH_VAR_NAME_83
+OBJC_SELECTOR_REFERENCES_84
+OBJC_CLASSLIST_REFERENCES_$_85
+OBJC_METH_VAR_NAME_90
+OBJC_SELECTOR_REFERENCES_91
+OBJC_METH_VAR_NAME_92
+OBJC_SELECTOR_REFERENCES_93
+OBJC_CLASSLIST_REFERENCES_$_94
+OBJC_METH_VAR_NAME_95
+OBJC_SELECTOR_REFERENCES_96
+OBJC_METH_VAR_NAME_97
+OBJC_SELECTOR_REFERENCES_98
+OBJC_CLASSLIST_REFERENCES_$_99
+OBJC_METH_VAR_NAME_102
+OBJC_SELECTOR_REFERENCES_103
+OBJC_METH_VAR_NAME_104
+OBJC_SELECTOR_REFERENCES_105
+OBJC_IVAR_$_STPFormTextField._formatsCardNumbers
+l_OBJC_METACLASS_RO_$_STPFormTextField
+OBJC_CLASS_NAME_106
+OBJC_METH_VAR_NAME_107
+OBJC_METH_VAR_NAME_108
+OBJC_METH_VAR_TYPE_109
+OBJC_METH_VAR_NAME_110
+OBJC_METH_VAR_TYPE_111
+OBJC_METH_VAR_TYPE_112
+OBJC_METH_VAR_TYPE_113
+OBJC_METH_VAR_NAME_114
+OBJC_METH_VAR_NAME_115
+OBJC_METH_VAR_NAME_116
+OBJC_METH_VAR_TYPE_117
+OBJC_METH_VAR_NAME_118
+OBJC_METH_VAR_NAME_119
+OBJC_METH_VAR_TYPE_120
+OBJC_METH_VAR_NAME_121
+OBJC_METH_VAR_NAME_122
+OBJC_METH_VAR_TYPE_123
+OBJC_METH_VAR_NAME_124
+OBJC_METH_VAR_NAME_125
+l_OBJC_$_INSTANCE_METHODS_STPFormTextField
+OBJC_METH_VAR_NAME_126
+OBJC_METH_VAR_TYPE_127
+OBJC_METH_VAR_NAME_128
+OBJC_METH_VAR_NAME_129
+OBJC_METH_VAR_TYPE_130
+OBJC_METH_VAR_NAME_131
+OBJC_METH_VAR_NAME_132
+OBJC_METH_VAR_NAME_133
+OBJC_METH_VAR_TYPE_134
+l_OBJC_$_INSTANCE_VARIABLES_STPFormTextField
+OBJC_CLASS_NAME_135
+OBJC_PROP_NAME_ATTR_
+OBJC_PROP_NAME_ATTR_136
+OBJC_PROP_NAME_ATTR_137
+OBJC_PROP_NAME_ATTR_138
+OBJC_PROP_NAME_ATTR_139
+OBJC_PROP_NAME_ATTR_140
+OBJC_PROP_NAME_ATTR_141
+OBJC_PROP_NAME_ATTR_142
+OBJC_PROP_NAME_ATTR_143
+OBJC_PROP_NAME_ATTR_144
+OBJC_PROP_NAME_ATTR_145
+OBJC_PROP_NAME_ATTR_146
+l_OBJC_$_PROP_LIST_STPFormTextField
+l_OBJC_CLASS_RO_$_STPFormTextField
+/Users/mirco/Library/Developer/Xcode/DerivedData/ModuleCache/T78I7L3N6UU6/CoreGraphics-1YQ59ILDR3NYI.pcm
+CoreGraphics
+/Users/mirco/Library/Developer/Xcode/DerivedData/ModuleCache/T78I7L3N6UU6/Darwin-MI6WZSG1PNOM.pcm
+Darwin
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/usr/include
+/Users/mirco/Library/Developer/Xcode/DerivedData/ModuleCache/T78I7L3N6UU6/UIKit-2LM3EQU7VVY4O.pcm
+UIKit
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/UIKit.framework
+-[STPFormTextField .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/UI/STPFormTextField.m
+-[STPFormTextField formDelegate]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/UI/STPFormTextField.h
+-[STPFormTextField validText]
+-[STPFormTextField setFormatsCardNumbers:]
+-[STPFormTextField formatsCardNumbers]
+-[STPFormTextField errorColor]
+-[STPFormTextField defaultColor]
+-[STPFormTextField placeholderColor]
+-[STPFormTextField commandDeleteBackwards]
+-[STPFormTextField keyCommands]
+-[STPFormTextField editingRectForBounds:]
+-[STPFormTextField updateColor]
+-[STPFormTextField setPlaceholderColor:]
+-[STPFormTextField setValidText:]
+-[STPFormTextField setErrorColor:]
+-[STPFormTextField setDefaultColor:]
+-[STPFormTextField safeDefaultTextAttributes]
+-[STPFormTextField attributedStringForString:attributes:]
+-[STPFormTextField setPlaceholder:]
+-[STPFormTextField setText:]
+-[STPFormTextField measureTextSize]
+-[STPFormTextField deleteBackward]
+-[STPFormTextField setFormDelegate:]
+-[STPCard init]
+-[STPCard last4]
+-[STPCard type]
+-[STPCard isEqual:]
+-[STPCard hash]
+-[STPCard isEqualToCard:]
++[STPCard requiredFields]
++[STPCard decodedObjectFromAPIResponse:]
+-[STPCard setLast4:]
+-[STPCard dynamicLast4]
+-[STPCard setDynamicLast4:]
+-[STPCard cardId]
+-[STPCard setCardId:]
+-[STPCard brand]
+-[STPCard setBrand:]
+-[STPCard funding]
+-[STPCard setFunding:]
+-[STPCard fingerprint]
+-[STPCard setFingerprint:]
+-[STPCard country]
+-[STPCard setCountry:]
+-[STPCard allResponseFields]
+-[STPCard setAllResponseFields:]
+-[STPCard .cxx_destruct]
+OBJC_CLASSLIST_SUP_REFS_$_
+OBJC_IVAR_$_STPCard._brand
+OBJC_IVAR_$_STPCard._funding
+OBJC_IVAR_$_STPCard._last4
+.str5
+_unnamed_cfstring_6
+.str7
+_unnamed_cfstring_8
+.str9
+_unnamed_cfstring_10
+.str11
+_unnamed_cfstring_12
+.str13
+_unnamed_cfstring_14
+.str15
+_unnamed_cfstring_16
+.str29
+_unnamed_cfstring_30
+.str31
+_unnamed_cfstring_32
+.str33
+_unnamed_cfstring_34
+.str35
+_unnamed_cfstring_36
+.str37
+_unnamed_cfstring_38
+OBJC_METH_VAR_NAME_49
+OBJC_SELECTOR_REFERENCES_50
+.str51
+_unnamed_cfstring_52
+OBJC_METH_VAR_NAME_53
+OBJC_SELECTOR_REFERENCES_54
+OBJC_METH_VAR_NAME_55
+OBJC_SELECTOR_REFERENCES_56
+.str57
+_unnamed_cfstring_58
+OBJC_METH_VAR_NAME_59
+OBJC_SELECTOR_REFERENCES_60
+OBJC_METH_VAR_NAME_61
+OBJC_SELECTOR_REFERENCES_62
+.str63
+_unnamed_cfstring_64
+OBJC_METH_VAR_NAME_65
+OBJC_SELECTOR_REFERENCES_66
+.str67
+_unnamed_cfstring_68
+.str71
+_unnamed_cfstring_72
+.str73
+_unnamed_cfstring_74
+.str75
+_unnamed_cfstring_76
+.str79
+_unnamed_cfstring_80
+.str83
+_unnamed_cfstring_84
+OBJC_METH_VAR_NAME_85
+OBJC_SELECTOR_REFERENCES_86
+OBJC_METH_VAR_NAME_87
+OBJC_SELECTOR_REFERENCES_88
+OBJC_METH_VAR_NAME_89
+OBJC_SELECTOR_REFERENCES_90
+OBJC_METH_VAR_NAME_91
+OBJC_SELECTOR_REFERENCES_92
+.str93
+_unnamed_cfstring_94
+.str97
+_unnamed_cfstring_98
+OBJC_METH_VAR_NAME_99
+OBJC_SELECTOR_REFERENCES_100
+.str101
+_unnamed_cfstring_102
+OBJC_METH_VAR_NAME_103
+OBJC_SELECTOR_REFERENCES_104
+.str105
+_unnamed_cfstring_106
+OBJC_SELECTOR_REFERENCES_108
+.str109
+_unnamed_cfstring_110
+OBJC_METH_VAR_NAME_111
+OBJC_SELECTOR_REFERENCES_112
+.str113
+_unnamed_cfstring_114
+OBJC_SELECTOR_REFERENCES_116
+OBJC_METH_VAR_NAME_117
+OBJC_SELECTOR_REFERENCES_118
+OBJC_IVAR_$_STPCard._dynamicLast4
+OBJC_IVAR_$_STPCard._cardId
+OBJC_IVAR_$_STPCard._fingerprint
+OBJC_IVAR_$_STPCard._country
+OBJC_IVAR_$_STPCard._allResponseFields
+l_OBJC_$_CLASS_METHODS_STPCard
+OBJC_METH_VAR_TYPE_122
+OBJC_METH_VAR_TYPE_124
+OBJC_CLASS_NAME_125
+OBJC_METH_VAR_TYPE_128
+OBJC_METH_VAR_NAME_130
+OBJC_METH_VAR_TYPE_131
+OBJC_METH_VAR_TYPE_133
+OBJC_METH_VAR_NAME_134
+OBJC_METH_VAR_TYPE_135
+OBJC_METH_VAR_NAME_136
+OBJC_METH_VAR_TYPE_137
+OBJC_METH_VAR_TYPE_138
+OBJC_METH_VAR_NAME_139
+OBJC_METH_VAR_NAME_140
+OBJC_METH_VAR_TYPE_141
+OBJC_METH_VAR_NAME_142
+OBJC_METH_VAR_TYPE_143
+OBJC_METH_VAR_NAME_144
+OBJC_METH_VAR_NAME_145
+OBJC_METH_VAR_TYPE_146
+OBJC_METH_VAR_NAME_147
+OBJC_METH_VAR_NAME_148
+OBJC_METH_VAR_TYPE_149
+OBJC_METH_VAR_NAME_150
+OBJC_METH_VAR_TYPE_151
+OBJC_METH_VAR_NAME_152
+OBJC_METH_VAR_TYPE_154
+OBJC_CLASS_NAME_156
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+OBJC_PROP_NAME_ATTR_157
+OBJC_PROP_NAME_ATTR_158
+OBJC_PROP_NAME_ATTR_159
+OBJC_PROP_NAME_ATTR_160
+OBJC_PROP_NAME_ATTR_161
+OBJC_PROP_NAME_ATTR_162
+l_OBJC_$_PROP_LIST_NSObject
+l_OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_$_PROTOCOL_REFS_STPAPIResponseDecodable
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_STPAPIResponseDecodable
+l_OBJC_$_PROTOCOL_CLASS_METHODS_STPAPIResponseDecodable
+OBJC_PROP_NAME_ATTR_163
+OBJC_PROP_NAME_ATTR_164
+l_OBJC_$_PROP_LIST_STPAPIResponseDecodable
+l_OBJC_$_PROTOCOL_METHOD_TYPES_STPAPIResponseDecodable
+l_OBJC_PROTOCOL_$_STPAPIResponseDecodable
+l_OBJC_LABEL_PROTOCOL_$_STPAPIResponseDecodable
+l_OBJC_CLASS_PROTOCOLS_$_STPCard
+l_OBJC_METACLASS_RO_$_STPCard
+OBJC_CLASS_NAME_165
+OBJC_METH_VAR_NAME_166
+OBJC_METH_VAR_TYPE_168
+OBJC_METH_VAR_TYPE_169
+OBJC_METH_VAR_NAME_170
+OBJC_METH_VAR_TYPE_171
+OBJC_METH_VAR_TYPE_172
+OBJC_METH_VAR_NAME_174
+OBJC_METH_VAR_NAME_175
+l_OBJC_$_INSTANCE_METHODS_STPCard
+OBJC_METH_VAR_NAME_176
+OBJC_METH_VAR_NAME_179
+OBJC_METH_VAR_NAME_180
+OBJC_METH_VAR_NAME_182
+OBJC_METH_VAR_NAME_184
+OBJC_METH_VAR_NAME_185
+l_OBJC_$_INSTANCE_VARIABLES_STPCard
+OBJC_PROP_NAME_ATTR_187
+OBJC_PROP_NAME_ATTR_188
+OBJC_PROP_NAME_ATTR_189
+OBJC_PROP_NAME_ATTR_190
+OBJC_PROP_NAME_ATTR_191
+OBJC_PROP_NAME_ATTR_192
+OBJC_PROP_NAME_ATTR_193
+OBJC_PROP_NAME_ATTR_194
+OBJC_PROP_NAME_ATTR_195
+OBJC_PROP_NAME_ATTR_196
+OBJC_PROP_NAME_ATTR_197
+OBJC_PROP_NAME_ATTR_198
+OBJC_PROP_NAME_ATTR_199
+OBJC_PROP_NAME_ATTR_200
+OBJC_PROP_NAME_ATTR_201
+OBJC_PROP_NAME_ATTR_202
+OBJC_PROP_NAME_ATTR_203
+OBJC_PROP_NAME_ATTR_204
+OBJC_PROP_NAME_ATTR_205
+OBJC_PROP_NAME_ATTR_206
+OBJC_PROP_NAME_ATTR_207
+OBJC_PROP_NAME_ATTR_208
+OBJC_PROP_NAME_ATTR_209
+OBJC_PROP_NAME_ATTR_210
+OBJC_PROP_NAME_ATTR_211
+OBJC_PROP_NAME_ATTR_212
+OBJC_PROP_NAME_ATTR_213
+OBJC_PROP_NAME_ATTR_214
+OBJC_PROP_NAME_ATTR_215
+OBJC_PROP_NAME_ATTR_216
+OBJC_PROP_NAME_ATTR_217
+l_OBJC_$_PROP_LIST_STPCard
+l_OBJC_CLASS_RO_$_STPCard
+-[STPCard .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/STPCard.m
+-[STPCard setAllResponseFields:]
+-[STPCard allResponseFields]
+-[STPCard setCountry:]
+-[STPCard country]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/PublicHeaders/STPCard.h
+-[STPCard setFingerprint:]
+-[STPCard fingerprint]
+-[STPCard setFunding:]
+-[STPCard funding]
+-[STPCard setBrand:]
+-[STPCard brand]
+-[STPCard setCardId:]
+-[STPCard cardId]
+-[STPCard setDynamicLast4:]
+-[STPCard dynamicLast4]
+-[STPCard setLast4:]
++[STPCard decodedObjectFromAPIResponse:]
++[STPCard requiredFields]
+-[STPCard isEqualToCard:]
+-[STPCard hash]
+-[STPCard isEqual:]
+-[STPCard type]
+-[STPCard last4]
+-[STPCard init]
++[Stripe setDefaultPublishableKey:]
++[Stripe defaultPublishableKey]
++[STPAPIClient sharedClient]
+__28+[STPAPIClient sharedClient]_block_invoke
+__copy_helper_block_
+__destroy_helper_block_
+-[STPAPIClient init]
+-[STPAPIClient initWithPublishableKey:]
+-[STPAPIClient setOperationQueue:]
+-[STPAPIClient createTokenWithData:completion:]
++[STPAPIClient validateKey:]
++[STPAPIClient stripeUserAgentDetails]
++[STPAPIClient bundleIdentifier]
++[STPAPIClient kitDisplayVersion]
++[STPAPIClient initializeIfNeeded]
+-[STPAPIClient publishableKey]
+-[STPAPIClient setPublishableKey:]
+-[STPAPIClient operationQueue]
+-[STPAPIClient apiURL]
+-[STPAPIClient setApiURL:]
+-[STPAPIClient urlSession]
+-[STPAPIClient setUrlSession:]
+-[STPAPIClient .cxx_destruct]
+-[STPAPIClient(BankAccounts) createTokenWithBankAccount:completion:]
+-[STPAPIClient(CreditCards) createTokenWithCard:completion:]
++[Stripe(Deprecated) alloc]
++[Stripe(Deprecated) createTokenWithCard:publishableKey:operationQueue:completion:]
++[Stripe(Deprecated) createTokenWithBankAccount:publishableKey:operationQueue:completion:]
++[Stripe(Deprecated) createTokenWithCard:completion:]
++[Stripe(Deprecated) createTokenWithCard:publishableKey:completion:]
++[Stripe(Deprecated) createTokenWithCard:operationQueue:completion:]
++[Stripe(Deprecated) createTokenWithBankAccount:completion:]
++[Stripe(Deprecated) createTokenWithBankAccount:publishableKey:completion:]
++[Stripe(Deprecated) createTokenWithBankAccount:operationQueue:completion:]
+.str1
+_unnamed_cfstring_2
+.str3
+_unnamed_cfstring_4
+STPDefaultPublishableKey
+OBJC_METH_VAR_TYPE_8
+l_OBJC_$_CLASS_METHODS_Stripe
+l_OBJC_METACLASS_RO_$_Stripe
+l_OBJC_CLASS_RO_$_Stripe
+sharedClient.sharedClient
+sharedClient.onceToken
+OBJC_METH_VAR_NAME_10
+OBJC_SELECTOR_REFERENCES_11
+.str12
+OBJC_CLASS_NAME_13
+__block_descriptor_tmp
+OBJC_CLASSLIST_REFERENCES_$_21
+OBJC_CLASSLIST_REFERENCES_$_22
+.str23
+_unnamed_cfstring_24
+OBJC_IVAR_$_STPAPIClient._apiURL
+OBJC_IVAR_$_STPAPIClient._publishableKey
+OBJC_CLASSLIST_REFERENCES_$_31
+OBJC_METH_VAR_NAME_32
+OBJC_SELECTOR_REFERENCES_33
+OBJC_IVAR_$_STPAPIClient._operationQueue
+OBJC_CLASSLIST_REFERENCES_$_34
+.str43
+_unnamed_cfstring_44
+.str47
+_unnamed_cfstring_48
+.str49
+_unnamed_cfstring_50
+OBJC_CLASSLIST_REFERENCES_$_51
+OBJC_CLASSLIST_REFERENCES_$_56
+OBJC_METH_VAR_NAME_57
+OBJC_SELECTOR_REFERENCES_58
+OBJC_IVAR_$_STPAPIClient._urlSession
+__PRETTY_FUNCTION__.-[STPAPIClient setOperationQueue:]
+.str61
+_unnamed_cfstring_62
+.str64
+_unnamed_cfstring_65
+.str69
+_unnamed_cfstring_70
+__PRETTY_FUNCTION__.-[STPAPIClient createTokenWithData:completion:]
+OBJC_CLASSLIST_REFERENCES_$_77
+OBJC_CLASSLIST_REFERENCES_$_78
+__PRETTY_FUNCTION__.+[STPAPIClient validateKey:]
+.str87
+_unnamed_cfstring_88
+.str89
+_unnamed_cfstring_90
+.str99
+_unnamed_cfstring_100
+.str103
+_unnamed_cfstring_104
+OBJC_CLASSLIST_REFERENCES_$_109
+OBJC_SELECTOR_REFERENCES_111
+OBJC_METH_VAR_NAME_112
+OBJC_SELECTOR_REFERENCES_113
+OBJC_SELECTOR_REFERENCES_117
+OBJC_METH_VAR_NAME_120
+OBJC_SELECTOR_REFERENCES_121
+OBJC_SELECTOR_REFERENCES_125
+OBJC_SELECTOR_REFERENCES_127
+OBJC_SELECTOR_REFERENCES_129
+OBJC_SELECTOR_REFERENCES_131
+OBJC_CLASSLIST_REFERENCES_$_134
+OBJC_METH_VAR_NAME_135
+OBJC_SELECTOR_REFERENCES_136
+OBJC_METH_VAR_NAME_137
+OBJC_SELECTOR_REFERENCES_138
+.str139
+_unnamed_cfstring_140
+.str141
+_unnamed_cfstring_142
+OBJC_CLASSLIST_REFERENCES_$_143
+OBJC_SELECTOR_REFERENCES_145
+OBJC_SELECTOR_REFERENCES_149
+OBJC_SELECTOR_REFERENCES_152
+__PRETTY_FUNCTION__.+[STPAPIClient initializeIfNeeded]
+.str153
+_unnamed_cfstring_154
+OBJC_CLASS_NAME_155
+OBJC_METH_VAR_NAME_156
+OBJC_METH_VAR_NAME_158
+OBJC_METH_VAR_TYPE_160
+l_OBJC_$_CLASS_METHODS_STPAPIClient
+OBJC_METH_VAR_NAME_161
+OBJC_METH_VAR_TYPE_162
+OBJC_METH_VAR_TYPE_163
+OBJC_METH_VAR_TYPE_165
+OBJC_METH_VAR_TYPE_166
+OBJC_CLASS_NAME_169
+OBJC_METH_VAR_TYPE_174
+OBJC_METH_VAR_NAME_177
+OBJC_METH_VAR_TYPE_178
+OBJC_METH_VAR_NAME_181
+OBJC_METH_VAR_NAME_187
+OBJC_METH_VAR_NAME_190
+OBJC_METH_VAR_NAME_191
+OBJC_METH_VAR_TYPE_192
+OBJC_METH_VAR_NAME_193
+OBJC_METH_VAR_TYPE_194
+OBJC_METH_VAR_NAME_195
+OBJC_METH_VAR_NAME_196
+OBJC_METH_VAR_NAME_197
+OBJC_METH_VAR_TYPE_198
+OBJC_METH_VAR_NAME_199
+OBJC_CLASS_NAME_200
+l_OBJC_$_PROTOCOL_REFS_NSURLSessionDelegate
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSURLSessionDelegate
+l_OBJC_$_PROTOCOL_METHOD_TYPES_NSURLSessionDelegate
+l_OBJC_PROTOCOL_$_NSURLSessionDelegate
+l_OBJC_LABEL_PROTOCOL_$_NSURLSessionDelegate
+OBJC_METH_VAR_NAME_207
+OBJC_CLASS_NAME_208
+l_OBJC_$_PROTOCOL_REFS_FABKit
+l_OBJC_$_PROTOCOL_CLASS_METHODS_FABKit
+l_OBJC_$_PROTOCOL_CLASS_METHODS_OPT_FABKit
+l_OBJC_$_PROTOCOL_METHOD_TYPES_FABKit
+l_OBJC_PROTOCOL_$_FABKit
+l_OBJC_LABEL_PROTOCOL_$_FABKit
+l_OBJC_CLASS_PROTOCOLS_$_STPAPIClient
+l_OBJC_METACLASS_RO_$_STPAPIClient
+OBJC_CLASS_NAME_209
+OBJC_METH_VAR_TYPE_210
+OBJC_METH_VAR_NAME_211
+OBJC_METH_VAR_NAME_212
+OBJC_METH_VAR_TYPE_213
+OBJC_METH_VAR_NAME_214
+OBJC_METH_VAR_NAME_215
+OBJC_METH_VAR_NAME_216
+OBJC_METH_VAR_NAME_217
+OBJC_METH_VAR_NAME_218
+OBJC_METH_VAR_NAME_219
+OBJC_METH_VAR_NAME_220
+l_OBJC_$_INSTANCE_METHODS_STPAPIClient
+OBJC_METH_VAR_NAME_221
+OBJC_METH_VAR_TYPE_222
+OBJC_METH_VAR_NAME_223
+OBJC_METH_VAR_TYPE_224
+OBJC_METH_VAR_NAME_225
+OBJC_METH_VAR_TYPE_226
+OBJC_METH_VAR_NAME_227
+OBJC_METH_VAR_TYPE_228
+l_OBJC_$_INSTANCE_VARIABLES_STPAPIClient
+OBJC_PROP_NAME_ATTR_229
+OBJC_PROP_NAME_ATTR_230
+OBJC_PROP_NAME_ATTR_231
+OBJC_PROP_NAME_ATTR_232
+OBJC_PROP_NAME_ATTR_233
+OBJC_PROP_NAME_ATTR_234
+OBJC_PROP_NAME_ATTR_235
+OBJC_PROP_NAME_ATTR_236
+l_OBJC_$_PROP_LIST_STPAPIClient
+l_OBJC_CLASS_RO_$_STPAPIClient
+OBJC_CLASSLIST_REFERENCES_$_237
+OBJC_METH_VAR_NAME_238
+OBJC_SELECTOR_REFERENCES_239
+OBJC_SELECTOR_REFERENCES_240
+OBJC_CLASS_NAME_241
+OBJC_METH_VAR_NAME_242
+l_OBJC_$_CATEGORY_INSTANCE_METHODS_STPAPIClient_$_BankAccounts
+l_OBJC_$_CATEGORY_STPAPIClient_$_BankAccounts
+OBJC_CLASS_NAME_243
+OBJC_METH_VAR_NAME_244
+l_OBJC_$_CATEGORY_INSTANCE_METHODS_STPAPIClient_$_CreditCards
+l_OBJC_$_CATEGORY_STPAPIClient_$_CreditCards
+__PRETTY_FUNCTION__.+[Stripe(Deprecated) alloc]
+.str245
+_unnamed_cfstring_246
+__PRETTY_FUNCTION__.+[Stripe(Deprecated) createTokenWithCard:publishableKey:operationQueue:completion:]
+.str247
+_unnamed_cfstring_248
+OBJC_SELECTOR_REFERENCES_249
+OBJC_SELECTOR_REFERENCES_250
+__PRETTY_FUNCTION__.+[Stripe(Deprecated) createTokenWithBankAccount:publishableKey:operationQueue:completion:]
+.str251
+_unnamed_cfstring_252
+.str253
+_unnamed_cfstring_254
+OBJC_SELECTOR_REFERENCES_255
+OBJC_METH_VAR_NAME_256
+OBJC_SELECTOR_REFERENCES_257
+OBJC_METH_VAR_NAME_258
+OBJC_SELECTOR_REFERENCES_259
+OBJC_METH_VAR_NAME_260
+OBJC_SELECTOR_REFERENCES_261
+OBJC_METH_VAR_NAME_262
+OBJC_SELECTOR_REFERENCES_263
+OBJC_CLASS_NAME_264
+OBJC_METH_VAR_TYPE_265
+OBJC_METH_VAR_NAME_266
+OBJC_METH_VAR_NAME_267
+l_OBJC_$_CATEGORY_CLASS_METHODS_Stripe_$_Deprecated
+l_OBJC_$_CATEGORY_Stripe_$_Deprecated
+OBJC_LABEL_CATEGORY_$
+_dispatch_once
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/usr/include/dispatch/once.h
++[Stripe(Deprecated) createTokenWithBankAccount:operationQueue:completion:]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/STPAPIClient.m
++[Stripe(Deprecated) createTokenWithBankAccount:publishableKey:completion:]
++[Stripe(Deprecated) createTokenWithBankAccount:completion:]
++[Stripe(Deprecated) createTokenWithCard:operationQueue:completion:]
++[Stripe(Deprecated) createTokenWithCard:publishableKey:completion:]
++[Stripe(Deprecated) createTokenWithCard:completion:]
++[Stripe(Deprecated) createTokenWithBankAccount:publishableKey:operationQueue:completion:]
++[Stripe(Deprecated) createTokenWithCard:publishableKey:operationQueue:completion:]
++[Stripe(Deprecated) alloc]
+-[STPAPIClient(CreditCards) createTokenWithCard:completion:]
+-[STPAPIClient(BankAccounts) createTokenWithBankAccount:completion:]
+-[STPAPIClient .cxx_destruct]
+-[STPAPIClient setUrlSession:]
+-[STPAPIClient urlSession]
+-[STPAPIClient setApiURL:]
+-[STPAPIClient apiURL]
+-[STPAPIClient operationQueue]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/PublicHeaders/STPAPIClient.h
+-[STPAPIClient setPublishableKey:]
+-[STPAPIClient publishableKey]
++[STPAPIClient initializeIfNeeded]
++[STPAPIClient kitDisplayVersion]
++[STPAPIClient bundleIdentifier]
++[STPAPIClient stripeUserAgentDetails]
++[STPAPIClient validateKey:]
+-[STPAPIClient createTokenWithData:completion:]
+-[STPAPIClient setOperationQueue:]
+-[STPAPIClient initWithPublishableKey:]
+-[STPAPIClient init]
++[STPAPIClient sharedClient]
++[Stripe defaultPublishableKey]
++[Stripe setDefaultPublishableKey:]
+-[STPBankAccount setAccountNumber:]
+-[STPBankAccount last4]
+-[STPBankAccount isEqual:]
+-[STPBankAccount hash]
+-[STPBankAccount isEqualToBankAccount:]
+-[STPBankAccount validated]
+-[STPBankAccount disabled]
++[STPBankAccount requiredFields]
++[STPBankAccount decodedObjectFromAPIResponse:]
+-[STPBankAccount routingNumber]
+-[STPBankAccount setRoutingNumber:]
+-[STPBankAccount country]
+-[STPBankAccount setCountry:]
+-[STPBankAccount currency]
+-[STPBankAccount setCurrency:]
+-[STPBankAccount bankAccountId]
+-[STPBankAccount setBankAccountId:]
+-[STPBankAccount setLast4:]
+-[STPBankAccount bankName]
+-[STPBankAccount setBankName:]
+-[STPBankAccount fingerprint]
+-[STPBankAccount setFingerprint:]
+-[STPBankAccount status]
+-[STPBankAccount setStatus:]
+-[STPBankAccount allResponseFields]
+-[STPBankAccount setAllResponseFields:]
+-[STPBankAccount .cxx_destruct]
+OBJC_IVAR_$_STPBankAccount._last4
+.str17
+_unnamed_cfstring_18
+.str25
+_unnamed_cfstring_26
+.str45
+_unnamed_cfstring_46
+.str59
+_unnamed_cfstring_60
+OBJC_METH_VAR_NAME_63
+OBJC_SELECTOR_REFERENCES_64
+OBJC_IVAR_$_STPBankAccount.routingNumber
+OBJC_IVAR_$_STPBankAccount.country
+OBJC_IVAR_$_STPBankAccount.currency
+OBJC_IVAR_$_STPBankAccount._bankAccountId
+OBJC_IVAR_$_STPBankAccount._bankName
+OBJC_IVAR_$_STPBankAccount._fingerprint
+OBJC_IVAR_$_STPBankAccount._status
+OBJC_IVAR_$_STPBankAccount._allResponseFields
+OBJC_METH_VAR_TYPE_66
+l_OBJC_$_CLASS_METHODS_STPBankAccount
+OBJC_METH_VAR_TYPE_68
+OBJC_METH_VAR_TYPE_69
+OBJC_METH_VAR_TYPE_70
+OBJC_CLASS_NAME_71
+OBJC_METH_VAR_TYPE_72
+OBJC_METH_VAR_TYPE_73
+OBJC_METH_VAR_TYPE_76
+OBJC_METH_VAR_TYPE_78
+OBJC_METH_VAR_TYPE_80
+OBJC_METH_VAR_TYPE_82
+OBJC_METH_VAR_TYPE_83
+OBJC_METH_VAR_TYPE_86
+OBJC_METH_VAR_TYPE_88
+OBJC_METH_VAR_TYPE_91
+OBJC_METH_VAR_NAME_93
+OBJC_METH_VAR_TYPE_94
+OBJC_METH_VAR_TYPE_96
+OBJC_METH_VAR_NAME_98
+OBJC_METH_VAR_TYPE_99
+OBJC_METH_VAR_NAME_100
+OBJC_CLASS_NAME_101
+OBJC_PROP_NAME_ATTR_102
+OBJC_PROP_NAME_ATTR_103
+OBJC_PROP_NAME_ATTR_104
+OBJC_PROP_NAME_ATTR_105
+OBJC_PROP_NAME_ATTR_106
+OBJC_PROP_NAME_ATTR_107
+OBJC_PROP_NAME_ATTR_108
+OBJC_PROP_NAME_ATTR_109
+l_OBJC_CLASS_PROTOCOLS_$_STPBankAccount
+l_OBJC_METACLASS_RO_$_STPBankAccount
+OBJC_CLASS_NAME_110
+OBJC_METH_VAR_NAME_113
+OBJC_METH_VAR_TYPE_115
+l_OBJC_$_INSTANCE_METHODS_STPBankAccount
+OBJC_METH_VAR_NAME_127
+OBJC_METH_VAR_TYPE_132
+l_OBJC_$_INSTANCE_VARIABLES_STPBankAccount
+OBJC_PROP_NAME_ATTR_133
+OBJC_PROP_NAME_ATTR_134
+OBJC_PROP_NAME_ATTR_135
+OBJC_PROP_NAME_ATTR_147
+OBJC_PROP_NAME_ATTR_148
+OBJC_PROP_NAME_ATTR_149
+OBJC_PROP_NAME_ATTR_150
+OBJC_PROP_NAME_ATTR_151
+OBJC_PROP_NAME_ATTR_152
+l_OBJC_$_PROP_LIST_STPBankAccount
+l_OBJC_CLASS_RO_$_STPBankAccount
+-[STPBankAccount .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/STPBankAccount.m
+-[STPBankAccount setAllResponseFields:]
+-[STPBankAccount allResponseFields]
+-[STPBankAccount setStatus:]
+-[STPBankAccount status]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/PublicHeaders/STPBankAccount.h
+-[STPBankAccount setFingerprint:]
+-[STPBankAccount fingerprint]
+-[STPBankAccount setBankName:]
+-[STPBankAccount bankName]
+-[STPBankAccount setLast4:]
+-[STPBankAccount setBankAccountId:]
+-[STPBankAccount bankAccountId]
+-[STPBankAccount setCurrency:]
+-[STPBankAccount currency]
+-[STPBankAccount setCountry:]
+-[STPBankAccount country]
+-[STPBankAccount setRoutingNumber:]
+-[STPBankAccount routingNumber]
++[STPBankAccount decodedObjectFromAPIResponse:]
++[STPBankAccount requiredFields]
+-[STPBankAccount disabled]
+-[STPBankAccount validated]
+-[STPBankAccount isEqualToBankAccount:]
+-[STPBankAccount hash]
+-[STPBankAccount isEqual:]
+-[STPBankAccount last4]
+-[STPBankAccount setAccountNumber:]
++[NSError(Stripe) stp_errorFromStripeResponse:]
+.str27
+_unnamed_cfstring_28
+.str41
+_unnamed_cfstring_42
+OBJC_CLASSLIST_REFERENCES_$_46
+.str65
+_unnamed_cfstring_66
+.str77
+_unnamed_cfstring_78
+.str81
+_unnamed_cfstring_82
+.str85
+_unnamed_cfstring_86
+.str91
+_unnamed_cfstring_92
+.str95
+_unnamed_cfstring_96
+OBJC_METH_VAR_NAME_101
+l_OBJC_$_CATEGORY_CLASS_METHODS_NSError_$_Stripe
+l_OBJC_$_CATEGORY_NSError_$_Stripe
++[NSError(Stripe) stp_errorFromStripeResponse:]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/StripeError.m
++[UIImage(Stripe) stp_amexCardImage]
++[UIImage(Stripe) stp_dinersClubCardImage]
++[UIImage(Stripe) stp_discoverCardImage]
++[UIImage(Stripe) stp_jcbCardImage]
++[UIImage(Stripe) stp_masterCardCardImage]
++[UIImage(Stripe) stp_visaCardImage]
++[UIImage(Stripe) stp_unknownCardCardImage]
++[UIImage(Stripe) stp_brandImageForCardBrand:]
++[UIImage(Stripe) stp_cvcImageForCardBrand:]
++[UIImage(Stripe) stp_safeImageNamed:]
+l_OBJC_METACLASS_RO_$_STPBundleLocator
+l_OBJC_CLASS_RO_$_STPBundleLocator
+OBJC_CLASSLIST_REFERENCES_$_32
+OBJC_CLASS_NAME_37
+OBJC_METH_VAR_NAME_38
+OBJC_METH_VAR_NAME_40
+OBJC_METH_VAR_NAME_42
+OBJC_METH_VAR_TYPE_45
+OBJC_METH_VAR_TYPE_47
+l_OBJC_$_CATEGORY_CLASS_METHODS_UIImage_$_Stripe
+l_OBJC_$_CATEGORY_UIImage_$_Stripe
+linkUIImageCategory
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/UI/UIImage+Stripe.m
++[UIImage(Stripe) stp_safeImageNamed:]
++[UIImage(Stripe) stp_cvcImageForCardBrand:]
++[UIImage(Stripe) stp_brandImageForCardBrand:]
++[UIImage(Stripe) stp_unknownCardCardImage]
++[UIImage(Stripe) stp_visaCardImage]
++[UIImage(Stripe) stp_masterCardCardImage]
++[UIImage(Stripe) stp_jcbCardImage]
++[UIImage(Stripe) stp_discoverCardImage]
++[UIImage(Stripe) stp_dinersClubCardImage]
++[UIImage(Stripe) stp_amexCardImage]
+-[STPCheckoutOptions initWithPublishableKey:]
+-[STPCheckoutOptions init]
+-[STPCheckoutOptions stringifiedJSONRepresentation]
+-[STPCheckoutOptions setLogoImage:]
+-[STPCheckoutOptions copyWithZone:]
+-[STPCheckoutOptions publishableKey]
+-[STPCheckoutOptions setPublishableKey:]
+-[STPCheckoutOptions logoURL]
+-[STPCheckoutOptions setLogoURL:]
+-[STPCheckoutOptions logoImage]
+-[STPCheckoutOptions logoColor]
+-[STPCheckoutOptions setLogoColor:]
+-[STPCheckoutOptions companyName]
+-[STPCheckoutOptions setCompanyName:]
+-[STPCheckoutOptions purchaseDescription]
+-[STPCheckoutOptions setPurchaseDescription:]
+-[STPCheckoutOptions purchaseAmount]
+-[STPCheckoutOptions setPurchaseAmount:]
+-[STPCheckoutOptions customerEmail]
+-[STPCheckoutOptions setCustomerEmail:]
+-[STPCheckoutOptions purchaseLabel]
+-[STPCheckoutOptions setPurchaseLabel:]
+-[STPCheckoutOptions purchaseCurrency]
+-[STPCheckoutOptions setPurchaseCurrency:]
+-[STPCheckoutOptions enableRememberMe]
+-[STPCheckoutOptions setEnableRememberMe:]
+-[STPCheckoutOptions enablePostalCode]
+-[STPCheckoutOptions setEnablePostalCode:]
+-[STPCheckoutOptions requireBillingAddress]
+-[STPCheckoutOptions setRequireBillingAddress:]
+-[STPCheckoutOptions .cxx_destruct]
+OBJC_IVAR_$_STPCheckoutOptions._publishableKey
+OBJC_IVAR_$_STPCheckoutOptions._companyName
+OBJC_IVAR_$_STPCheckoutOptions._purchaseCurrency
+OBJC_CLASSLIST_REFERENCES_$_11
+OBJC_METH_VAR_NAME_12
+OBJC_SELECTOR_REFERENCES_13
+OBJC_METH_VAR_NAME_14
+OBJC_SELECTOR_REFERENCES_15
+OBJC_CLASSLIST_REFERENCES_$_16
+OBJC_CLASSLIST_REFERENCES_$_35
+OBJC_METH_VAR_NAME_36
+OBJC_SELECTOR_REFERENCES_37
+OBJC_SELECTOR_REFERENCES_39
+.str40
+_unnamed_cfstring_41
+OBJC_SELECTOR_REFERENCES_43
+.str44
+_unnamed_cfstring_45
+.str48
+_unnamed_cfstring_49
+.str55
+_unnamed_cfstring_56
+OBJC_CLASSLIST_REFERENCES_$_79
+OBJC_CLASSLIST_REFERENCES_$_82
+OBJC_IVAR_$_STPCheckoutOptions._logoImage
+OBJC_SELECTOR_REFERENCES_94
+OBJC_CLASSLIST_REFERENCES_$_95
+OBJC_METH_VAR_NAME_96
+OBJC_SELECTOR_REFERENCES_97
+OBJC_SELECTOR_REFERENCES_99
+OBJC_SELECTOR_REFERENCES_101
+OBJC_METH_VAR_NAME_106
+OBJC_SELECTOR_REFERENCES_107
+OBJC_SELECTOR_REFERENCES_109
+OBJC_SELECTOR_REFERENCES_115
+OBJC_SELECTOR_REFERENCES_119
+OBJC_SELECTOR_REFERENCES_123
+OBJC_IVAR_$_STPCheckoutOptions._logoURL
+OBJC_IVAR_$_STPCheckoutOptions._logoColor
+OBJC_IVAR_$_STPCheckoutOptions._purchaseDescription
+OBJC_IVAR_$_STPCheckoutOptions._purchaseAmount
+OBJC_IVAR_$_STPCheckoutOptions._customerEmail
+OBJC_IVAR_$_STPCheckoutOptions._purchaseLabel
+OBJC_IVAR_$_STPCheckoutOptions._enableRememberMe
+OBJC_IVAR_$_STPCheckoutOptions._enablePostalCode
+OBJC_IVAR_$_STPCheckoutOptions._requireBillingAddress
+OBJC_CLASS_NAME_129
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_NSCopying
+l_OBJC_$_PROTOCOL_METHOD_TYPES_NSCopying
+l_OBJC_PROTOCOL_$_NSCopying
+l_OBJC_LABEL_PROTOCOL_$_NSCopying
+l_OBJC_CLASS_PROTOCOLS_$_STPCheckoutOptions
+l_OBJC_METACLASS_RO_$_STPCheckoutOptions
+OBJC_CLASS_NAME_130
+OBJC_METH_VAR_TYPE_136
+l_OBJC_$_INSTANCE_METHODS_STPCheckoutOptions
+OBJC_METH_VAR_TYPE_140
+OBJC_METH_VAR_NAME_141
+OBJC_METH_VAR_TYPE_142
+OBJC_METH_VAR_NAME_143
+OBJC_METH_VAR_TYPE_144
+OBJC_METH_VAR_NAME_149
+OBJC_METH_VAR_TYPE_150
+OBJC_METH_VAR_NAME_151
+OBJC_METH_VAR_NAME_154
+OBJC_METH_VAR_TYPE_155
+l_OBJC_$_INSTANCE_VARIABLES_STPCheckoutOptions
+OBJC_PROP_NAME_ATTR_165
+OBJC_PROP_NAME_ATTR_166
+OBJC_PROP_NAME_ATTR_167
+OBJC_PROP_NAME_ATTR_168
+OBJC_PROP_NAME_ATTR_169
+OBJC_PROP_NAME_ATTR_170
+OBJC_PROP_NAME_ATTR_171
+OBJC_PROP_NAME_ATTR_172
+OBJC_PROP_NAME_ATTR_173
+OBJC_PROP_NAME_ATTR_174
+OBJC_PROP_NAME_ATTR_175
+OBJC_PROP_NAME_ATTR_176
+OBJC_PROP_NAME_ATTR_177
+OBJC_PROP_NAME_ATTR_178
+OBJC_PROP_NAME_ATTR_179
+OBJC_PROP_NAME_ATTR_180
+OBJC_PROP_NAME_ATTR_181
+OBJC_PROP_NAME_ATTR_182
+l_OBJC_$_PROP_LIST_STPCheckoutOptions
+l_OBJC_CLASS_RO_$_STPCheckoutOptions
+/Users/mirco/Library/Developer/Xcode/DerivedData/ModuleCache/T78I7L3N6UU6/PassKit-239FSIA2DNRIK.pcm
+PassKit
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/PassKit.framework
+-[STPCheckoutOptions .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/Checkout/STPCheckoutOptions.m
+-[STPCheckoutOptions setRequireBillingAddress:]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/PublicHeaders/Checkout/STPCheckoutOptions.h
+-[STPCheckoutOptions requireBillingAddress]
+-[STPCheckoutOptions setEnablePostalCode:]
+-[STPCheckoutOptions enablePostalCode]
+-[STPCheckoutOptions setEnableRememberMe:]
+-[STPCheckoutOptions enableRememberMe]
+-[STPCheckoutOptions setPurchaseCurrency:]
+-[STPCheckoutOptions purchaseCurrency]
+-[STPCheckoutOptions setPurchaseLabel:]
+-[STPCheckoutOptions purchaseLabel]
+-[STPCheckoutOptions setCustomerEmail:]
+-[STPCheckoutOptions customerEmail]
+-[STPCheckoutOptions setPurchaseAmount:]
+-[STPCheckoutOptions purchaseAmount]
+-[STPCheckoutOptions setPurchaseDescription:]
+-[STPCheckoutOptions purchaseDescription]
+-[STPCheckoutOptions setCompanyName:]
+-[STPCheckoutOptions companyName]
+-[STPCheckoutOptions setLogoColor:]
+-[STPCheckoutOptions logoColor]
+-[STPCheckoutOptions logoImage]
+-[STPCheckoutOptions setLogoURL:]
+-[STPCheckoutOptions logoURL]
+-[STPCheckoutOptions setPublishableKey:]
+-[STPCheckoutOptions publishableKey]
+-[STPCheckoutOptions copyWithZone:]
+-[STPCheckoutOptions setLogoImage:]
+-[STPCheckoutOptions stringifiedJSONRepresentation]
+-[STPCheckoutOptions init]
+-[STPCheckoutOptions initWithPublishableKey:]
+-[STPCheckoutInternalUIWebViewController initWithCheckoutViewController:]
+__73-[STPCheckoutInternalUIWebViewController initWithCheckoutViewController:]_block_invoke
+-[STPCheckoutInternalUIWebViewController viewDidLoad]
+-[STPCheckoutInternalUIWebViewController cancel:]
+-[STPCheckoutInternalUIWebViewController cleanup]
+-[STPCheckoutInternalUIWebViewController preferredStatusBarStyle]
+-[STPCheckoutInternalUIWebViewController setLogoColor:]
+-[STPCheckoutInternalUIWebViewController checkoutAdapterDidStartLoad:]
+-[STPCheckoutInternalUIWebViewController checkoutAdapter:didTriggerEvent:withPayload:]
+__86-[STPCheckoutInternalUIWebViewController checkoutAdapter:didTriggerEvent:withPayload:]_block_invoke
+-[STPCheckoutInternalUIWebViewController checkoutAdapterDidFinishLoad:]
+__71-[STPCheckoutInternalUIWebViewController checkoutAdapterDidFinishLoad:]_block_invoke
+__copy_helper_block_217
+__destroy_helper_block_218
+__71-[STPCheckoutInternalUIWebViewController checkoutAdapterDidFinishLoad:]_block_invoke220
+__copy_helper_block_223
+__destroy_helper_block_224
+-[STPCheckoutInternalUIWebViewController checkoutAdapter:didError:]
+-[STPCheckoutInternalUIWebViewController scrollViewDidScroll:]
+__62-[STPCheckoutInternalUIWebViewController scrollViewDidScroll:]_block_invoke
+__copy_helper_block_244
+__destroy_helper_block_245
+-[STPCheckoutInternalUIWebViewController prefersStatusBarHidden]
+-[STPCheckoutInternalUIWebViewController checkoutDisplayOptionsForScrollViewOffset:]
+-[STPCheckoutInternalUIWebViewController checkoutController]
+-[STPCheckoutInternalUIWebViewController webView]
+-[STPCheckoutInternalUIWebViewController setWebView:]
+-[STPCheckoutInternalUIWebViewController options]
+-[STPCheckoutInternalUIWebViewController setOptions:]
+-[STPCheckoutInternalUIWebViewController delegate]
+-[STPCheckoutInternalUIWebViewController setDelegate:]
+-[STPCheckoutInternalUIWebViewController statusBarHidden]
+-[STPCheckoutInternalUIWebViewController setStatusBarHidden:]
+-[STPCheckoutInternalUIWebViewController adapter]
+-[STPCheckoutInternalUIWebViewController setAdapter:]
+-[STPCheckoutInternalUIWebViewController url]
+-[STPCheckoutInternalUIWebViewController setUrl:]
+-[STPCheckoutInternalUIWebViewController activityIndicator]
+-[STPCheckoutInternalUIWebViewController setActivityIndicator:]
+-[STPCheckoutInternalUIWebViewController backendChargeSuccessful]
+-[STPCheckoutInternalUIWebViewController setBackendChargeSuccessful:]
+-[STPCheckoutInternalUIWebViewController backendChargeError]
+-[STPCheckoutInternalUIWebViewController setBackendChargeError:]
+-[STPCheckoutInternalUIWebViewController .cxx_destruct]
+OBJC_IVAR_$_STPCheckoutInternalUIWebViewController._options
+OBJC_IVAR_$_STPCheckoutInternalUIWebViewController._url
+OBJC_METH_VAR_NAME_34
+OBJC_SELECTOR_REFERENCES_35
+OBJC_SELECTOR_REFERENCES_41
+OBJC_IVAR_$_STPCheckoutInternalUIWebViewController._checkoutController
+initWithCheckoutViewController:.onceToken
+OBJC_CLASSLIST_REFERENCES_$_42
+.str52
+_unnamed_cfstring_53
+.str56
+_unnamed_cfstring_57
+OBJC_CLASSLIST_REFERENCES_$_58
+OBJC_CLASSLIST_REFERENCES_$_61
+.str66
+__block_literal_global
+OBJC_CLASSLIST_REFERENCES_$_86
+OBJC_CLASSLIST_REFERENCES_$_97
+OBJC_CLASSLIST_REFERENCES_$_108
+OBJC_METH_VAR_NAME_109
+OBJC_SELECTOR_REFERENCES_110
+OBJC_SELECTOR_REFERENCES_114
+OBJC_CLASSLIST_REFERENCES_$_117
+OBJC_CLASSLIST_REFERENCES_$_120
+OBJC_SELECTOR_REFERENCES_122
+OBJC_METH_VAR_NAME_123
+OBJC_SELECTOR_REFERENCES_124
+OBJC_SELECTOR_REFERENCES_126
+OBJC_SELECTOR_REFERENCES_128
+OBJC_SELECTOR_REFERENCES_130
+OBJC_SELECTOR_REFERENCES_132
+OBJC_SELECTOR_REFERENCES_134
+OBJC_SELECTOR_REFERENCES_140
+OBJC_SELECTOR_REFERENCES_142
+OBJC_SELECTOR_REFERENCES_144
+OBJC_CLASSLIST_REFERENCES_$_145
+OBJC_METH_VAR_NAME_146
+OBJC_SELECTOR_REFERENCES_147
+OBJC_SELECTOR_REFERENCES_151
+.str152
+_unnamed_cfstring_153
+OBJC_SELECTOR_REFERENCES_155
+OBJC_SELECTOR_REFERENCES_157
+OBJC_SELECTOR_REFERENCES_159
+OBJC_METH_VAR_NAME_160
+OBJC_SELECTOR_REFERENCES_161
+.str164
+_unnamed_cfstring_165
+OBJC_SELECTOR_REFERENCES_167
+OBJC_METH_VAR_NAME_168
+OBJC_SELECTOR_REFERENCES_169
+.str170
+_unnamed_cfstring_171
+OBJC_CLASSLIST_REFERENCES_$_172
+OBJC_SELECTOR_REFERENCES_176
+OBJC_SELECTOR_REFERENCES_178
+.str179
+_unnamed_cfstring_180
+.str181
+_unnamed_cfstring_182
+.str183
+_unnamed_cfstring_184
+OBJC_SELECTOR_REFERENCES_186
+OBJC_CLASSLIST_REFERENCES_$_187
+OBJC_CLASSLIST_REFERENCES_$_188
+OBJC_METH_VAR_NAME_189
+OBJC_SELECTOR_REFERENCES_190
+OBJC_SELECTOR_REFERENCES_192
+OBJC_SELECTOR_REFERENCES_194
+OBJC_SELECTOR_REFERENCES_196
+OBJC_SELECTOR_REFERENCES_198
+.str199
+__block_descriptor_tmp200
+OBJC_METH_VAR_NAME_201
+OBJC_SELECTOR_REFERENCES_202
+OBJC_METH_VAR_NAME_203
+OBJC_SELECTOR_REFERENCES_204
+OBJC_METH_VAR_NAME_205
+OBJC_SELECTOR_REFERENCES_206
+OBJC_CLASSLIST_REFERENCES_$_207
+OBJC_METH_VAR_NAME_208
+OBJC_SELECTOR_REFERENCES_209
+OBJC_CLASSLIST_REFERENCES_$_210
+OBJC_SELECTOR_REFERENCES_212
+OBJC_METH_VAR_NAME_213
+OBJC_SELECTOR_REFERENCES_214
+OBJC_SELECTOR_REFERENCES_216
+__block_descriptor_tmp219
+OBJC_SELECTOR_REFERENCES_222
+.str225
+__block_descriptor_tmp226
+OBJC_SELECTOR_REFERENCES_228
+OBJC_METH_VAR_NAME_229
+OBJC_SELECTOR_REFERENCES_230
+OBJC_METH_VAR_NAME_231
+OBJC_SELECTOR_REFERENCES_232
+.str233
+_unnamed_cfstring_234
+OBJC_METH_VAR_NAME_235
+OBJC_SELECTOR_REFERENCES_236
+.str237
+_unnamed_cfstring_238
+OBJC_CLASSLIST_REFERENCES_$_239
+OBJC_METH_VAR_NAME_240
+OBJC_SELECTOR_REFERENCES_241
+OBJC_SELECTOR_REFERENCES_243
+__block_descriptor_tmp246
+OBJC_METH_VAR_NAME_247
+OBJC_SELECTOR_REFERENCES_248
+OBJC_METH_VAR_NAME_249
+OBJC_METH_VAR_NAME_251
+OBJC_SELECTOR_REFERENCES_252
+OBJC_METH_VAR_NAME_253
+OBJC_SELECTOR_REFERENCES_254
+.str255
+_unnamed_cfstring_256
+OBJC_CLASSLIST_REFERENCES_$_257
+OBJC_IVAR_$_STPCheckoutInternalUIWebViewController._webView
+OBJC_IVAR_$_STPCheckoutInternalUIWebViewController._delegate
+OBJC_IVAR_$_STPCheckoutInternalUIWebViewController._statusBarHidden
+OBJC_IVAR_$_STPCheckoutInternalUIWebViewController._adapter
+OBJC_IVAR_$_STPCheckoutInternalUIWebViewController._activityIndicator
+OBJC_IVAR_$_STPCheckoutInternalUIWebViewController._backendChargeSuccessful
+OBJC_IVAR_$_STPCheckoutInternalUIWebViewController._backendChargeError
+OBJC_METH_VAR_NAME_264
+OBJC_METH_VAR_TYPE_268
+OBJC_METH_VAR_TYPE_269
+OBJC_METH_VAR_NAME_270
+OBJC_METH_VAR_TYPE_271
+OBJC_METH_VAR_TYPE_272
+OBJC_CLASS_NAME_273
+OBJC_METH_VAR_NAME_274
+OBJC_METH_VAR_TYPE_275
+OBJC_METH_VAR_NAME_276
+OBJC_METH_VAR_TYPE_277
+OBJC_METH_VAR_NAME_278
+OBJC_METH_VAR_TYPE_279
+OBJC_METH_VAR_NAME_280
+OBJC_METH_VAR_TYPE_281
+OBJC_METH_VAR_NAME_282
+OBJC_METH_VAR_TYPE_283
+OBJC_METH_VAR_NAME_284
+OBJC_METH_VAR_TYPE_285
+OBJC_METH_VAR_NAME_286
+OBJC_METH_VAR_TYPE_287
+OBJC_METH_VAR_NAME_288
+OBJC_METH_VAR_TYPE_289
+OBJC_METH_VAR_NAME_290
+OBJC_METH_VAR_NAME_291
+OBJC_METH_VAR_TYPE_292
+OBJC_METH_VAR_TYPE_293
+OBJC_METH_VAR_NAME_294
+OBJC_METH_VAR_NAME_295
+OBJC_METH_VAR_TYPE_296
+OBJC_METH_VAR_NAME_297
+OBJC_METH_VAR_NAME_298
+OBJC_METH_VAR_TYPE_299
+OBJC_METH_VAR_NAME_300
+OBJC_METH_VAR_TYPE_301
+OBJC_METH_VAR_NAME_302
+OBJC_METH_VAR_NAME_303
+OBJC_METH_VAR_NAME_304
+OBJC_METH_VAR_TYPE_305
+OBJC_METH_VAR_NAME_306
+OBJC_CLASS_NAME_307
+OBJC_PROP_NAME_ATTR_308
+OBJC_PROP_NAME_ATTR_309
+OBJC_PROP_NAME_ATTR_310
+OBJC_PROP_NAME_ATTR_311
+OBJC_PROP_NAME_ATTR_312
+OBJC_PROP_NAME_ATTR_313
+l_OBJC_$_PROTOCOL_REFS_STPCheckoutDelegate
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_STPCheckoutDelegate
+l_OBJC_$_PROTOCOL_METHOD_TYPES_STPCheckoutDelegate
+l_OBJC_PROTOCOL_$_STPCheckoutDelegate
+l_OBJC_LABEL_PROTOCOL_$_STPCheckoutDelegate
+OBJC_METH_VAR_NAME_314
+OBJC_METH_VAR_TYPE_315
+OBJC_METH_VAR_NAME_316
+OBJC_METH_VAR_NAME_317
+OBJC_METH_VAR_NAME_318
+OBJC_METH_VAR_TYPE_319
+OBJC_METH_VAR_TYPE_320
+OBJC_METH_VAR_NAME_321
+OBJC_METH_VAR_TYPE_322
+OBJC_METH_VAR_TYPE_323
+OBJC_METH_VAR_NAME_324
+OBJC_METH_VAR_NAME_325
+OBJC_METH_VAR_NAME_326
+OBJC_METH_VAR_NAME_327
+OBJC_METH_VAR_TYPE_328
+OBJC_METH_VAR_TYPE_329
+OBJC_METH_VAR_NAME_330
+OBJC_METH_VAR_TYPE_331
+OBJC_METH_VAR_NAME_332
+OBJC_METH_VAR_TYPE_333
+OBJC_METH_VAR_TYPE_334
+OBJC_METH_VAR_NAME_335
+OBJC_METH_VAR_TYPE_336
+OBJC_METH_VAR_NAME_337
+OBJC_CLASS_NAME_338
+l_OBJC_$_PROTOCOL_REFS_UIScrollViewDelegate
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_UIScrollViewDelegate
+l_OBJC_$_PROTOCOL_METHOD_TYPES_UIScrollViewDelegate
+l_OBJC_PROTOCOL_$_UIScrollViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIScrollViewDelegate
+l_OBJC_CLASS_PROTOCOLS_$_STPCheckoutInternalUIWebViewController
+l_OBJC_METACLASS_RO_$_STPCheckoutInternalUIWebViewController
+OBJC_CLASS_NAME_339
+OBJC_METH_VAR_NAME_340
+OBJC_METH_VAR_TYPE_341
+OBJC_METH_VAR_TYPE_342
+OBJC_METH_VAR_TYPE_343
+OBJC_METH_VAR_NAME_344
+OBJC_METH_VAR_NAME_345
+OBJC_METH_VAR_TYPE_346
+OBJC_METH_VAR_NAME_347
+l_OBJC_$_INSTANCE_METHODS_STPCheckoutInternalUIWebViewController
+OBJC_METH_VAR_NAME_348
+OBJC_METH_VAR_TYPE_349
+OBJC_METH_VAR_NAME_350
+OBJC_METH_VAR_NAME_351
+OBJC_METH_VAR_TYPE_352
+OBJC_METH_VAR_NAME_353
+OBJC_METH_VAR_TYPE_354
+OBJC_METH_VAR_NAME_355
+OBJC_METH_VAR_TYPE_356
+OBJC_METH_VAR_NAME_357
+OBJC_METH_VAR_TYPE_358
+OBJC_METH_VAR_NAME_359
+OBJC_METH_VAR_TYPE_360
+OBJC_METH_VAR_NAME_361
+OBJC_METH_VAR_TYPE_362
+OBJC_METH_VAR_NAME_363
+OBJC_METH_VAR_TYPE_364
+OBJC_METH_VAR_NAME_365
+OBJC_METH_VAR_TYPE_366
+l_OBJC_$_INSTANCE_VARIABLES_STPCheckoutInternalUIWebViewController
+OBJC_CLASS_NAME_367
+OBJC_PROP_NAME_ATTR_368
+OBJC_PROP_NAME_ATTR_369
+OBJC_PROP_NAME_ATTR_370
+OBJC_PROP_NAME_ATTR_371
+OBJC_PROP_NAME_ATTR_372
+OBJC_PROP_NAME_ATTR_373
+OBJC_PROP_NAME_ATTR_374
+OBJC_PROP_NAME_ATTR_375
+OBJC_PROP_NAME_ATTR_376
+OBJC_PROP_NAME_ATTR_377
+OBJC_PROP_NAME_ATTR_378
+OBJC_PROP_NAME_ATTR_379
+OBJC_PROP_NAME_ATTR_380
+OBJC_PROP_NAME_ATTR_381
+OBJC_PROP_NAME_ATTR_382
+OBJC_PROP_NAME_ATTR_383
+OBJC_PROP_NAME_ATTR_384
+OBJC_PROP_NAME_ATTR_385
+OBJC_PROP_NAME_ATTR_386
+OBJC_PROP_NAME_ATTR_387
+l_OBJC_$_PROP_LIST_STPCheckoutInternalUIWebViewController
+l_OBJC_CLASS_RO_$_STPCheckoutInternalUIWebViewController
+-[STPCheckoutInternalUIWebViewController .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/Checkout/STPCheckoutInternalUIWebViewController.m
+-[STPCheckoutInternalUIWebViewController setBackendChargeError:]
+-[STPCheckoutInternalUIWebViewController backendChargeError]
+-[STPCheckoutInternalUIWebViewController setBackendChargeSuccessful:]
+-[STPCheckoutInternalUIWebViewController backendChargeSuccessful]
+-[STPCheckoutInternalUIWebViewController setActivityIndicator:]
+-[STPCheckoutInternalUIWebViewController activityIndicator]
+-[STPCheckoutInternalUIWebViewController setUrl:]
+-[STPCheckoutInternalUIWebViewController url]
+-[STPCheckoutInternalUIWebViewController setAdapter:]
+-[STPCheckoutInternalUIWebViewController adapter]
+-[STPCheckoutInternalUIWebViewController setStatusBarHidden:]
+-[STPCheckoutInternalUIWebViewController statusBarHidden]
+-[STPCheckoutInternalUIWebViewController setDelegate:]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/Checkout/STPCheckoutInternalUIWebViewController.h
+-[STPCheckoutInternalUIWebViewController delegate]
+-[STPCheckoutInternalUIWebViewController setOptions:]
+-[STPCheckoutInternalUIWebViewController options]
+-[STPCheckoutInternalUIWebViewController setWebView:]
+-[STPCheckoutInternalUIWebViewController webView]
+-[STPCheckoutInternalUIWebViewController checkoutController]
+-[STPCheckoutInternalUIWebViewController checkoutDisplayOptionsForScrollViewOffset:]
+-[STPCheckoutInternalUIWebViewController prefersStatusBarHidden]
+-[STPCheckoutInternalUIWebViewController scrollViewDidScroll:]
+-[STPCheckoutInternalUIWebViewController checkoutAdapter:didError:]
+-[STPCheckoutInternalUIWebViewController checkoutAdapterDidFinishLoad:]
+-[STPCheckoutInternalUIWebViewController checkoutAdapter:didTriggerEvent:withPayload:]
+-[STPCheckoutInternalUIWebViewController checkoutAdapterDidStartLoad:]
+-[STPCheckoutInternalUIWebViewController setLogoColor:]
+-[STPCheckoutInternalUIWebViewController preferredStatusBarStyle]
+-[STPCheckoutInternalUIWebViewController cleanup]
+-[STPCheckoutInternalUIWebViewController cancel:]
+-[STPCheckoutInternalUIWebViewController viewDidLoad]
+-[STPCheckoutInternalUIWebViewController initWithCheckoutViewController:]
++[STPStrictURLProtocol canInitWithRequest:]
++[STPStrictURLProtocol canonicalRequestForRequest:]
+-[STPStrictURLProtocol startLoading]
+-[STPStrictURLProtocol stopLoading]
+-[STPStrictURLProtocol connection:didReceiveResponse:]
+-[STPStrictURLProtocol connection:didReceiveData:]
+-[STPStrictURLProtocol connectionDidFinishLoading:]
+-[STPStrictURLProtocol connection:didFailWithError:]
+-[STPStrictURLProtocol connection]
+-[STPStrictURLProtocol setConnection:]
+-[STPStrictURLProtocol .cxx_destruct]
+OBJC_CLASSLIST_REFERENCES_$_19
+OBJC_METH_VAR_NAME_20
+OBJC_SELECTOR_REFERENCES_21
+OBJC_METH_VAR_NAME_22
+OBJC_SELECTOR_REFERENCES_23
+OBJC_CLASSLIST_REFERENCES_$_24
+OBJC_CLASSLIST_REFERENCES_$_27
+OBJC_METH_VAR_NAME_28
+OBJC_SELECTOR_REFERENCES_29
+.str30
+_unnamed_cfstring_31
+.str32
+_unnamed_cfstring_33
+.str36
+_unnamed_cfstring_37
+OBJC_CLASSLIST_REFERENCES_$_38
+OBJC_IVAR_$_STPStrictURLProtocol._connection
+OBJC_METH_VAR_TYPE_55
+l_OBJC_$_CLASS_METHODS_STPStrictURLProtocol
+OBJC_METH_VAR_TYPE_57
+OBJC_METH_VAR_TYPE_58
+OBJC_METH_VAR_TYPE_60
+OBJC_METH_VAR_TYPE_61
+OBJC_METH_VAR_TYPE_63
+OBJC_METH_VAR_TYPE_65
+OBJC_METH_VAR_TYPE_71
+OBJC_METH_VAR_TYPE_74
+OBJC_CLASS_NAME_75
+OBJC_METH_VAR_TYPE_77
+OBJC_METH_VAR_TYPE_79
+OBJC_METH_VAR_TYPE_81
+OBJC_METH_VAR_TYPE_84
+OBJC_CLASS_NAME_87
+OBJC_METH_VAR_TYPE_89
+OBJC_METH_VAR_TYPE_93
+OBJC_METH_VAR_NAME_94
+OBJC_METH_VAR_TYPE_95
+OBJC_METH_VAR_TYPE_97
+OBJC_METH_VAR_TYPE_100
+OBJC_METH_VAR_TYPE_103
+OBJC_METH_VAR_TYPE_105
+OBJC_METH_VAR_TYPE_108
+OBJC_CLASS_NAME_119
+OBJC_PROP_NAME_ATTR_120
+OBJC_PROP_NAME_ATTR_121
+OBJC_PROP_NAME_ATTR_122
+OBJC_PROP_NAME_ATTR_123
+OBJC_PROP_NAME_ATTR_124
+OBJC_PROP_NAME_ATTR_125
+l_OBJC_$_PROTOCOL_REFS_NSURLConnectionDelegate
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSURLConnectionDelegate
+l_OBJC_$_PROTOCOL_METHOD_TYPES_NSURLConnectionDelegate
+l_OBJC_PROTOCOL_$_NSURLConnectionDelegate
+l_OBJC_LABEL_PROTOCOL_$_NSURLConnectionDelegate
+l_OBJC_$_PROTOCOL_REFS_NSURLConnectionDataDelegate
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSURLConnectionDataDelegate
+l_OBJC_$_PROTOCOL_METHOD_TYPES_NSURLConnectionDataDelegate
+l_OBJC_PROTOCOL_$_NSURLConnectionDataDelegate
+l_OBJC_LABEL_PROTOCOL_$_NSURLConnectionDataDelegate
+l_OBJC_CLASS_PROTOCOLS_$_STPStrictURLProtocol
+l_OBJC_METACLASS_RO_$_STPStrictURLProtocol
+OBJC_CLASS_NAME_126
+l_OBJC_$_INSTANCE_METHODS_STPStrictURLProtocol
+l_OBJC_$_INSTANCE_VARIABLES_STPStrictURLProtocol
+l_OBJC_$_PROP_LIST_STPStrictURLProtocol
+l_OBJC_CLASS_RO_$_STPStrictURLProtocol
+-[STPStrictURLProtocol .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/Checkout/STPStrictURLProtocol.m
+-[STPStrictURLProtocol setConnection:]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/Checkout/STPStrictURLProtocol.h
+-[STPStrictURLProtocol connection]
+-[STPStrictURLProtocol connection:didFailWithError:]
+-[STPStrictURLProtocol connectionDidFinishLoading:]
+-[STPStrictURLProtocol connection:didReceiveData:]
+-[STPStrictURLProtocol connection:didReceiveResponse:]
+-[STPStrictURLProtocol stopLoading]
+-[STPStrictURLProtocol startLoading]
++[STPStrictURLProtocol canonicalRequestForRequest:]
++[STPStrictURLProtocol canInitWithRequest:]
+-[STPPaymentCardTextField initWithCoder:]
+-[STPPaymentCardTextField initWithFrame:]
+-[STPPaymentCardTextField commonInit]
+-[STPPaymentCardTextField viewModel]
++[STPPaymentCardTextField placeholderGrayColor]
+-[STPPaymentCardTextField setBackgroundColor:]
+-[STPPaymentCardTextField backgroundColor]
+-[STPPaymentCardTextField setFont:]
+-[STPPaymentCardTextField font]
+-[STPPaymentCardTextField setTextColor:]
+-[STPPaymentCardTextField setContentVerticalAlignment:]
+-[STPPaymentCardTextField textColor]
+-[STPPaymentCardTextField setTextErrorColor:]
+-[STPPaymentCardTextField textErrorColor]
+-[STPPaymentCardTextField setPlaceholderColor:]
+-[STPPaymentCardTextField placeholderColor]
+-[STPPaymentCardTextField setNumberPlaceholder:]
+-[STPPaymentCardTextField setExpirationPlaceholder:]
+-[STPPaymentCardTextField setCvcPlaceholder:]
+-[STPPaymentCardTextField setCursorColor:]
+-[STPPaymentCardTextField cursorColor]
+-[STPPaymentCardTextField setBorderColor:]
+-[STPPaymentCardTextField borderColor]
+-[STPPaymentCardTextField setCornerRadius:]
+-[STPPaymentCardTextField cornerRadius]
+-[STPPaymentCardTextField setBorderWidth:]
+-[STPPaymentCardTextField borderWidth]
+-[STPPaymentCardTextField setKeyboardAppearance:]
+-[STPPaymentCardTextField setInputAccessoryView:]
+-[STPPaymentCardTextField setEnabled:]
+-[STPPaymentCardTextField isFirstResponder]
+-[STPPaymentCardTextField canBecomeFirstResponder]
+-[STPPaymentCardTextField becomeFirstResponder]
+-[STPPaymentCardTextField firstResponderField]
+-[STPPaymentCardTextField canResignFirstResponder]
+-[STPPaymentCardTextField resignFirstResponder]
+-[STPPaymentCardTextField selectNextField]
+-[STPPaymentCardTextField selectPreviousField]
+-[STPPaymentCardTextField nextField]
+-[STPPaymentCardTextField previousField]
+-[STPPaymentCardTextField clear]
+__32-[STPPaymentCardTextField clear]_block_invoke
+-[STPPaymentCardTextField isValid]
+-[STPPaymentCardTextField cardNumber]
+-[STPPaymentCardTextField expirationMonth]
+-[STPPaymentCardTextField expirationYear]
+-[STPPaymentCardTextField cvc]
+-[STPPaymentCardTextField cardParams]
+-[STPPaymentCardTextField setCardParams:]
+-[STPPaymentCardTextField card]
+-[STPPaymentCardTextField setCard:]
+-[STPPaymentCardTextField setText:inField:]
+-[STPPaymentCardTextField intrinsicContentSize]
+-[STPPaymentCardTextField brandImageRectForBounds:]
+-[STPPaymentCardTextField fieldsRectForBounds:]
+-[STPPaymentCardTextField numberFieldRectForBounds:]
+-[STPPaymentCardTextField cvcFieldRectForBounds:]
+-[STPPaymentCardTextField expirationFieldRectForBounds:]
+-[STPPaymentCardTextField layoutSubviews]
+-[STPPaymentCardTextField buildTextField]
+-[STPPaymentCardTextField allFields]
+-[STPPaymentCardTextField setNumberFieldShrunk:animated:completion:]
+__68-[STPPaymentCardTextField setNumberFieldShrunk:animated:completion:]_block_invoke
+__copy_helper_block_274
+__destroy_helper_block_275
+-[STPPaymentCardTextField shouldShrinkNumberField]
+-[STPPaymentCardTextField widthForText:]
+-[STPPaymentCardTextField widthForTextWithLength:]
+-[STPPaymentCardTextField widthForCardNumber:]
+-[STPPaymentCardTextField formTextFieldDidBackspaceOnEmpty:]
+-[STPPaymentCardTextField textFieldDidBeginEditing:]
+-[STPPaymentCardTextField textFieldDidEndEditing:]
+-[STPPaymentCardTextField textField:shouldChangeCharactersInRange:replacementString:]
+-[STPPaymentCardTextField brandImage]
++[STPPaymentCardTextField cvcImageForCardBrand:]
++[STPPaymentCardTextField brandImageForCardBrand:]
+-[STPPaymentCardTextField brandImageForFieldType:]
+-[STPPaymentCardTextField updateImageForFieldType:]
+-[STPPaymentCardTextField onChange]
+-[STPPaymentCardTextField delegate]
+-[STPPaymentCardTextField setDelegate:]
+-[STPPaymentCardTextField numberPlaceholder]
+-[STPPaymentCardTextField expirationPlaceholder]
+-[STPPaymentCardTextField cvcPlaceholder]
+-[STPPaymentCardTextField keyboardAppearance]
+-[STPPaymentCardTextField inputAccessoryView]
+-[STPPaymentCardTextField sizingField]
+-[STPPaymentCardTextField setSizingField:]
+-[STPPaymentCardTextField brandImageView]
+-[STPPaymentCardTextField setBrandImageView:]
+-[STPPaymentCardTextField fieldsView]
+-[STPPaymentCardTextField setFieldsView:]
+-[STPPaymentCardTextField numberField]
+-[STPPaymentCardTextField setNumberField:]
+-[STPPaymentCardTextField expirationField]
+-[STPPaymentCardTextField setExpirationField:]
+-[STPPaymentCardTextField cvcField]
+-[STPPaymentCardTextField setCvcField:]
+-[STPPaymentCardTextField setViewModel:]
+-[STPPaymentCardTextField selectedField]
+-[STPPaymentCardTextField setSelectedField:]
+-[STPPaymentCardTextField numberFieldShrunk]
+-[STPPaymentCardTextField setNumberFieldShrunk:]
+-[STPPaymentCardTextField .cxx_destruct]
+-[PTKView setDelegate:]
+-[PTKView delegate]
+-[PTKView onChange]
+-[PTKView card]
+-[PTKView internalDelegate]
+-[PTKView setInternalDelegate:]
+-[PTKView .cxx_destruct]
+OBJC_IVAR_$_STPPaymentCardTextField._viewModel
+OBJC_IVAR_$_STPPaymentCardTextField._sizingField
+OBJC_METH_VAR_NAME_24
+OBJC_SELECTOR_REFERENCES_25
+OBJC_METH_VAR_NAME_26
+OBJC_SELECTOR_REFERENCES_27
+OBJC_CLASSLIST_REFERENCES_$_30
+OBJC_IVAR_$_STPPaymentCardTextField._font
+OBJC_SELECTOR_REFERENCES_95
+OBJC_CLASSLIST_REFERENCES_$_98
+OBJC_IVAR_$_STPPaymentCardTextField._textColor
+OBJC_SELECTOR_REFERENCES_102
+OBJC_METH_VAR_NAME_105
+OBJC_SELECTOR_REFERENCES_106
+OBJC_IVAR_$_STPPaymentCardTextField._textErrorColor
+OBJC_IVAR_$_STPPaymentCardTextField._placeholderColor
+OBJC_IVAR_$_STPPaymentCardTextField._numberPlaceholder
+OBJC_IVAR_$_STPPaymentCardTextField._expirationPlaceholder
+OBJC_IVAR_$_STPPaymentCardTextField._cvcPlaceholder
+OBJC_SELECTOR_REFERENCES_120
+OBJC_IVAR_$_STPPaymentCardTextField._keyboardAppearance
+OBJC_IVAR_$_STPPaymentCardTextField._inputAccessoryView
+OBJC_SELECTOR_REFERENCES_146
+OBJC_SELECTOR_REFERENCES_148
+OBJC_SELECTOR_REFERENCES_150
+OBJC_SELECTOR_REFERENCES_162
+OBJC_METH_VAR_NAME_163
+OBJC_SELECTOR_REFERENCES_164
+OBJC_METH_VAR_NAME_165
+OBJC_SELECTOR_REFERENCES_166
+.str167
+_unnamed_cfstring_168
+.str177
+OBJC_SELECTOR_REFERENCES_179
+OBJC_SELECTOR_REFERENCES_181
+OBJC_SELECTOR_REFERENCES_183
+OBJC_SELECTOR_REFERENCES_185
+OBJC_METH_VAR_NAME_186
+OBJC_SELECTOR_REFERENCES_187
+OBJC_SELECTOR_REFERENCES_189
+OBJC_CLASSLIST_REFERENCES_$_190
+OBJC_SELECTOR_REFERENCES_200
+.str208
+_unnamed_cfstring_209
+OBJC_METH_VAR_NAME_210
+OBJC_SELECTOR_REFERENCES_211
+OBJC_SELECTOR_REFERENCES_213
+OBJC_SELECTOR_REFERENCES_215
+OBJC_SELECTOR_REFERENCES_217
+OBJC_SELECTOR_REFERENCES_219
+OBJC_SELECTOR_REFERENCES_221
+OBJC_METH_VAR_NAME_222
+OBJC_SELECTOR_REFERENCES_223
+OBJC_METH_VAR_NAME_224
+OBJC_SELECTOR_REFERENCES_225
+OBJC_METH_VAR_NAME_226
+OBJC_SELECTOR_REFERENCES_227
+OBJC_METH_VAR_NAME_228
+OBJC_SELECTOR_REFERENCES_229
+OBJC_METH_VAR_NAME_230
+OBJC_SELECTOR_REFERENCES_231
+OBJC_METH_VAR_NAME_232
+OBJC_SELECTOR_REFERENCES_233
+OBJC_METH_VAR_NAME_234
+OBJC_SELECTOR_REFERENCES_235
+OBJC_METH_VAR_NAME_236
+OBJC_SELECTOR_REFERENCES_237
+.str244
+_unnamed_cfstring_245
+OBJC_METH_VAR_NAME_246
+OBJC_SELECTOR_REFERENCES_247
+OBJC_METH_VAR_NAME_248
+.str250
+_unnamed_cfstring_251
+OBJC_METH_VAR_NAME_252
+OBJC_SELECTOR_REFERENCES_253
+OBJC_METH_VAR_NAME_254
+OBJC_CLASSLIST_REFERENCES_$_260
+OBJC_METH_VAR_NAME_261
+OBJC_SELECTOR_REFERENCES_262
+OBJC_METH_VAR_NAME_263
+OBJC_SELECTOR_REFERENCES_264
+OBJC_METH_VAR_NAME_265
+OBJC_SELECTOR_REFERENCES_266
+OBJC_SELECTOR_REFERENCES_268
+OBJC_METH_VAR_NAME_269
+OBJC_SELECTOR_REFERENCES_270
+OBJC_CLASSLIST_REFERENCES_$_271
+OBJC_METH_VAR_NAME_272
+OBJC_SELECTOR_REFERENCES_273
+OBJC_IVAR_$_STPPaymentCardTextField._numberFieldShrunk
+.str276
+__block_descriptor_tmp277
+OBJC_SELECTOR_REFERENCES_279
+OBJC_SELECTOR_REFERENCES_281
+.str282
+_unnamed_cfstring_283
+OBJC_SELECTOR_REFERENCES_285
+OBJC_SELECTOR_REFERENCES_287
+OBJC_SELECTOR_REFERENCES_289
+OBJC_SELECTOR_REFERENCES_291
+OBJC_METH_VAR_NAME_292
+OBJC_SELECTOR_REFERENCES_293
+OBJC_SELECTOR_REFERENCES_295
+OBJC_METH_VAR_NAME_296
+OBJC_SELECTOR_REFERENCES_297
+.str298
+_unnamed_cfstring_299
+OBJC_SELECTOR_REFERENCES_301
+OBJC_SELECTOR_REFERENCES_303
+OBJC_SELECTOR_REFERENCES_305
+OBJC_SELECTOR_REFERENCES_307
+OBJC_METH_VAR_NAME_308
+OBJC_SELECTOR_REFERENCES_309
+OBJC_METH_VAR_NAME_310
+OBJC_SELECTOR_REFERENCES_311
+OBJC_METH_VAR_NAME_312
+OBJC_SELECTOR_REFERENCES_313
+OBJC_SELECTOR_REFERENCES_315
+OBJC_CLASSLIST_REFERENCES_$_316
+OBJC_SELECTOR_REFERENCES_318
+OBJC_METH_VAR_NAME_319
+OBJC_SELECTOR_REFERENCES_320
+OBJC_SELECTOR_REFERENCES_322
+OBJC_METH_VAR_NAME_323
+OBJC_SELECTOR_REFERENCES_324
+OBJC_SELECTOR_REFERENCES_326
+OBJC_SELECTOR_REFERENCES_328
+OBJC_CLASSLIST_REFERENCES_$_329
+OBJC_SELECTOR_REFERENCES_331
+OBJC_SELECTOR_REFERENCES_333
+OBJC_CLASSLIST_REFERENCES_$_334
+OBJC_SELECTOR_REFERENCES_336
+OBJC_SELECTOR_REFERENCES_338
+OBJC_METH_VAR_NAME_339
+OBJC_SELECTOR_REFERENCES_340
+OBJC_METH_VAR_NAME_341
+OBJC_SELECTOR_REFERENCES_342
+OBJC_METH_VAR_NAME_343
+OBJC_SELECTOR_REFERENCES_344
+OBJC_SELECTOR_REFERENCES_346
+OBJC_IVAR_$_STPPaymentCardTextField._delegate
+OBJC_IVAR_$_STPPaymentCardTextField._brandImageView
+OBJC_IVAR_$_STPPaymentCardTextField._fieldsView
+OBJC_IVAR_$_STPPaymentCardTextField._numberField
+OBJC_IVAR_$_STPPaymentCardTextField._expirationField
+OBJC_IVAR_$_STPPaymentCardTextField._cvcField
+OBJC_IVAR_$_STPPaymentCardTextField._selectedField
+OBJC_METH_VAR_TYPE_347
+l_OBJC_$_CLASS_METHODS_STPPaymentCardTextField
+OBJC_METH_VAR_TYPE_350
+OBJC_CLASS_NAME_351
+OBJC_METH_VAR_NAME_352
+OBJC_METH_VAR_TYPE_353
+OBJC_METH_VAR_NAME_358
+OBJC_METH_VAR_TYPE_359
+OBJC_METH_VAR_NAME_362
+OBJC_CLASS_NAME_363
+OBJC_METH_VAR_NAME_364
+OBJC_METH_VAR_TYPE_365
+OBJC_METH_VAR_NAME_366
+OBJC_METH_VAR_NAME_367
+OBJC_METH_VAR_TYPE_368
+OBJC_METH_VAR_NAME_369
+OBJC_METH_VAR_TYPE_370
+OBJC_METH_VAR_NAME_371
+OBJC_METH_VAR_TYPE_372
+OBJC_METH_VAR_NAME_373
+OBJC_METH_VAR_TYPE_374
+OBJC_METH_VAR_NAME_375
+OBJC_METH_VAR_TYPE_376
+OBJC_METH_VAR_NAME_377
+OBJC_METH_VAR_NAME_378
+OBJC_METH_VAR_TYPE_379
+OBJC_METH_VAR_TYPE_380
+OBJC_METH_VAR_NAME_381
+OBJC_METH_VAR_NAME_382
+OBJC_METH_VAR_TYPE_383
+OBJC_METH_VAR_NAME_384
+OBJC_METH_VAR_NAME_385
+OBJC_METH_VAR_TYPE_386
+OBJC_METH_VAR_NAME_387
+OBJC_METH_VAR_TYPE_388
+OBJC_METH_VAR_NAME_389
+OBJC_METH_VAR_NAME_390
+OBJC_METH_VAR_NAME_391
+OBJC_METH_VAR_TYPE_392
+OBJC_METH_VAR_NAME_393
+OBJC_CLASS_NAME_394
+OBJC_PROP_NAME_ATTR_395
+OBJC_PROP_NAME_ATTR_396
+OBJC_PROP_NAME_ATTR_397
+OBJC_PROP_NAME_ATTR_398
+OBJC_PROP_NAME_ATTR_399
+OBJC_PROP_NAME_ATTR_400
+l_OBJC_$_PROTOCOL_REFS_UITextFieldDelegate
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_UITextFieldDelegate
+l_OBJC_$_PROTOCOL_METHOD_TYPES_UITextFieldDelegate
+l_OBJC_PROTOCOL_$_UITextFieldDelegate
+l_OBJC_LABEL_PROTOCOL_$_UITextFieldDelegate
+l_OBJC_$_PROTOCOL_REFS_STPFormTextFieldDelegate
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_STPFormTextFieldDelegate
+l_OBJC_$_PROTOCOL_METHOD_TYPES_STPFormTextFieldDelegate
+l_OBJC_PROTOCOL_$_STPFormTextFieldDelegate
+l_OBJC_LABEL_PROTOCOL_$_STPFormTextFieldDelegate
+l_OBJC_CLASS_PROTOCOLS_$_STPPaymentCardTextField
+l_OBJC_METACLASS_RO_$_STPPaymentCardTextField
+OBJC_CLASS_NAME_401
+OBJC_METH_VAR_TYPE_402
+OBJC_METH_VAR_TYPE_403
+OBJC_METH_VAR_TYPE_404
+OBJC_METH_VAR_NAME_405
+OBJC_METH_VAR_TYPE_406
+OBJC_METH_VAR_NAME_407
+OBJC_METH_VAR_NAME_408
+OBJC_METH_VAR_NAME_409
+OBJC_METH_VAR_TYPE_410
+OBJC_METH_VAR_TYPE_411
+OBJC_METH_VAR_TYPE_412
+OBJC_METH_VAR_NAME_413
+OBJC_METH_VAR_NAME_414
+OBJC_METH_VAR_NAME_415
+OBJC_METH_VAR_NAME_416
+OBJC_METH_VAR_TYPE_417
+OBJC_METH_VAR_NAME_418
+OBJC_METH_VAR_TYPE_419
+OBJC_METH_VAR_TYPE_420
+OBJC_METH_VAR_TYPE_421
+OBJC_METH_VAR_TYPE_422
+OBJC_METH_VAR_NAME_423
+OBJC_METH_VAR_TYPE_424
+OBJC_METH_VAR_NAME_425
+OBJC_METH_VAR_NAME_426
+OBJC_METH_VAR_NAME_427
+OBJC_METH_VAR_NAME_428
+OBJC_METH_VAR_NAME_429
+OBJC_METH_VAR_NAME_430
+OBJC_METH_VAR_TYPE_431
+OBJC_METH_VAR_NAME_432
+OBJC_METH_VAR_NAME_433
+OBJC_METH_VAR_NAME_434
+l_OBJC_$_INSTANCE_METHODS_STPPaymentCardTextField
+OBJC_METH_VAR_NAME_435
+OBJC_METH_VAR_TYPE_436
+OBJC_METH_VAR_NAME_437
+OBJC_METH_VAR_TYPE_438
+OBJC_METH_VAR_NAME_439
+OBJC_METH_VAR_TYPE_440
+OBJC_METH_VAR_NAME_441
+OBJC_METH_VAR_NAME_442
+OBJC_METH_VAR_NAME_443
+OBJC_METH_VAR_TYPE_444
+OBJC_METH_VAR_NAME_445
+OBJC_METH_VAR_TYPE_446
+OBJC_METH_VAR_NAME_447
+OBJC_METH_VAR_NAME_448
+OBJC_METH_VAR_NAME_449
+OBJC_METH_VAR_TYPE_450
+OBJC_METH_VAR_NAME_451
+OBJC_METH_VAR_TYPE_452
+OBJC_METH_VAR_NAME_453
+OBJC_METH_VAR_TYPE_454
+OBJC_METH_VAR_NAME_455
+OBJC_METH_VAR_TYPE_456
+OBJC_METH_VAR_NAME_457
+OBJC_METH_VAR_NAME_458
+OBJC_METH_VAR_NAME_459
+OBJC_METH_VAR_NAME_460
+OBJC_METH_VAR_NAME_461
+OBJC_METH_VAR_TYPE_462
+OBJC_METH_VAR_NAME_463
+OBJC_METH_VAR_TYPE_464
+l_OBJC_$_INSTANCE_VARIABLES_STPPaymentCardTextField
+OBJC_CLASS_NAME_465
+OBJC_PROP_NAME_ATTR_466
+OBJC_PROP_NAME_ATTR_467
+OBJC_PROP_NAME_ATTR_468
+OBJC_PROP_NAME_ATTR_469
+OBJC_PROP_NAME_ATTR_470
+OBJC_PROP_NAME_ATTR_471
+OBJC_PROP_NAME_ATTR_472
+OBJC_PROP_NAME_ATTR_473
+OBJC_PROP_NAME_ATTR_474
+OBJC_PROP_NAME_ATTR_475
+OBJC_PROP_NAME_ATTR_476
+OBJC_PROP_NAME_ATTR_477
+OBJC_PROP_NAME_ATTR_478
+OBJC_PROP_NAME_ATTR_479
+OBJC_PROP_NAME_ATTR_480
+OBJC_PROP_NAME_ATTR_481
+OBJC_PROP_NAME_ATTR_482
+OBJC_PROP_NAME_ATTR_483
+OBJC_PROP_NAME_ATTR_484
+OBJC_PROP_NAME_ATTR_485
+OBJC_PROP_NAME_ATTR_486
+OBJC_PROP_NAME_ATTR_487
+OBJC_PROP_NAME_ATTR_488
+OBJC_PROP_NAME_ATTR_489
+OBJC_PROP_NAME_ATTR_490
+OBJC_PROP_NAME_ATTR_491
+OBJC_PROP_NAME_ATTR_492
+OBJC_PROP_NAME_ATTR_493
+OBJC_PROP_NAME_ATTR_494
+OBJC_PROP_NAME_ATTR_495
+OBJC_PROP_NAME_ATTR_496
+OBJC_PROP_NAME_ATTR_497
+OBJC_PROP_NAME_ATTR_498
+OBJC_PROP_NAME_ATTR_499
+OBJC_PROP_NAME_ATTR_500
+OBJC_PROP_NAME_ATTR_501
+OBJC_PROP_NAME_ATTR_502
+OBJC_PROP_NAME_ATTR_503
+OBJC_PROP_NAME_ATTR_504
+OBJC_PROP_NAME_ATTR_505
+OBJC_PROP_NAME_ATTR_506
+OBJC_PROP_NAME_ATTR_507
+OBJC_PROP_NAME_ATTR_508
+OBJC_PROP_NAME_ATTR_509
+OBJC_PROP_NAME_ATTR_510
+OBJC_PROP_NAME_ATTR_511
+OBJC_PROP_NAME_ATTR_512
+OBJC_PROP_NAME_ATTR_513
+OBJC_PROP_NAME_ATTR_514
+OBJC_PROP_NAME_ATTR_515
+OBJC_PROP_NAME_ATTR_516
+OBJC_PROP_NAME_ATTR_517
+OBJC_PROP_NAME_ATTR_518
+OBJC_PROP_NAME_ATTR_519
+OBJC_PROP_NAME_ATTR_520
+OBJC_PROP_NAME_ATTR_521
+OBJC_PROP_NAME_ATTR_522
+OBJC_PROP_NAME_ATTR_523
+OBJC_PROP_NAME_ATTR_524
+l_OBJC_$_PROP_LIST_STPPaymentCardTextField
+l_OBJC_CLASS_RO_$_STPPaymentCardTextField
+OBJC_CLASS_NAME_525
+l_OBJC_METACLASS_RO_$_PTKCard
+l_OBJC_CLASS_RO_$_PTKCard
+OBJC_METH_VAR_NAME_526
+OBJC_SELECTOR_REFERENCES_527
+OBJC_METH_VAR_NAME_528
+OBJC_SELECTOR_REFERENCES_529
+OBJC_CLASSLIST_SUP_REFS_$_530
+OBJC_SELECTOR_REFERENCES_531
+OBJC_METH_VAR_NAME_532
+OBJC_SELECTOR_REFERENCES_533
+OBJC_CLASSLIST_REFERENCES_$_534
+OBJC_IVAR_$_PTKView._internalDelegate
+OBJC_CLASS_NAME_535
+l_OBJC_METACLASS_RO_$_PTKView
+l_OBJC_$_INSTANCE_METHODS_PTKView
+OBJC_METH_VAR_NAME_536
+OBJC_METH_VAR_TYPE_537
+l_OBJC_$_INSTANCE_VARIABLES_PTKView
+OBJC_CLASS_NAME_538
+OBJC_PROP_NAME_ATTR_539
+OBJC_PROP_NAME_ATTR_540
+OBJC_PROP_NAME_ATTR_541
+OBJC_PROP_NAME_ATTR_542
+l_OBJC_$_PROP_LIST_PTKView
+l_OBJC_CLASS_RO_$_PTKView
+/Users/mirco/Library/Developer/Xcode/DerivedData/ModuleCache/T78I7L3N6UU6/QuartzCore-3I7S0M4UEAD0U.pcm
+QuartzCore
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/QuartzCore.framework
+CGRectMake
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h
+CGSizeMake
+-[PTKView .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/UI/STPPaymentCardTextField.m
+-[PTKView setInternalDelegate:]
+-[PTKView internalDelegate]
+-[PTKView card]
+-[PTKView onChange]
+-[PTKView delegate]
+-[PTKView setDelegate:]
+-[STPPaymentCardTextField .cxx_destruct]
+-[STPPaymentCardTextField setNumberFieldShrunk:]
+-[STPPaymentCardTextField numberFieldShrunk]
+-[STPPaymentCardTextField setSelectedField:]
+-[STPPaymentCardTextField selectedField]
+-[STPPaymentCardTextField setViewModel:]
+-[STPPaymentCardTextField setCvcField:]
+-[STPPaymentCardTextField cvcField]
+-[STPPaymentCardTextField setExpirationField:]
+-[STPPaymentCardTextField expirationField]
+-[STPPaymentCardTextField setNumberField:]
+-[STPPaymentCardTextField numberField]
+-[STPPaymentCardTextField setFieldsView:]
+-[STPPaymentCardTextField fieldsView]
+-[STPPaymentCardTextField setBrandImageView:]
+-[STPPaymentCardTextField brandImageView]
+-[STPPaymentCardTextField setSizingField:]
+-[STPPaymentCardTextField sizingField]
+-[STPPaymentCardTextField inputAccessoryView]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/PublicHeaders/UI/STPPaymentCardTextField.h
+-[STPPaymentCardTextField keyboardAppearance]
+-[STPPaymentCardTextField cvcPlaceholder]
+-[STPPaymentCardTextField expirationPlaceholder]
+-[STPPaymentCardTextField numberPlaceholder]
+-[STPPaymentCardTextField setDelegate:]
+-[STPPaymentCardTextField delegate]
+-[STPPaymentCardTextField onChange]
+-[STPPaymentCardTextField updateImageForFieldType:]
+-[STPPaymentCardTextField brandImageForFieldType:]
++[STPPaymentCardTextField brandImageForCardBrand:]
++[STPPaymentCardTextField cvcImageForCardBrand:]
+-[STPPaymentCardTextField brandImage]
+-[STPPaymentCardTextField textField:shouldChangeCharactersInRange:replacementString:]
+-[STPPaymentCardTextField textFieldDidEndEditing:]
+-[STPPaymentCardTextField textFieldDidBeginEditing:]
+-[STPPaymentCardTextField formTextFieldDidBackspaceOnEmpty:]
+-[STPPaymentCardTextField widthForCardNumber:]
+-[STPPaymentCardTextField widthForTextWithLength:]
+-[STPPaymentCardTextField widthForText:]
+-[STPPaymentCardTextField shouldShrinkNumberField]
+-[STPPaymentCardTextField setNumberFieldShrunk:animated:completion:]
+-[STPPaymentCardTextField allFields]
+-[STPPaymentCardTextField buildTextField]
+-[STPPaymentCardTextField layoutSubviews]
+-[STPPaymentCardTextField expirationFieldRectForBounds:]
+-[STPPaymentCardTextField cvcFieldRectForBounds:]
+-[STPPaymentCardTextField numberFieldRectForBounds:]
+-[STPPaymentCardTextField fieldsRectForBounds:]
+-[STPPaymentCardTextField brandImageRectForBounds:]
+-[STPPaymentCardTextField intrinsicContentSize]
+-[STPPaymentCardTextField setText:inField:]
+-[STPPaymentCardTextField setCard:]
+-[STPPaymentCardTextField card]
+-[STPPaymentCardTextField setCardParams:]
+-[STPPaymentCardTextField cardParams]
+-[STPPaymentCardTextField cvc]
+-[STPPaymentCardTextField expirationYear]
+-[STPPaymentCardTextField expirationMonth]
+-[STPPaymentCardTextField cardNumber]
+-[STPPaymentCardTextField isValid]
+-[STPPaymentCardTextField clear]
+-[STPPaymentCardTextField previousField]
+-[STPPaymentCardTextField nextField]
+-[STPPaymentCardTextField selectPreviousField]
+-[STPPaymentCardTextField selectNextField]
+-[STPPaymentCardTextField resignFirstResponder]
+-[STPPaymentCardTextField canResignFirstResponder]
+-[STPPaymentCardTextField firstResponderField]
+-[STPPaymentCardTextField becomeFirstResponder]
+-[STPPaymentCardTextField canBecomeFirstResponder]
+-[STPPaymentCardTextField isFirstResponder]
+-[STPPaymentCardTextField setEnabled:]
+-[STPPaymentCardTextField setInputAccessoryView:]
+-[STPPaymentCardTextField setKeyboardAppearance:]
+-[STPPaymentCardTextField borderWidth]
+-[STPPaymentCardTextField setBorderWidth:]
+-[STPPaymentCardTextField cornerRadius]
+-[STPPaymentCardTextField setCornerRadius:]
+-[STPPaymentCardTextField borderColor]
+-[STPPaymentCardTextField setBorderColor:]
+-[STPPaymentCardTextField cursorColor]
+-[STPPaymentCardTextField setCursorColor:]
+-[STPPaymentCardTextField setCvcPlaceholder:]
+-[STPPaymentCardTextField setExpirationPlaceholder:]
+-[STPPaymentCardTextField setNumberPlaceholder:]
+-[STPPaymentCardTextField placeholderColor]
+-[STPPaymentCardTextField setPlaceholderColor:]
+-[STPPaymentCardTextField textErrorColor]
+-[STPPaymentCardTextField setTextErrorColor:]
+-[STPPaymentCardTextField textColor]
+-[STPPaymentCardTextField setContentVerticalAlignment:]
+-[STPPaymentCardTextField setTextColor:]
+-[STPPaymentCardTextField font]
+-[STPPaymentCardTextField setFont:]
+-[STPPaymentCardTextField backgroundColor]
+-[STPPaymentCardTextField setBackgroundColor:]
++[STPPaymentCardTextField placeholderGrayColor]
+-[STPPaymentCardTextField viewModel]
+-[STPPaymentCardTextField commonInit]
+-[STPPaymentCardTextField initWithFrame:]
+-[STPPaymentCardTextField initWithCoder:]
++[STPFormEncoder stringByReplacingSnakeCaseWithCamelCase:]
+__58+[STPFormEncoder stringByReplacingSnakeCaseWithCamelCase:]_block_invoke
++[STPFormEncoder formEncodedDataForObject:]
++[STPFormEncoder keyPairDictionaryForObject:]
+__45+[STPFormEncoder keyPairDictionaryForObject:]_block_invoke
+__copy_helper_block_34
+__destroy_helper_block_35
+__45+[STPFormEncoder keyPairDictionaryForObject:]_block_invoke42
+__copy_helper_block_43
+__destroy_helper_block_44
++[STPFormEncoder formEncodableValueForObject:]
++[STPFormEncoder stringByURLEncoding:]
+-[STPQueryStringPair initWithField:value:]
+-[STPQueryStringPair URLEncodedStringValue]
+-[STPQueryStringPair field]
+-[STPQueryStringPair setField:]
+-[STPQueryStringPair value]
+-[STPQueryStringPair setValue:]
+-[STPQueryStringPair .cxx_destruct]
+OBJC_METH_VAR_NAME_8
+OBJC_SELECTOR_REFERENCES_9
+OBJC_METH_VAR_NAME_16
+OBJC_SELECTOR_REFERENCES_17
+OBJC_CLASSLIST_REFERENCES_$_18
+OBJC_CLASSLIST_REFERENCES_$_23
+OBJC_METH_VAR_NAME_30
+OBJC_SELECTOR_REFERENCES_31
+__block_descriptor_tmp37
+OBJC_CLASS_NAME_46
+__block_descriptor_tmp47
+OBJC_METH_VAR_TYPE_48
+OBJC_METH_VAR_TYPE_50
+OBJC_METH_VAR_TYPE_51
+OBJC_METH_VAR_TYPE_52
+OBJC_CLASS_NAME_53
+OBJC_METH_VAR_TYPE_56
+OBJC_METH_VAR_TYPE_59
+OBJC_METH_VAR_NAME_66
+OBJC_METH_VAR_TYPE_67
+OBJC_METH_VAR_NAME_68
+OBJC_METH_VAR_TYPE_75
+OBJC_CLASS_NAME_85
+OBJC_PROP_NAME_ATTR_86
+OBJC_PROP_NAME_ATTR_87
+OBJC_PROP_NAME_ATTR_88
+OBJC_PROP_NAME_ATTR_89
+OBJC_PROP_NAME_ATTR_90
+OBJC_PROP_NAME_ATTR_91
+l_OBJC_$_PROTOCOL_REFS_STPFormEncodable
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_STPFormEncodable
+l_OBJC_$_PROTOCOL_CLASS_METHODS_STPFormEncodable
+OBJC_PROP_NAME_ATTR_92
+OBJC_PROP_NAME_ATTR_93
+l_OBJC_$_PROP_LIST_STPFormEncodable
+l_OBJC_$_PROTOCOL_METHOD_TYPES_STPFormEncodable
+l_OBJC_PROTOCOL_$_STPFormEncodable
+l_OBJC_LABEL_PROTOCOL_$_STPFormEncodable
+l_OBJC_PROTOCOL_REFERENCE_$_STPFormEncodable
+OBJC_CLASS_NAME_95
+l_OBJC_$_CLASS_METHODS_STPFormEncoder
+l_OBJC_METACLASS_RO_$_STPFormEncoder
+l_OBJC_CLASS_RO_$_STPFormEncoder
+OBJC_CLASSLIST_REFERENCES_$_104
+OBJC_IVAR_$_STPQueryStringPair._field
+OBJC_IVAR_$_STPQueryStringPair._value
+OBJC_CLASSLIST_REFERENCES_$_127
+OBJC_SELECTOR_REFERENCES_133
+.str135
+_unnamed_cfstring_136
+OBJC_CLASS_NAME_139
+l_OBJC_METACLASS_RO_$_STPQueryStringPair
+OBJC_CLASS_NAME_140
+OBJC_METH_VAR_TYPE_145
+l_OBJC_$_INSTANCE_METHODS_STPQueryStringPair
+l_OBJC_$_INSTANCE_VARIABLES_STPQueryStringPair
+OBJC_PROP_NAME_ATTR_153
+OBJC_PROP_NAME_ATTR_154
+l_OBJC_$_PROP_LIST_STPQueryStringPair
+l_OBJC_CLASS_RO_$_STPQueryStringPair
+OBJC_CLASSLIST_REFERENCES_$_155
+.str163
+_unnamed_cfstring_164
+OBJC_CLASSLIST_REFERENCES_$_167
+OBJC_SELECTOR_REFERENCES_171
+OBJC_CLASSLIST_REFERENCES_$_175
+OBJC_SELECTOR_REFERENCES_177
+.str182
+_unnamed_cfstring_183
+.str186
+_unnamed_cfstring_187
+OBJC_CLASSLIST_REFERENCES_$_189
+OBJC_SELECTOR_REFERENCES_191
+STPQueryStringPairsFromKeyAndValue
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/STPFormEncoder.m
+STPQueryStringPairsFromDictionary
+STPQueryStringFromParameters
+-[STPQueryStringPair .cxx_destruct]
+-[STPQueryStringPair setValue:]
+-[STPQueryStringPair value]
+-[STPQueryStringPair setField:]
+-[STPQueryStringPair field]
+-[STPQueryStringPair URLEncodedStringValue]
+-[STPQueryStringPair initWithField:value:]
+STPPercentEscapedStringFromString
++[STPFormEncoder stringByURLEncoding:]
++[STPFormEncoder formEncodableValueForObject:]
++[STPFormEncoder keyPairDictionaryForObject:]
++[STPFormEncoder formEncodedDataForObject:]
++[STPFormEncoder stringByReplacingSnakeCaseWithCamelCase:]
+-[STPIOSCheckoutWebViewAdapter init]
+__36-[STPIOSCheckoutWebViewAdapter init]_block_invoke
+-[STPIOSCheckoutWebViewAdapter dealloc]
+-[STPIOSCheckoutWebViewAdapter loadRequest:]
+-[STPIOSCheckoutWebViewAdapter evaluateJavaScript:]
+-[STPIOSCheckoutWebViewAdapter cleanup]
+-[STPIOSCheckoutWebViewAdapter webViewDidStartLoad:]
+__52-[STPIOSCheckoutWebViewAdapter webViewDidStartLoad:]_block_invoke
+-[STPIOSCheckoutWebViewAdapter webView:shouldStartLoadWithRequest:navigationType:]
+__82-[STPIOSCheckoutWebViewAdapter webView:shouldStartLoadWithRequest:navigationType:]_block_invoke
+__copy_helper_block_88
+__destroy_helper_block_89
+-[STPIOSCheckoutWebViewAdapter webViewDidFinishLoad:]
+__53-[STPIOSCheckoutWebViewAdapter webViewDidFinishLoad:]_block_invoke
+__copy_helper_block_93
+__destroy_helper_block_94
+-[STPIOSCheckoutWebViewAdapter webView:didFailLoadWithError:]
+__61-[STPIOSCheckoutWebViewAdapter webView:didFailLoadWithError:]_block_invoke
+__copy_helper_block_100
+__destroy_helper_block_101
+-[STPIOSCheckoutWebViewAdapter delegate]
+-[STPIOSCheckoutWebViewAdapter setDelegate:]
+-[STPIOSCheckoutWebViewAdapter webView]
+-[STPIOSCheckoutWebViewAdapter setWebView:]
+-[STPIOSCheckoutWebViewAdapter .cxx_destruct]
+OBJC_IVAR_$_STPIOSCheckoutWebViewAdapter._webView
+init.onceToken
+OBJC_METH_VAR_NAME_50
+OBJC_SELECTOR_REFERENCES_51
+__block_descriptor_tmp54
+OBJC_CLASSLIST_REFERENCES_$_65
+OBJC_SELECTOR_REFERENCES_67
+OBJC_SELECTOR_REFERENCES_69
+.str72
+_unnamed_cfstring_73
+OBJC_CLASSLIST_REFERENCES_$_81
+__block_descriptor_tmp90
+__block_descriptor_tmp95
+__block_descriptor_tmp102
+OBJC_IVAR_$_STPIOSCheckoutWebViewAdapter.delegate
+OBJC_METH_VAR_TYPE_106
+OBJC_METH_VAR_TYPE_110
+OBJC_CLASS_NAME_113
+OBJC_METH_VAR_TYPE_116
+OBJC_METH_VAR_TYPE_119
+OBJC_METH_VAR_TYPE_121
+OBJC_METH_VAR_TYPE_125
+OBJC_CLASS_NAME_146
+l_OBJC_$_PROTOCOL_REFS_STPCheckoutWebViewAdapter
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_STPCheckoutWebViewAdapter
+OBJC_PROP_NAME_ATTR_155
+OBJC_PROP_NAME_ATTR_156
+l_OBJC_$_PROP_LIST_STPCheckoutWebViewAdapter
+l_OBJC_$_PROTOCOL_METHOD_TYPES_STPCheckoutWebViewAdapter
+l_OBJC_PROTOCOL_$_STPCheckoutWebViewAdapter
+l_OBJC_LABEL_PROTOCOL_$_STPCheckoutWebViewAdapter
+OBJC_METH_VAR_TYPE_158
+OBJC_METH_VAR_TYPE_159
+OBJC_METH_VAR_TYPE_161
+OBJC_METH_VAR_TYPE_164
+OBJC_CLASS_NAME_166
+l_OBJC_$_PROTOCOL_REFS_UIWebViewDelegate
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_UIWebViewDelegate
+l_OBJC_$_PROTOCOL_METHOD_TYPES_UIWebViewDelegate
+l_OBJC_PROTOCOL_$_UIWebViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIWebViewDelegate
+l_OBJC_CLASS_PROTOCOLS_$_STPIOSCheckoutWebViewAdapter
+l_OBJC_METACLASS_RO_$_STPIOSCheckoutWebViewAdapter
+OBJC_CLASS_NAME_167
+l_OBJC_$_INSTANCE_METHODS_STPIOSCheckoutWebViewAdapter
+OBJC_METH_VAR_TYPE_170
+l_OBJC_$_INSTANCE_VARIABLES_STPIOSCheckoutWebViewAdapter
+OBJC_CLASS_NAME_173
+l_OBJC_$_PROP_LIST_STPIOSCheckoutWebViewAdapter
+l_OBJC_CLASS_RO_$_STPIOSCheckoutWebViewAdapter
+dispatch_get_main_queue
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/usr/include/dispatch/queue.h
+-[STPIOSCheckoutWebViewAdapter .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/Checkout/STPIOSCheckoutWebViewAdapter.m
+-[STPIOSCheckoutWebViewAdapter setWebView:]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/Checkout/STPIOSCheckoutWebViewAdapter.h
+-[STPIOSCheckoutWebViewAdapter webView]
+-[STPIOSCheckoutWebViewAdapter setDelegate:]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/Checkout/STPCheckoutWebViewAdapter.h
+-[STPIOSCheckoutWebViewAdapter delegate]
+-[STPIOSCheckoutWebViewAdapter webView:didFailLoadWithError:]
+-[STPIOSCheckoutWebViewAdapter webViewDidFinishLoad:]
+-[STPIOSCheckoutWebViewAdapter webView:shouldStartLoadWithRequest:navigationType:]
+-[STPIOSCheckoutWebViewAdapter webViewDidStartLoad:]
+-[STPIOSCheckoutWebViewAdapter cleanup]
+-[STPIOSCheckoutWebViewAdapter evaluateJavaScript:]
+-[STPIOSCheckoutWebViewAdapter loadRequest:]
+-[STPIOSCheckoutWebViewAdapter dealloc]
+-[STPIOSCheckoutWebViewAdapter init]
++[Stripe(ApplePay) canSubmitPaymentRequest:]
++[Stripe(ApplePay) paymentRequestWithMerchantIdentifier:]
++[Stripe(ApplePay) createTokenWithPayment:completion:]
++[Stripe(ApplePay) createTokenWithPayment:operationQueue:completion:]
+OBJC_CLASSLIST_REFERENCES_$_3
+OBJC_METH_VAR_NAME_4
+OBJC_SELECTOR_REFERENCES_5
+OBJC_METH_VAR_NAME_6
+OBJC_SELECTOR_REFERENCES_7
+OBJC_CLASSLIST_REFERENCES_$_10
+OBJC_CLASSLIST_REFERENCES_$_25
+OBJC_METH_VAR_TYPE_41
+OBJC_METH_VAR_TYPE_42
+OBJC_METH_VAR_TYPE_43
+l_OBJC_$_CATEGORY_CLASS_METHODS_Stripe_$_ApplePay
+l_OBJC_$_CATEGORY_Stripe_$_ApplePay
+linkStripeApplePayCategory
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/ApplePay/Stripe+ApplePay.m
++[Stripe(ApplePay) createTokenWithPayment:operationQueue:completion:]
++[Stripe(ApplePay) createTokenWithPayment:completion:]
++[Stripe(ApplePay) paymentRequestWithMerchantIdentifier:]
++[Stripe(ApplePay) canSubmitPaymentRequest:]
++[STPColorUtils colorIsLight:]
++[STPColorUtils colorForHexCode:]
++[STPColorUtils hexCodeForColor:]
+OBJC_CLASSLIST_REFERENCES_$_9
+OBJC_METH_VAR_TYPE_23
+l_OBJC_$_CLASS_METHODS_STPColorUtils
+l_OBJC_METACLASS_RO_$_STPColorUtils
+l_OBJC_CLASS_RO_$_STPColorUtils
++[STPColorUtils hexCodeForColor:]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/Checkout/STPColorUtils.m
++[STPColorUtils colorForHexCode:]
++[STPColorUtils colorIsLight:]
+-[STPToken description]
+-[STPToken debugDescription]
+-[STPToken isEqual:]
+-[STPToken hash]
+-[STPToken isEqualToToken:]
++[STPToken requiredFields]
++[STPToken decodedObjectFromAPIResponse:]
+-[STPToken tokenId]
+-[STPToken setTokenId:]
+-[STPToken livemode]
+-[STPToken setLivemode:]
+-[STPToken card]
+-[STPToken setCard:]
+-[STPToken bankAccount]
+-[STPToken setBankAccount:]
+-[STPToken created]
+-[STPToken setCreated:]
+-[STPToken allResponseFields]
+-[STPToken setAllResponseFields:]
+-[STPToken .cxx_destruct]
+OBJC_CLASSLIST_REFERENCES_$_37
+OBJC_CLASSLIST_REFERENCES_$_54
+OBJC_CLASSLIST_REFERENCES_$_63
+.str68
+_unnamed_cfstring_69
+OBJC_CLASSLIST_REFERENCES_$_70
+OBJC_IVAR_$_STPToken._tokenId
+OBJC_IVAR_$_STPToken._livemode
+OBJC_IVAR_$_STPToken._card
+OBJC_IVAR_$_STPToken._bankAccount
+OBJC_IVAR_$_STPToken._created
+OBJC_IVAR_$_STPToken._allResponseFields
+l_OBJC_$_CLASS_METHODS_STPToken
+OBJC_CLASS_NAME_80
+OBJC_METH_VAR_TYPE_85
+OBJC_METH_VAR_TYPE_87
+OBJC_METH_VAR_TYPE_92
+OBJC_PROP_NAME_ATTR_111
+OBJC_PROP_NAME_ATTR_112
+OBJC_PROP_NAME_ATTR_113
+OBJC_PROP_NAME_ATTR_114
+OBJC_PROP_NAME_ATTR_115
+OBJC_PROP_NAME_ATTR_116
+OBJC_PROP_NAME_ATTR_117
+OBJC_PROP_NAME_ATTR_118
+l_OBJC_CLASS_PROTOCOLS_$_STPToken
+l_OBJC_METACLASS_RO_$_STPToken
+l_OBJC_$_INSTANCE_METHODS_STPToken
+OBJC_METH_VAR_TYPE_129
+l_OBJC_$_INSTANCE_VARIABLES_STPToken
+l_OBJC_$_PROP_LIST_STPToken
+l_OBJC_CLASS_RO_$_STPToken
+-[STPToken .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/STPToken.m
+-[STPToken setAllResponseFields:]
+-[STPToken allResponseFields]
+-[STPToken setCreated:]
+-[STPToken created]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/PublicHeaders/STPToken.h
+-[STPToken setBankAccount:]
+-[STPToken bankAccount]
+-[STPToken setCard:]
+-[STPToken card]
+-[STPToken setLivemode:]
+-[STPToken livemode]
+-[STPToken setTokenId:]
+-[STPToken tokenId]
++[STPToken decodedObjectFromAPIResponse:]
++[STPToken requiredFields]
+-[STPToken isEqualToToken:]
+-[STPToken hash]
+-[STPToken isEqual:]
+-[STPToken debugDescription]
+-[STPToken description]
+-[PKPayment(Stripe) stp_isSimulated]
++[PKPayment(Stripe) stp_testTransactionIdentifier]
+.str20
+_unnamed_cfstring_21
+l_OBJC_$_CATEGORY_INSTANCE_METHODS_PKPayment_$_Stripe
+OBJC_METH_VAR_TYPE_44
+l_OBJC_$_CATEGORY_CLASS_METHODS_PKPayment_$_Stripe
+l_OBJC_$_CATEGORY_PKPayment_$_Stripe
+linkPKPaymentCategory
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/ApplePay/PKPayment+Stripe.m
++[PKPayment(Stripe) stp_testTransactionIdentifier]
+-[PKPayment(Stripe) stp_isSimulated]
+-[NSDictionary(Stripe) stp_dictionaryByRemovingNullsValidatingRequiredFields:]
+__78-[NSDictionary(Stripe) stp_dictionaryByRemovingNullsValidatingRequiredFields:]_block_invoke
+OBJC_CLASSLIST_REFERENCES_$_1
+OBJC_METH_VAR_NAME_2
+OBJC_SELECTOR_REFERENCES_3
+l_OBJC_$_CATEGORY_INSTANCE_METHODS_NSDictionary_$_Stripe
+l_OBJC_$_CATEGORY_NSDictionary_$_Stripe
+linkDictionaryCategory
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/NSDictionary+Stripe.m
+-[NSDictionary(Stripe) stp_dictionaryByRemovingNullsValidatingRequiredFields:]
+-[NSString(StripeSubstring) stp_safeSubstringToIndex:]
+-[NSString(StripeSubstring) stp_safeSubstringFromIndex:]
+-[STPPaymentCardTextFieldViewModel setCardNumber:]
+-[STPPaymentCardTextFieldViewModel setRawExpiration:]
+-[STPPaymentCardTextFieldViewModel rawExpiration]
+-[STPPaymentCardTextFieldViewModel setExpirationMonth:]
+-[STPPaymentCardTextFieldViewModel setExpirationYear:]
+-[STPPaymentCardTextFieldViewModel setCvc:]
+-[STPPaymentCardTextFieldViewModel brand]
+-[STPPaymentCardTextFieldViewModel validationStateForField:]
+-[STPPaymentCardTextFieldViewModel isValid]
+-[STPPaymentCardTextFieldViewModel defaultPlaceholder]
+-[STPPaymentCardTextFieldViewModel numberWithoutLastDigits]
+-[STPPaymentCardTextFieldViewModel cardNumber]
+-[STPPaymentCardTextFieldViewModel expirationMonth]
+-[STPPaymentCardTextFieldViewModel expirationYear]
+-[STPPaymentCardTextFieldViewModel cvc]
+-[STPPaymentCardTextFieldViewModel .cxx_destruct]
+l_OBJC_$_CATEGORY_INSTANCE_METHODS_NSString_$_StripeSubstring
+l_OBJC_$_CATEGORY_NSString_$_StripeSubstring
+OBJC_IVAR_$_STPPaymentCardTextFieldViewModel._cardNumber
+.str34
+_unnamed_cfstring_35
+.str38
+_unnamed_cfstring_39
+OBJC_IVAR_$_STPPaymentCardTextFieldViewModel._expirationMonth
+OBJC_IVAR_$_STPPaymentCardTextFieldViewModel._expirationYear
+OBJC_IVAR_$_STPPaymentCardTextFieldViewModel._cvc
+.str60
+_unnamed_cfstring_61
+OBJC_CLASS_NAME_66
+l_OBJC_METACLASS_RO_$_STPPaymentCardTextFieldViewModel
+OBJC_CLASS_NAME_67
+l_OBJC_$_INSTANCE_METHODS_STPPaymentCardTextFieldViewModel
+l_OBJC_$_INSTANCE_VARIABLES_STPPaymentCardTextFieldViewModel
+OBJC_PROP_NAME_ATTR_94
+OBJC_PROP_NAME_ATTR_95
+OBJC_PROP_NAME_ATTR_96
+l_OBJC_$_PROP_LIST_STPPaymentCardTextFieldViewModel
+l_OBJC_CLASS_RO_$_STPPaymentCardTextFieldViewModel
+-[STPPaymentCardTextFieldViewModel .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/UI/STPPaymentCardTextFieldViewModel.m
+-[STPPaymentCardTextFieldViewModel cvc]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/UI/STPPaymentCardTextFieldViewModel.h
+-[STPPaymentCardTextFieldViewModel expirationYear]
+-[STPPaymentCardTextFieldViewModel expirationMonth]
+-[STPPaymentCardTextFieldViewModel cardNumber]
+-[STPPaymentCardTextFieldViewModel numberWithoutLastDigits]
+-[STPPaymentCardTextFieldViewModel defaultPlaceholder]
+-[STPPaymentCardTextFieldViewModel isValid]
+-[STPPaymentCardTextFieldViewModel validationStateForField:]
+-[STPPaymentCardTextFieldViewModel brand]
+-[STPPaymentCardTextFieldViewModel setCvc:]
+-[STPPaymentCardTextFieldViewModel setExpirationYear:]
+-[STPPaymentCardTextFieldViewModel setExpirationMonth:]
+-[STPPaymentCardTextFieldViewModel rawExpiration]
+-[STPPaymentCardTextFieldViewModel setRawExpiration:]
+-[STPPaymentCardTextFieldViewModel setCardNumber:]
+-[NSString(StripeSubstring) stp_safeSubstringFromIndex:]
+-[NSString(StripeSubstring) stp_safeSubstringToIndex:]
+-[STPCardParams init]
+-[STPCardParams last4]
+-[STPCardParams validateNumber:error:]
+-[STPCardParams validateCvc:error:]
+-[STPCardParams validateExpMonth:error:]
+-[STPCardParams validateExpYear:error:]
+-[STPCardParams validateCardReturningError:]
++[STPCardParams handleValidationErrorForParameter:error:]
++[STPCardParams createErrorWithMessage:parameter:cardErrorCode:devErrorMessage:]
++[STPCardParams rootObjectName]
++[STPCardParams propertyNamesToFormFieldNamesMapping]
+-[STPCardParams additionalAPIParameters]
+-[STPCardParams setAdditionalAPIParameters:]
+-[STPCardParams number]
+-[STPCardParams setNumber:]
+-[STPCardParams expMonth]
+-[STPCardParams setExpMonth:]
+-[STPCardParams expYear]
+-[STPCardParams setExpYear:]
+-[STPCardParams cvc]
+-[STPCardParams setCvc:]
+-[STPCardParams name]
+-[STPCardParams setName:]
+-[STPCardParams addressLine1]
+-[STPCardParams setAddressLine1:]
+-[STPCardParams addressLine2]
+-[STPCardParams setAddressLine2:]
+-[STPCardParams addressCity]
+-[STPCardParams setAddressCity:]
+-[STPCardParams addressState]
+-[STPCardParams setAddressState:]
+-[STPCardParams addressZip]
+-[STPCardParams setAddressZip:]
+-[STPCardParams addressCountry]
+-[STPCardParams setAddressCountry:]
+-[STPCardParams currency]
+-[STPCardParams setCurrency:]
+-[STPCardParams .cxx_destruct]
+OBJC_IVAR_$_STPCardParams._additionalAPIParameters
+OBJC_CLASSLIST_REFERENCES_$_13
+OBJC_METH_VAR_NAME_18
+OBJC_SELECTOR_REFERENCES_19
+.str22
+_unnamed_cfstring_23
+OBJC_CLASSLIST_REFERENCES_$_33
+_unnamed_cfstring_67
+.str70
+_unnamed_cfstring_71
+.str74
+_unnamed_cfstring_75
+.str76
+_unnamed_cfstring_77
+.str78
+_unnamed_cfstring_79
+.str80
+_unnamed_cfstring_81
+.str82
+_unnamed_cfstring_83
+.str84
+_unnamed_cfstring_85
+.str107
+_unnamed_cfstring_108
+.str111
+_unnamed_cfstring_112
+.str115
+_unnamed_cfstring_116
+.str117
+_unnamed_cfstring_118
+.str119
+_unnamed_cfstring_120
+.str121
+_unnamed_cfstring_122
+.str123
+_unnamed_cfstring_124
+.str125
+_unnamed_cfstring_126
+.str127
+_unnamed_cfstring_128
+OBJC_IVAR_$_STPCardParams._number
+OBJC_IVAR_$_STPCardParams._expMonth
+OBJC_IVAR_$_STPCardParams._expYear
+OBJC_IVAR_$_STPCardParams._cvc
+OBJC_IVAR_$_STPCardParams._name
+OBJC_IVAR_$_STPCardParams._addressLine1
+OBJC_IVAR_$_STPCardParams._addressLine2
+OBJC_IVAR_$_STPCardParams._addressCity
+OBJC_IVAR_$_STPCardParams._addressState
+OBJC_IVAR_$_STPCardParams._addressZip
+OBJC_IVAR_$_STPCardParams._addressCountry
+OBJC_IVAR_$_STPCardParams._currency
+l_OBJC_$_CLASS_METHODS_STPCardParams
+OBJC_METH_VAR_TYPE_147
+OBJC_METH_VAR_TYPE_153
+OBJC_METH_VAR_TYPE_156
+OBJC_CLASS_NAME_171
+l_OBJC_CLASS_PROTOCOLS_$_STPCardParams
+l_OBJC_METACLASS_RO_$_STPCardParams
+OBJC_CLASS_NAME_180
+OBJC_METH_VAR_NAME_192
+OBJC_METH_VAR_NAME_194
+OBJC_METH_VAR_NAME_198
+OBJC_METH_VAR_NAME_200
+OBJC_METH_VAR_NAME_202
+OBJC_METH_VAR_NAME_204
+OBJC_METH_VAR_NAME_206
+l_OBJC_$_INSTANCE_METHODS_STPCardParams
+OBJC_METH_VAR_TYPE_209
+OBJC_METH_VAR_TYPE_211
+l_OBJC_$_INSTANCE_VARIABLES_STPCardParams
+OBJC_PROP_NAME_ATTR_224
+OBJC_PROP_NAME_ATTR_225
+OBJC_PROP_NAME_ATTR_226
+OBJC_PROP_NAME_ATTR_227
+OBJC_PROP_NAME_ATTR_228
+OBJC_PROP_NAME_ATTR_237
+OBJC_PROP_NAME_ATTR_238
+OBJC_PROP_NAME_ATTR_239
+OBJC_PROP_NAME_ATTR_240
+OBJC_PROP_NAME_ATTR_241
+OBJC_PROP_NAME_ATTR_242
+OBJC_PROP_NAME_ATTR_243
+OBJC_PROP_NAME_ATTR_244
+OBJC_PROP_NAME_ATTR_245
+OBJC_PROP_NAME_ATTR_246
+OBJC_PROP_NAME_ATTR_247
+OBJC_PROP_NAME_ATTR_248
+l_OBJC_$_PROP_LIST_STPCardParams
+l_OBJC_CLASS_RO_$_STPCardParams
+-[STPCardParams .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/STPCardParams.m
+-[STPCardParams setCurrency:]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/PublicHeaders/STPCardParams.h
+-[STPCardParams currency]
+-[STPCardParams setAddressCountry:]
+-[STPCardParams addressCountry]
+-[STPCardParams setAddressZip:]
+-[STPCardParams addressZip]
+-[STPCardParams setAddressState:]
+-[STPCardParams addressState]
+-[STPCardParams setAddressCity:]
+-[STPCardParams addressCity]
+-[STPCardParams setAddressLine2:]
+-[STPCardParams addressLine2]
+-[STPCardParams setAddressLine1:]
+-[STPCardParams addressLine1]
+-[STPCardParams setName:]
+-[STPCardParams name]
+-[STPCardParams setCvc:]
+-[STPCardParams cvc]
+-[STPCardParams setExpYear:]
+-[STPCardParams expYear]
+-[STPCardParams setExpMonth:]
+-[STPCardParams expMonth]
+-[STPCardParams setNumber:]
+-[STPCardParams number]
+-[STPCardParams setAdditionalAPIParameters:]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/PublicHeaders/STPFormEncodable.h
+-[STPCardParams additionalAPIParameters]
++[STPCardParams propertyNamesToFormFieldNamesMapping]
++[STPCardParams rootObjectName]
++[STPCardParams createErrorWithMessage:parameter:cardErrorCode:devErrorMessage:]
++[STPCardParams handleValidationErrorForParameter:error:]
+-[STPCardParams validateCardReturningError:]
+-[STPCardParams validateExpYear:error:]
+-[STPCardParams validateExpMonth:error:]
+-[STPCardParams validateCvc:error:]
+-[STPCardParams validateNumber:error:]
+-[STPCardParams last4]
+-[STPCardParams init]
+-[STPAPIClient(ApplePay) createTokenWithPayment:completion:]
++[STPAPIClient(ApplePay) formEncodedDataForPayment:]
+__Block_byref_object_copy_
+__Block_byref_object_dispose_
+__52+[STPAPIClient(ApplePay) formEncodedDataForPayment:]_block_invoke
+__PRETTY_FUNCTION__.+[STPAPIClient(ApplePay) formEncodedDataForPayment:]
+.str10
+_unnamed_cfstring_11
+OBJC_CLASSLIST_REFERENCES_$_12
+.str24
+_unnamed_cfstring_25
+OBJC_CLASSLIST_REFERENCES_$_44
+OBJC_CLASSLIST_REFERENCES_$_84
+l_OBJC_$_CATEGORY_INSTANCE_METHODS_STPAPIClient_$_ApplePay
+l_OBJC_$_CATEGORY_CLASS_METHODS_STPAPIClient_$_ApplePay
+l_OBJC_$_CATEGORY_STPAPIClient_$_ApplePay
+/Users/mirco/Library/Developer/Xcode/DerivedData/ModuleCache/T78I7L3N6UU6/CoreFoundation-10I2D2XL7L7X9.pcm
+CoreFoundation
+/Users/mirco/Library/Developer/Xcode/DerivedData/ModuleCache/T78I7L3N6UU6/AddressBook-1YQ59ILDR3NYI.pcm
+AddressBook
+linkSTPAPIClientApplePayCategory
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/ApplePay/STPAPIClient+ApplePay.m
++[STPAPIClient(ApplePay) formEncodedDataForPayment:]
+-[STPAPIClient(ApplePay) createTokenWithPayment:completion:]
+-[STPCheckoutViewController initWithOptions:]
+-[STPCheckoutViewController viewWillAppear:]
+-[STPCheckoutViewController viewWillDisappear:]
+-[STPCheckoutViewController childViewControllerForStatusBarStyle]
+-[STPCheckoutViewController setCheckoutDelegate:]
+-[STPCheckoutViewController checkoutDelegate]
+-[STPCheckoutViewController options]
+-[STPCheckoutViewController webViewController]
+-[STPCheckoutViewController setWebViewController:]
+-[STPCheckoutViewController previousStyle]
+-[STPCheckoutViewController setPreviousStyle:]
+-[STPCheckoutViewController .cxx_destruct]
+OBJC_IVAR_$_STPCheckoutViewController._webViewController
+OBJC_IVAR_$_STPCheckoutViewController._previousStyle
+OBJC_CLASSLIST_REFERENCES_$_40
+__PRETTY_FUNCTION__.-[STPCheckoutViewController viewWillAppear:]
+.str54
+OBJC_CLASSLIST_REFERENCES_$_57
+l_OBJC_METACLASS_RO_$_STPCheckoutViewController
+l_OBJC_$_INSTANCE_METHODS_STPCheckoutViewController
+l_OBJC_$_INSTANCE_VARIABLES_STPCheckoutViewController
+OBJC_CLASS_NAME_96
+OBJC_PROP_NAME_ATTR_97
+OBJC_PROP_NAME_ATTR_98
+OBJC_PROP_NAME_ATTR_99
+OBJC_PROP_NAME_ATTR_100
+OBJC_PROP_NAME_ATTR_101
+l_OBJC_$_PROP_LIST_STPCheckoutViewController
+l_OBJC_CLASS_RO_$_STPCheckoutViewController
+-[STPCheckoutViewController .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/Checkout/STPCheckoutViewController.m
+-[STPCheckoutViewController setPreviousStyle:]
+-[STPCheckoutViewController previousStyle]
+-[STPCheckoutViewController setWebViewController:]
+-[STPCheckoutViewController webViewController]
+-[STPCheckoutViewController options]
+-[STPCheckoutViewController checkoutDelegate]
+-[STPCheckoutViewController setCheckoutDelegate:]
+-[STPCheckoutViewController childViewControllerForStatusBarStyle]
+-[STPCheckoutViewController viewWillDisappear:]
+-[STPCheckoutViewController viewWillAppear:]
+-[STPCheckoutViewController initWithOptions:]
++[STPAPIPostRequest startWithAPIClient:endpoint:postData:serializer:completion:]
+__80+[STPAPIPostRequest startWithAPIClient:endpoint:postData:serializer:completion:]_block_invoke
+__80+[STPAPIPostRequest startWithAPIClient:endpoint:postData:serializer:completion:]_block_invoke_2
+__80+[STPAPIPostRequest startWithAPIClient:endpoint:postData:serializer:completion:]_block_invoke46
+__copy_helper_block_47
+__destroy_helper_block_48
+__copy_helper_block_50
+__destroy_helper_block_51
+OBJC_CLASSLIST_REFERENCES_$_15
+.str28
+_unnamed_cfstring_29
+OBJC_CLASSLIST_REFERENCES_$_36
+__block_descriptor_tmp49
+__block_descriptor_tmp53
+l_OBJC_$_CLASS_METHODS_STPAPIPostRequest
+l_OBJC_METACLASS_RO_$_STPAPIPostRequest
+l_OBJC_CLASS_RO_$_STPAPIPostRequest
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/STPAPIPostRequest.m
++[STPAPIPostRequest startWithAPIClient:endpoint:postData:serializer:completion:]
+-[STPBankAccountParams init]
+-[STPBankAccountParams last4]
++[STPBankAccountParams rootObjectName]
++[STPBankAccountParams propertyNamesToFormFieldNamesMapping]
+-[STPBankAccountParams additionalAPIParameters]
+-[STPBankAccountParams setAdditionalAPIParameters:]
+-[STPBankAccountParams accountNumber]
+-[STPBankAccountParams setAccountNumber:]
+-[STPBankAccountParams routingNumber]
+-[STPBankAccountParams setRoutingNumber:]
+-[STPBankAccountParams country]
+-[STPBankAccountParams setCountry:]
+-[STPBankAccountParams currency]
+-[STPBankAccountParams setCurrency:]
+-[STPBankAccountParams .cxx_destruct]
+OBJC_IVAR_$_STPBankAccountParams._additionalAPIParameters
+OBJC_IVAR_$_STPBankAccountParams._accountNumber
+OBJC_IVAR_$_STPBankAccountParams._routingNumber
+OBJC_IVAR_$_STPBankAccountParams._country
+OBJC_IVAR_$_STPBankAccountParams._currency
+l_OBJC_$_CLASS_METHODS_STPBankAccountParams
+OBJC_METH_VAR_TYPE_24
+OBJC_METH_VAR_TYPE_26
+OBJC_METH_VAR_TYPE_27
+OBJC_METH_VAR_TYPE_28
+OBJC_CLASS_NAME_29
+OBJC_METH_VAR_TYPE_31
+OBJC_METH_VAR_TYPE_33
+OBJC_METH_VAR_TYPE_36
+OBJC_METH_VAR_TYPE_38
+OBJC_METH_VAR_TYPE_40
+OBJC_METH_VAR_TYPE_49
+OBJC_CLASS_NAME_62
+OBJC_PROP_NAME_ATTR_63
+OBJC_PROP_NAME_ATTR_64
+OBJC_PROP_NAME_ATTR_65
+OBJC_PROP_NAME_ATTR_66
+OBJC_PROP_NAME_ATTR_67
+OBJC_PROP_NAME_ATTR_68
+OBJC_PROP_NAME_ATTR_69
+OBJC_PROP_NAME_ATTR_70
+l_OBJC_CLASS_PROTOCOLS_$_STPBankAccountParams
+l_OBJC_METACLASS_RO_$_STPBankAccountParams
+l_OBJC_$_INSTANCE_METHODS_STPBankAccountParams
+l_OBJC_$_INSTANCE_VARIABLES_STPBankAccountParams
+l_OBJC_$_PROP_LIST_STPBankAccountParams
+l_OBJC_CLASS_RO_$_STPBankAccountParams
+-[STPBankAccountParams .cxx_destruct]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/STPBankAccountParams.m
+-[STPBankAccountParams setCurrency:]
+/Users/mirco/Dropbox/mCloudSampleApp/Carthage/Checkouts/stripe-ios/Stripe/PublicHeaders/STPBankAccountParams.h
+-[STPBankAccountParams currency]
+-[STPBankAccountParams setCountry:]
+-[STPBankAccountParams country]
+-[STPBankAccountParams setRoutingNumber:]
+-[STPBankAccountParams routingNumber]
+-[STPBankAccountParams setAccountNumber:]
+-[STPBankAccountParams accountNumber]
+-[STPBankAccountParams setAdditionalAPIParameters:]
+-[STPBankAccountParams additionalAPIParameters]
++[STPBankAccountParams propertyNamesToFormFieldNamesMapping]
++[STPBankAccountParams rootObjectName]
+-[STPBankAccountParams last4]
+-[STPBankAccountParams init]
+/Users/mirco/Library/Developer/Xcode/DerivedData/Stripe-gnsaruiiqxtgqhdntwfygozmpiyv/Build/Intermediates/Stripe.build/Release-iphoneos/StripeiOS.build/DerivedSources/Stripe_vers.c
+_ZL15__ARCLite__loadv
+_ZL30add_image_hook_autoreleasepoolPK11mach_headerl
+_ZL34__arclite_objc_autoreleasePoolPushv
+_ZL33__arclite_objc_autoreleasePoolPopPv
+_ZL19patch_lazy_pointersPK11mach_headerP7patch_tm
+_ZL42__arclite_NSArray_objectAtIndexedSubscriptP7NSArrayP13objc_selectorj
+_ZL53__arclite_NSMutableArray_setObject_atIndexedSubscriptP14NSMutableArrayP13objc_selectorP11objc_objectj
+_ZL46__arclite_NSDictionary_objectForKeyedSubscriptP12NSDictionaryP13objc_selectorP11objc_object
+_ZL47__arclite_NSOrderedSet_objectAtIndexedSubscriptP12NSOrderedSetP13objc_selectorj
+_ZL58__arclite_NSMutableOrderedSet_setObject_atIndexedSubscriptP19NSMutableOrderedSetP13objc_selectorP11objc_objectj
+_ZL58__arclite_NSMutableDictionary__setObject_forKeyedSubscriptP19NSMutableDictionaryP13objc_selectorP11objc_objectS4_
+_ZL18add_image_hook_ARCPK11mach_headerl
+_ZL36__arclite_object_setInstanceVariableP11objc_objectPKcPv
+_ZL24__arclite_object_setIvarP11objc_objectP9objc_ivarS0_
+_ZL21__arclite_object_copyP11objc_objectm
+_ZL21__arclite_objc_retainP11objc_object
+_ZL26__arclite_objc_retainBlockP11objc_object
+_ZL22__arclite_objc_releaseP11objc_object
+_ZL26__arclite_objc_autoreleaseP11objc_object
+_ZL32__arclite_objc_retainAutoreleaseP11objc_object
+_ZL37__arclite_objc_autoreleaseReturnValueP11objc_object
+_ZL43__arclite_objc_retainAutoreleaseReturnValueP11objc_object
+_ZL44__arclite_objc_retainAutoreleasedReturnValueP11objc_object
+_ZL26__arclite_objc_storeStrongPP11objc_objectS0_
+_ZL22add_image_hook_swiftV1PK11mach_headerl
+_ZL42__arclite_NSUndoManagerProxy_isKindOfClassP11objc_objectP13objc_selectorP10objc_class
+_ZL13replaceMethodP10objc_classP13objc_selectorPFP11objc_objectS4_S2_zEPS6_
+_ZL30__arclite_NSManagedObject_initP11objc_objectP13objc_selector
+_ZL41__arclite_NSManagedObject_allocWithEntityP11objc_objectP13objc_selectorS0_
+_ZL36__arclite_NSManagedObject_allocBatchP11objc_objectP13objc_selectorPS0_S0_j
+_ZL37__arclite_NSKKMS_fastIndexForKnownKeyP11objc_objectP13objc_selectorS0_
+_ZL28__arclite_NSKKMS_indexForKeyP11objc_objectP13objc_selectorS0_
+_ZL29__arclite_NSKKsD_objectForKeyP11objc_objectP13objc_selectorS0_
+_ZL35__arclite_NSKKsD_removeObjectForKeyP11objc_objectP13objc_selectorS0_
+_ZL33__arclite_NSKKsD_setObject_forKeyP11objc_objectP13objc_selectorS0_S0_
+_ZL41__arclite_NSKKsD_addEntriesFromDictionaryP11objc_objectP13objc_selectorP12NSDictionary
+_ZL28__arclite_objc_readClassPairP10objc_classPK15objc_image_info
+_ZL32__arclite_objc_allocateClassPairP10objc_classPKcm
+_ZL32__arclite_object_getIndexedIvarsP11objc_object
+_ZL23__arclite_objc_getClassPKc
+_ZL27__arclite_objc_getMetaClassPKc
+_ZL31__arclite_objc_getRequiredClassPKc
+_ZL26__arclite_objc_lookUpClassPKc
+_ZL26__arclite_objc_getProtocolPKc
+_ZL23__arclite_class_getNameP10objc_class
+_ZL26__arclite_protocol_getNameP8Protocol
+_ZL37__arclite_objc_copyClassNamesForImagePKcPj
+_ZL17transcribeMethodsP10objc_classP15glue_class_ro_t
+_ZL19transcribeProtocolsP10objc_classP15glue_class_ro_t
+_ZL20transcribePropertiesP10objc_classP15glue_class_ro_t
+_ZL14initialize_impP11objc_objectP13objc_selector
+_ZL18allocateMaybeSwiftP18glue_swift_class_tm
+_ZL22copySwiftV1MangledNamePKcb
+_ZL13demangledNamePKcb
+_ZL16scanMangledFieldRPKcS0_S1_Ri
+_ZL30arclite_uninitialized_functionv
+_ZL12cxxConstructP11objc_object
+_ZL20fixStringForCoreDataP11objc_object
+OBJC_METACLASS_$___ARCLite__
+_ZL24OBJC_CLASS_$___ARCLite__
+_ZL31OBJC_METACLASS_RO_$___ARCLite__
+_non_lazy_classes
+_ZL27OBJC_CLASS_RO_$___ARCLite__
+_ZL11_class_name
+_ZL32OBJC_$_CLASS_METHODS___ARCLite__
+_ZL17_load_method_name
+_ZL17_load_method_type
+_ZL23NSAutoreleasePool_class
+_ZZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+_ZGVZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+.str2
+.str6
+.str16
+OBJC_METH_VAR_TYPE_20
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS___ARCLiteIndexedSubscripting__
+l_OBJC_$_PROTOCOL_METHOD_TYPES___ARCLiteIndexedSubscripting__
+l_OBJC_PROTOCOL_$___ARCLiteIndexedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteIndexedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteIndexedSubscripting__
+OBJC_METH_VAR_TYPE_29
+OBJC_CLASS_NAME_32
+l_OBJC_$_PROTOCOL_INSTANCE_METHODS___ARCLiteKeyedSubscripting__
+l_OBJC_$_PROTOCOL_METHOD_TYPES___ARCLiteKeyedSubscripting__
+l_OBJC_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteKeyedSubscripting__
+_ZZL18add_image_hook_ARCPK11mach_headerlE7patches
+_ZGVZL18add_image_hook_ARCPK11mach_headerlE7patches
+.str42
+.str46
+_ZL30NSUndoManagerProxy_targetClass
+_ZL29original_NSManagedObject_init
+_ZL40original_NSManagedObject_allocWithEntity
+_ZL35original_NSManagedObject_allocBatch
+_ZL25NSMutableDictionary_class
+_ZL22NSConstantString_class
+_ZL14NSString_class
+_ZL36original_NSKKMS_fastIndexForKnownKey
+_ZL27original_NSKKMS_indexForKey
+_ZL28original_NSKKsD_objectForKey
+_ZL34original_NSKKsD_removeObjectForKey
+_ZL32original_NSKKsD_setObject_forKey
+_ZL40original_NSKKsD_addEntriesFromDictionary
+_ZZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+_ZGVZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+_ZL31original_objc_allocateClassPair
+_ZL31original_object_getIndexedIvars
+_ZL22original_objc_getClass
+_ZL26original_objc_getMetaClass
+.str86
+_ZL30original_objc_getRequiredClass
+_ZL25original_objc_lookUpClass
+.str88
+_ZL25original_objc_getProtocol
+_ZL22original_class_getName
+_ZL25original_protocol_getName
+_ZL36original_objc_copyClassNamesForImage
+_ZL12demangleLock
+_ZL9Demangled
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch armv7 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -Wno-trigraphs -fno-exceptions -fno-rtti -mpascal-strings -Os -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -D NDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.Internal.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -miphoneos-version-min=4.3 -g -fno-threadsafe-statics -Wno-sign-conversion -fembed-bitcode -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~37/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-generated-files.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~37/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-own-target-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~37/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-all-target-headers.hmap -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~37/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-project-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~37/Symbols/BuiltProducts/include -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~37/Objects/arclite.build/arclite_iOS.build/DerivedSources/armv7 -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~37/Objects/arclite.build/arclite_iOS.build/DerivedSources -F/Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~37/Symbols/BuiltProducts -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.Internal.sdk/System/Library/PrivateFrameworks -Wall -Wextra -Wno-gcc-compat -fgnu-inline-asm -MMD -MT dependencies -MF /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~37/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.d --serialize-diagnostics /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~37/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.dia -c /Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-65/source/arclite.mm -o /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-65~37/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.o -mlinker-version=253.9 -march=armv7a
+__arclite_NSKKsD_addEntriesFromDictionary
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-65/source/arclite.mm
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-65
+__arclite_NSKKsD_setObject_forKey
+__arclite_NSKKsD_removeObjectForKey
+__arclite_NSKKsD_objectForKey
+__arclite_NSKKMS_indexForKey
+fixStringForCoreData
+__arclite_NSKKMS_fastIndexForKnownKey
+__arclite_NSManagedObject_allocBatch
+__arclite_NSManagedObject_allocWithEntity
+cxxConstruct
+__arclite_NSManagedObject_init
+arclite_uninitialized_function
+replaceMethod
+__arclite_NSUndoManagerProxy_isKindOfClass
+patch_t<const char **(const char *, unsigned int *)>
+__arclite_objc_copyClassNamesForImage
+patch_t<const char *(Protocol *)>
+__arclite_protocol_getName
+patch_t<const char *(Class)>
+__isctype
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.Internal.sdk/usr/include/ctype.h
+isdigit
+scanMangledField
+copySwiftV1DemangledName
+demangledName
+__arclite_class_getName
+patch_t<Protocol *(const char *)>
+__arclite_objc_getProtocol
+__arclite_objc_lookUpClass
+__arclite_objc_getRequiredClass
+__arclite_objc_getMetaClass
+patch_t<Class (const char *)>
+copySwiftV1MangledName
+__arclite_objc_getClass
+patch_t<void *(id)>
+word_align
+__arclite_object_getIndexedIvars
+patch_t<Class (Class, const char *, unsigned long)>
+allocateMaybeSwift
+isSwift
+metaclass
+__arclite_objc_allocateClassPair
+patch_t<Class (Class, const objc_image_info *)>
+initialize_imp
+property_list_nth
+transcribeProperties
+transcribeProtocols
+method_list_nth
+transcribeMethods
+alignment
+max
+ivar_list_nth
+transcribeIvars
+fastFlags
+ro
+__arclite_objc_readClassPair
+add_image_hook_swiftV1
+install_swiftV1
+patch_t<void (id *, id)>
+__arclite_objc_storeStrong
+__arclite_objc_retainAutoreleasedReturnValue
+__arclite_objc_retainAutoreleaseReturnValue
+__arclite_objc_autoreleaseReturnValue
+__arclite_objc_retainAutorelease
+__arclite_objc_autorelease
+patch_t<void (id)>
+__arclite_objc_release
+__arclite_objc_retainBlock
+patch_t<id (id)>
+__arclite_objc_retain
+patch_t<id (id, unsigned long)>
+fixupCopiedReferences
+classOrSuperClassesUseARR
+__arclite_object_copy
+patch_t<void (id, objc_ivar *, id)>
+isScannedOffset
+alignedInstanceStart
+_class_getInstanceStart
+data
+__arclite_class_usesAutomaticRetainRelease
+_ivar_getClass
+__arclite_object_setIvar
+patch_t<objc_ivar *(id, const char *, void *)>
+__arclite_object_setInstanceVariable
+add_image_hook_ARC
+install_ARC
+objc_collectingEnabled
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.Internal.sdk/usr/include/objc/objc-auto.h
+__arclite_NSMutableDictionary__setObject_forKeyedSubscript
+addOrReplaceMethod
+install_dict_nil_value
+__arclite_NSMutableOrderedSet_setObject_atIndexedSubscript
+__arclite_NSOrderedSet_objectAtIndexedSubscript
+keyedGetter
+__arclite_NSDictionary_objectForKeyedSubscript
+__arclite_NSMutableArray_setObject_atIndexedSubscript
+indexedGetter
+__arclite_NSArray_objectAtIndexedSubscript
+addMethod
+install_subscripting
+patch_lazy_pointers
+patch_t<void (void *)>
+__arclite_objc_autoreleasePoolPop
+patch_t<void *()>
+__arclite_objc_autoreleasePoolPush
+add_image_hook_autoreleasepool
+install_autoreleasepool
+__ARCLite__load

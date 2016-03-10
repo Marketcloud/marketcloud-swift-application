@@ -1,0 +1,10 @@
+framework module Marketcloud {
+  umbrella header "Marketcloud.h"
+
+  export *
+  module * { export * }
+}
+
+module Marketcloud.Swift {
+    header "Marketcloud-Swift.h"
+}
