@@ -29,8 +29,6 @@
 		A83129A21C87415B00D4C494 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83129A11C87415B00D4C494 /* ProductsViewController.swift */; };
 		A870CB541C90443200152311 /* Checkout3ViewCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A870CB531C90443200152311 /* Checkout3ViewCtrl.swift */; };
 		A870CB561C90571A00152311 /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A870CB551C90571A00152311 /* Stripe.framework */; };
-		A870CB591C906A0D00152311 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A870CB571C906A0D00152311 /* FBSDKCoreKit.framework */; };
-		A870CB5A1C906A0D00152311 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A870CB581C906A0D00152311 /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +56,6 @@
 		A83129A11C87415B00D4C494 /* ProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		A870CB531C90443200152311 /* Checkout3ViewCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkout3ViewCtrl.swift; sourceTree = "<group>"; };
 		A870CB551C90571A00152311 /* Stripe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stripe.framework; path = Carthage/Build/iOS/Stripe.framework; sourceTree = "<group>"; };
-		A870CB571C906A0D00152311 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		A870CB581C906A0D00152311 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A870CB591C906A0D00152311 /* FBSDKCoreKit.framework in Frameworks */,
-				A870CB5A1C906A0D00152311 /* FBSDKLoginKit.framework in Frameworks */,
 				A870CB561C90571A00152311 /* Stripe.framework in Frameworks */,
 				A831298E1C85AF0F00D4C494 /* Marketcloud.framework in Frameworks */,
 			);
@@ -90,8 +84,6 @@
 		A831296F1C85ADF600D4C494 = {
 			isa = PBXGroup;
 			children = (
-				A870CB571C906A0D00152311 /* FBSDKCoreKit.framework */,
-				A870CB581C906A0D00152311 /* FBSDKLoginKit.framework */,
 				A870CB551C90571A00152311 /* Stripe.framework */,
 				A831298D1C85AF0E00D4C494 /* Marketcloud.framework */,
 				A831297A1C85ADF700D4C494 /* mCloudSampleApp */,
