@@ -1,6 +1,7 @@
 import UIKit
 import Stripe
 
+//Controller for the credit card's view.
 class Checkout2ViewCtrl: UIViewController, UITextFieldDelegate
 {
     @IBOutlet weak var emailField: UITextField!
@@ -24,7 +25,7 @@ class Checkout2ViewCtrl: UIViewController, UITextFieldDelegate
             self.presentViewController(alertController, animated: true, completion: nil)
             return
         }
-        
+        //Obtains datas about the credit cards in Stripe card object
         let card = STPCardParams() //creating a stripe card object
         card.number = creditCardField.text!
         card.cvc = cvcField.text!
@@ -35,7 +36,7 @@ class Checkout2ViewCtrl: UIViewController, UITextFieldDelegate
                 NSLog("Error creating token: %@", error!.localizedDescription);
                 return
             }
-            
+
             // TODO: send the token to your server so it can create a charge
             let alert = UIAlertController(title: "Welcome to Stripe", message: "Token created: \(stripeToken)", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "OK", style: .Default,  handler: {(action:UIAlertAction) in
@@ -47,7 +48,7 @@ class Checkout2ViewCtrl: UIViewController, UITextFieldDelegate
         
     }
     
-    
+    //validates the credit card's field
     func validator() -> Bool {
         print("Validator on")
         
@@ -62,10 +63,13 @@ class Checkout2ViewCtrl: UIViewController, UITextFieldDelegate
         return true
     }
     
+    //TEXTFIELDS
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
     }
+    //-------------
+    
     
     override func viewDidLoad() {
         self.automaticallyAdjustsScrollViewInsets = false

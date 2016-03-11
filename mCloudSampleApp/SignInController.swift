@@ -1,6 +1,7 @@
 import UIKit
 import Marketcloud
 
+//Controller for the signin view
 class SignInController: UIViewController, UITextFieldDelegate
 {
     
@@ -12,6 +13,7 @@ class SignInController: UIViewController, UITextFieldDelegate
     
     @IBOutlet weak var passwordField: UITextField!
     
+    //validate the fields, then creates thenew user and returns to the login view
     @IBAction func signInButton(sender: UIButton) {
         if validator(){
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
@@ -36,6 +38,7 @@ class SignInController: UIViewController, UITextFieldDelegate
                     alertController.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Default, handler: {(action:UIAlertAction) in
                         UserData.setLastRegisteredUser(self.emailField.text!, password: self.passwordField.text!);
                         print("Setted UserData \n \(UserData.getLastRegistedUserEmail(),UserData.getLastRegisteredUserPassword())")
+                        //returns to the login view
                         let next = self.storyboard!.instantiateViewControllerWithIdentifier("viewController") as! ViewController
                         next.downloadProducts = false
                         next.load = true                        

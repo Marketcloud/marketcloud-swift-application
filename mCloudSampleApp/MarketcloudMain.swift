@@ -5,11 +5,13 @@ public class MarketcloudMain {
     
     internal static var marketcloud:Marketcloud? = nil
     
+    //sets the marketcloud public key. Use it once just for initialize the SDK
     static func setMarketcloud(key:String) {
         marketcloud = Marketcloud(key:key)
         print("setted marketcloud var with key \(key)")
     }
     
+    //returns the marketcloud object
     static func getMcloud() -> Marketcloud? {
         if(marketcloud != nil) {
             return marketcloud!
@@ -20,6 +22,7 @@ public class MarketcloudMain {
         }
     }
     
+    //don't need to call it :)
     init?(){
         print("This class doesn't need to be initialized \nReturning nil")
         return nil
@@ -27,7 +30,9 @@ public class MarketcloudMain {
     
 }
 
-//Estensione della classe UIImageView per l'inserimento di un immagine da url
+//Extends the UIImageView class in order to load images from url
+//usage: UIImageObject.load_image(url, imageId).
+//The imageId field is to cache the image
 extension UIImageView {
     
     func load_image(urlString:String, imageId:Int)
@@ -54,6 +59,7 @@ extension UIImageView {
     }
 }
 
+//extends the String class adding a method to validate an email..
 extension String {
     func isValidEmail() -> Bool {
         do {
@@ -65,6 +71,7 @@ extension String {
     }
 }
 
+//Extends the UIScrollView class adding a method to scroll the view to the top.
 extension UIScrollView {
     func scrollToTop() {
         let desiredOffset = CGPoint(x: 0, y: -contentInset.top)

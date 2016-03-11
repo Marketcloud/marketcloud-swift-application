@@ -1,9 +1,11 @@
 import UIKit
 
+//Controller for the products list view
 class ProductsViewController: UIViewController, UITextFieldDelegate,UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tblProducts: UITableView!
     
+    //logs out, destroyes the cart and returns to the login view
     @IBAction func logoutPressed(sender: UIBarButtonItem) {
         print("Logout button Pressed")
         Cart.products.removeAll()
@@ -16,7 +18,6 @@ class ProductsViewController: UIViewController, UITextFieldDelegate,UITableViewD
         self.automaticallyAdjustsScrollViewInsets = false
         self.navigationItem.setHidesBackButton(true, animated: false)
         self.title = "Products List"
-
     }
     
     //-------------TABLEVIEW
@@ -49,13 +50,13 @@ class ProductsViewController: UIViewController, UITextFieldDelegate,UITableViewD
                     }
                         else
                     {
-                    print("\n Image was not in cache ...\nSetting image from url \(Product.products[indexPath.row].images![0]) with id \(Product.products[indexPath.row].id!)")
+                    //print("\n Image was not in cache ...\nSetting image from url \(Product.products[indexPath.row].images![0]) with id \(Product.products[indexPath.row].id!)")
                     cell.imgCell.image = nil;
                     cell.imgCell.load_image(Product.products[indexPath.row].images![0],imageId: Product.products[indexPath.row].id!)
                     }
                 }
                 else {
-                    print("No image found for \(Product.products[indexPath.row].name!)")
+                    //print("No image found for \(Product.products[indexPath.row].name!)")
                     cell.imgCell.image = nil;
                     cell.imgCell.image = UIImage(named: "logo")
                 }
@@ -69,7 +70,7 @@ class ProductsViewController: UIViewController, UITextFieldDelegate,UITableViewD
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "detail"){
         UserData.selectedProduct = Product.products[(tblProducts.indexPathForSelectedRow?.row)!]
-        print("setted \(Product.products[tblProducts.indexPathForSelectedRow!.row])")
+        //print("setted \(Product.products[tblProducts.indexPathForSelectedRow!.row])")
         }
     }
 }

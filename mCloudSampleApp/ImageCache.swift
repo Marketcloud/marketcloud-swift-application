@@ -1,6 +1,8 @@
 import UIKit
 import Foundation
 
+//A cache for the downloaded image
+//The cache is made of a key:value array, where key is the image's product it and value is the downloaded UIImage data.
 public class ImageCache {
     
     private static var someDict = [Int: UIImage]()

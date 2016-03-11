@@ -1,5 +1,6 @@
 import UIKit
 
+//Controller for the last checkout part
 class Checkout3ViewCtrl: UIViewController
 {
     
@@ -13,14 +14,15 @@ class Checkout3ViewCtrl: UIViewController
 
     @IBOutlet weak var shippingAddressRecapLabel: UILabel!
 
+    //sets the order data then calls the createOrder method.
+    //Eventually, if the order went fine empties the cart.
     @IBAction func confirmButton(sender: UIButton) {
         print("Confirmed!")
-        //let r  = (marketcloud.getCart()["data"]!["items"]!!) as! NSArray
         
         let order = MarketcloudMain.getMcloud()?.createOrder(UserData.lastAddressId, billingId: UserData.lastAddressId, items: Cart.lastCart!["data"]!["items"]!! as! NSArray)
         print(order)
+        
         if(order!["status"] as! Int == 1) {
-            
             Cart.emptyCart()
             let alertController = UIAlertController(title: "Ok", message: "Order went fine. You will be redirect to main page", preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "Close",
@@ -37,6 +39,7 @@ class Checkout3ViewCtrl: UIViewController
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    //returns to the product's list view
     func returnToProducts() {
         for (var i = 0; i < self.navigationController?.viewControllers.count; i++) {
             if(self.navigationController?.viewControllers[i].isKindOfClass(ProductsViewController) == true) {

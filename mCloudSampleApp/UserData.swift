@@ -1,5 +1,6 @@
 import Foundation
 
+//keeps tracks of the user data in order to share between the views
 public class UserData {
     
     private static var lastRegisteredUser = ["email":"", "password":""]

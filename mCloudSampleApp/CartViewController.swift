@@ -1,5 +1,6 @@
 import UIKit
 
+//controller for the cart view
 class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var checkOutButton: UIButton!
@@ -7,7 +8,7 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var totalLabel: UILabel!
     
     override func viewDidLoad() {
-        print("Bazinga")
+        //print("Bazinga")
         let total = String(Cart.calcTotal())
         totalLabel.text = "Total: \(total)"
         if(Cart.products.count == 0) {
@@ -25,7 +26,7 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //sincronizza le celle in base alla posizione nell'array tasks
+
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CellCartController
         cell.titleCell.text = Cart.products[indexPath.row].name!
         cell.priceCell.text = "Price: \(String(Cart.products[indexPath.row].price!))€";
@@ -36,28 +37,28 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         if(Cart.products[indexPath.row].images!.count != 0) {
             
             if(ImageCache.isInCache(Cart.products[indexPath.row].id!)) {
-                print("Image is in Cache")
+             //   print("Image is in Cache")
                 let image = ImageCache.get(Cart.products[indexPath.row].id!)
                 cell.imgCell.image = nil;
                 cell.imgCell.image = image
             }
             else
             {
-                print("\n Image was not in cache ...\nSetting image from url \(Cart.products[indexPath.row].images![0]) with id \(Cart.products[indexPath.row].id!)")
+             //   print("\n Image was not in cache ...\nSetting image from url \(Cart.products[indexPath.row].images![0]) with id \(Cart.products[indexPath.row].id!)")
                 cell.imgCell.image = nil;
                 cell.imgCell.load_image(Cart.products[indexPath.row].images![0],imageId: Cart.products[indexPath.row].id!)
             }
             
         }
         else {
-            print("No image found for \(Product.products[indexPath.row].name!)")
+          //  print("No image found for \(Product.products[indexPath.row].name!)")
             cell.imgCell.image = nil;
             cell.imgCell.image = UIImage(named: "logo")
         }
         return cell
     }
     
-    //GESTISCE L'ELIMINAZIONE DEI FILM DELL'UTENTE
+    //slide left to delete a product when in the list
     func tableView(TableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if(editingStyle == UITableViewCellEditingStyle.Delete) {
             print("I'm going to delete @ row \(indexPath.row) \n Object is \(Cart.products[indexPath.row].name)")
@@ -83,7 +84,7 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                 self.presentViewController(alertController, animated: true, completion: nil)
                 return
             }
-            
+            //refreshes cart with the deleted object
             Cart.refreshCart(newCart!)
             if(Cart.products.isEmpty) {
                 checkOutButton.enabled = false
@@ -91,7 +92,7 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             else {
                 checkOutButton.enabled = true
             }
-            
+            //recalulates total
             let total = String(Cart.calcTotal())
             totalLabel.text = "Total: \(total)"
             
@@ -100,6 +101,7 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                 style: UIAlertActionStyle.Default,
                 handler: nil))
             self.presentViewController(alertController, animated: true, completion: nil)
+            //refreshes table
             tblDatas.reloadData()
         }
     }

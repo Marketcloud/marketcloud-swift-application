@@ -278,7 +278,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="C82A4438-AC81-4C9A-AF0A-B3518FDC66BB" translatesAutoresizingMaskIntoConstraints="NO" id="9Ea-62-16D">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A084812C-5486-4A59-9A66-87AA8CA70FC8" translatesAutoresizingMaskIntoConstraints="NO" id="9Ea-62-16D">
                                                     <rect key="frame" x="14" y="0.0" width="67" height="101"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="67" id="1SY-sl-eRk"/>
@@ -526,7 +526,7 @@ VG90YWw6IDAF4oKsA
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8CB23294-20F8-46F9-A7E9-053BF35B50E0" translatesAutoresizingMaskIntoConstraints="NO" id="dQx-Fg-KUK">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BCE1CCE6-7681-4761-A1DF-589F3579091B" translatesAutoresizingMaskIntoConstraints="NO" id="dQx-Fg-KUK">
                                                     <rect key="frame" x="14" y="4" width="67" height="101"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="67" id="tBZ-rx-qlz"/>
@@ -806,7 +806,7 @@ VG90YWw6IDAF4oKsA
             </objects>
             <point key="canvasLocation" x="376" y="-65"/>
         </scene>
-        <!--Title-->
+        <!--Checkout 3/3-->
         <scene sceneID="QQA-GT-hhC">
             <objects>
                 <viewController id="xsr-Ya-Otc" customClass="Checkout3ViewCtrl" customModule="mCloudSampleApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -898,7 +898,7 @@ Cantami, o diva, del Pelìde Achille  L’ira funesta che infiniti addusse  Lutt
                             <constraint firstItem="Abt-lk-bxF" firstAttribute="top" secondItem="lsz-HS-4gw" secondAttribute="bottom" id="shX-iS-Cnt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="2GF-jj-qWG">
+                    <navigationItem key="navigationItem" title="Checkout 3/3" id="2GF-jj-qWG">
                         <barButtonItem key="backBarButtonItem" title="Back" id="OB2-Cy-NpD"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1063,7 +1063,7 @@ Cantami, o diva, del Pelìde Achille  L’ira funesta che infiniti addusse  Lutt
         </scene>
     </scenes>
     <resources>
-        <image name="8CB23294-20F8-46F9-A7E9-053BF35B50E0" width="256" height="256">
+        <image name="A084812C-5486-4A59-9A66-87AA8CA70FC8" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -5486,7 +5486,7 @@ AAQKJAAECikABAoxAAQKNAAECjkABApBAAQKRAAEClYABApZAAQKXgAAAAAAAAQBAAAAAAAAAEEAAAAA
 AAAAAAAAAAAABApgA
 </mutableData>
         </image>
-        <image name="C82A4438-AC81-4C9A-AF0A-B3518FDC66BB" width="256" height="256">
+        <image name="BCE1CCE6-7681-4761-A1DF-589F3579091B" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

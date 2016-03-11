@@ -1,6 +1,7 @@
 import UIKit
 import Marketcloud
 
+//view controller for the main view
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var loadingAct: UIActivityIndicatorView!
@@ -8,6 +9,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailField: UITextField!
+    
     var marketcloud:Marketcloud? = MarketcloudMain.getMcloud()
     var downloadProducts:Bool = true
     var load:Bool = false
@@ -21,15 +23,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         else {
             loadingAct.hidden = true
         }
+        
         self.automaticallyAdjustsScrollViewInsets = false
         scrollView.scrollToTop()
+        
+        //marketcloud object will be initialized only once
         if (marketcloud == nil) {
             print("Setting marketcloud variable")
-            //f84af487-a315-42e6-a57a-d79296bd9d99
-
             MarketcloudMain.setMarketcloud("f84af487-a315-42e6-a57a-d79296bd9d99")
             marketcloud = (MarketcloudMain.getMcloud()!)
         }
+        //calls the getProducts method only if products are not been downloaded yet
         if(downloadProducts){
             print("Downloading Products")
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
@@ -41,8 +45,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 self.loginButton.enabled = true
                 self.loadingAct.stopAnimating()
                 self.loadingAct.hidden = true
-                }
+                    }
                 } else {
+                    //errors are occurred
                     let alertController = UIAlertController(title: "Error", message: "Connection Error ", preferredStyle: .Alert)
                     alertController.addAction(UIAlertAction(title: "Close",
                         style: UIAlertActionStyle.Destructive,
@@ -53,7 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 }
             })
         }
-        if(load){
+        if(load){ //if user came from the signup view
             print("Loading user fields")
             print(UserData.getLastRegistedUserEmail())
             print(UserData.getLastRegisteredUserPassword())
@@ -65,6 +70,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
     @IBAction func logOutButtonPressed(sender: UIBarButtonItem) {
         print("Logout Pressed")
     }
@@ -79,20 +85,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     //---------------TEXTFIELD
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        //Do nothing
+        //Do nothing :)
     }
     
     //---------------Buttons
 
     
     @IBAction func loginButton(sender: UIButton) {
+        //verifies if there are empty fields
         guard (!emailField.text!.isEmpty && !passwordField.text!.isEmpty)  else {
             let alertController = UIAlertController(title: "Error", message: "Please fill both email and password fields.", preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "Close",
@@ -101,17 +107,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.presentViewController(alertController, animated: true, completion: nil)
             return;
         }
-       
-        //La richiesta avviena in maniera asincrona
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            //preparo roba per chiamata sincrona
             let loginTest:[String:String] = ["email":self.emailField.text!, "password":self.passwordField.text!]
              print("Ok! \(self.emailField.text!) - \(self.passwordField.text!)")
+            
                 dispatch_async(dispatch_get_main_queue()) {
                      SwiftSpinner.show("Loggin' in...")
                 }
+            
+            //go for the login
             self.marketcloud!.logIn(loginTest)
             let userId = self.marketcloud!.getUserId()
+            
             dispatch_async(dispatch_get_main_queue()) {
                 SwiftSpinner.hide()
                 guard userId != -1 else {
@@ -123,16 +130,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     print("Login failed")
                     return
                 }
+                //Sets data about the last registered user. Will be used when back in ViewController
                 UserData.setLastRegisteredUser(self.emailField.text!, password: self.passwordField.text!)
+                //obtains cart
                 Cart.getCart()
-                print("Got Cart")
                 self.performSegueWithIdentifier("next", sender: sender)
             }
         })
     }
     
-
-    
+    //Shows a popup with useful informations about the app
     @IBAction func aboutPopUp(sender: UIButton) {
         let connectionInfos:String = Reachability.checkConnectionType()
         let alertController = UIAlertController(title: "Informazioni", message: " Marketcloud - A Sample Application written in Swift 2.1 with <3 \n\n Connessione -> \(connectionInfos)\n Marketcloud SDK \n Public key: \(marketcloud!.getKey())", preferredStyle: .Alert)
@@ -150,7 +157,5 @@ class ViewController: UIViewController, UITextFieldDelegate {
     internal func closeApp() {
         UIControl().sendAction(Selector("suspend"), to: UIApplication.sharedApplication(), forEvent: nil)
     }
-
-
 }
 

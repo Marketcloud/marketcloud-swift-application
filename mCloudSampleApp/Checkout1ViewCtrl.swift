@@ -1,5 +1,6 @@
 import UIKit
 
+//Controller for the first part of the checkout
 class Checkout1ViewCtrl: UIViewController, UITextFieldDelegate
 {
     
@@ -28,6 +29,7 @@ class Checkout1ViewCtrl: UIViewController, UITextFieldDelegate
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
+        /* 
         print(fullnameLabel.text!)
         print(countryLabel.text!)
         print(stateLabel.text!)
@@ -35,8 +37,10 @@ class Checkout1ViewCtrl: UIViewController, UITextFieldDelegate
         print(addressLabel.text!)
         print(postalcodeLabel.text!)
         //Do nothing
+        */
     }
     
+    //validates fields, saves the address then goes to the next view
     @IBAction func nextButton(sender: UIButton) {
         if(validator()) {
             let fullname = (fullnameLabel.text!)
@@ -68,7 +72,7 @@ class Checkout1ViewCtrl: UIViewController, UITextFieldDelegate
         }
     }
     
-    
+    //validates the fields
     func validator() -> Bool {
         guard (!fullnameLabel.text!.isEmpty && !countryLabel.text!.isEmpty && !stateLabel.text!.isEmpty && !cityLabel.text!.isEmpty && !addressLabel.text!.isEmpty && !postalcodeLabel.text!.isEmpty)  else {
             let alertController = UIAlertController(title: "Error", message: "All fields must be filled out in order to process the request", preferredStyle: .Alert)

@@ -1,6 +1,7 @@
 import UIKit
 import Marketcloud
 
+//Controller for the product's detail view
 class ProductDetailsViewController: UIViewController {
     
     let marketcloud:Marketcloud? = MarketcloudMain.getMcloud()
@@ -18,9 +19,12 @@ class ProductDetailsViewController: UIViewController {
     override func viewDidLoad() {
         self.automaticallyAdjustsScrollViewInsets = false
         scrollView.scrollToTop()
+        
+        //retrieves the product
         product = UserData.selectedProduct
+        
         self.navigationItem.title = "Back"
-        print("Product is \(product!.name)")
+        //print("Product is \(product!.name)")
         self.title = product!.name
         if(product!.images!.count != 0){
         imgView.load_image(product!.images![0], imageId: product!.id!)
@@ -31,20 +35,21 @@ class ProductDetailsViewController: UIViewController {
         priceLabel.text = "Price: \(String(product!.price!))€";
     }
     
+    //sets the quantity of the product
     @IBAction func changeQuantity(sender: UISegmentedControl) {
         var quantity:Int = Int(quantityLabel.text!)!
             switch segmentedControl.selectedSegmentIndex
             {
             case 1:
-                print("stock_quantity is \(product!.stock_level!)");
+                //print("stock_quantity is \(product!.stock_level!)");
                 if(quantity != product!.stock_level){
                 quantityLabel.text = String(quantity + 1);
                 quantity++;
-                print("Quantity is now \(quantity)")
+               // print("Quantity is now \(quantity)")
                 addToCartButton.enabled = true
                 }
                 else {
-                    print("OUT OF STOCK")
+                    NSLog("OUT OF STOCK")
                 }
             case 0:
                 if(quantity != 0){
@@ -60,6 +65,7 @@ class ProductDetailsViewController: UIViewController {
         
     }
     
+    //adds an object to the cart
     @IBAction func addToCart(sender: UIButton) {
         let id:Int = (product?.id)!
         let quantity:Int = Int(quantityLabel.text!)!
@@ -68,6 +74,8 @@ class ProductDetailsViewController: UIViewController {
         
         var itemArray = [AnyObject]()
         
+        //if has variants, auto-select the first one.
+        //Variant support will be improved in the next versions
         let booleano:Bool = product!.hasVariants!
         if(booleano) {
             itemArray.append(["product_id":id,"quantity":quantity,"variant_id":1])
@@ -89,9 +97,9 @@ class ProductDetailsViewController: UIViewController {
         
         
         let statusInt:Int = newCart!["status"] as! Int
-        print("Status number = \(statusInt)")
+        //print("Status number = \(statusInt)")
         guard (statusInt != 0 ) else {
-            print(newCart)
+            //print(newCart)
             let alertController = UIAlertController(title: "Error", message: "Unable to add the item to the cart. Probably it's out of stock.", preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "Close",
                 style: UIAlertActionStyle.Destructive,
@@ -99,6 +107,7 @@ class ProductDetailsViewController: UIViewController {
             self.presentViewController(alertController, animated: true, completion: nil)
             return
         }
+        //sets the new cart with the new object
         Cart.refreshCart(newCart!)
         let alertController = UIAlertController(title: "Ok!", message: "Item added to cart!", preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "Close",

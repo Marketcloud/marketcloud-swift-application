@@ -1,6 +1,7 @@
 import UIKit
 import Marketcloud
 
+//Product class
 public class Product {
     
     var id: Int?
@@ -12,8 +13,10 @@ public class Product {
     var quantity:Int?
     var hasVariants:Bool?
     
+    //keeps track of the downloaded products
     public static var products = [Product]()
     
+    //initialize a Product object taken from the API. (not for user's cart)
     internal init(id:Int, description:String, name:String, images:[String], price:Double, stock_level:Int, hasVariants:Bool) {
         self.id = id
         self.description = description
@@ -24,6 +27,7 @@ public class Product {
         self.hasVariants = hasVariants
     }
     
+    //Initialize a Product object for the user's cart
     internal init(id:Int, description:String, name:String, images:[String], price:Double, quantity:Int, hasVariants:Bool) {
         self.id = id
         self.description = description
@@ -34,7 +38,7 @@ public class Product {
         self.hasVariants = hasVariants
     }
 
-    
+    //Method for filtering the products (not used yet...)
     public static func getProductsByFilters(marketcloud:Marketcloud, filter:Int, filterField:Int){
         switch filter {
         case 1  :
@@ -60,48 +64,56 @@ public class Product {
         }
     }
     
+    //counts how many products have been downloaded
     public static func getProductsCount() -> Int {
         return products.count
     }
     
+    //downloads the products then calls elabProducts in order to make objects from them
     public static func getProducts(marketcloud:Marketcloud) -> Bool{
         let productList = marketcloud.getProducts()
         return(elabProducts(productList))
     }
     
+    /*
+    Elaborates the downloaded products and creates objects from them.
+    If some fields are missing the object won't be created (there will be
+    only valid objects...)
+    */
     private static func elabProducts(mainList:NSDictionary) -> Bool {
         products = [Product]()
         //print(mainList["data"]!.count)
-        guard (mainList["count"] != nil && mainList["data"] != nil) else { //caso per un solo elemento
-           return elabOneProduct(mainList)
+        
+        //check for a single filtered object
+        guard (mainList["count"] != nil && mainList["data"] != nil) else {
+            return elabOneProduct(mainList)
         }
         let items = mainList["data"]!.count
         
         for var i = 0; i < items; i++ {
-            print("Cycle \(i)")
+            //print("Cycle \(i)")
             let temp = mainList["data"]![i]
-            print(temp)
+            //print(temp)
             
             guard temp["id"]! != nil else {
-                print("id is nil - Skipping Object")
+                //print("id is nil - Skipping Object")
                 continue
             }
             let tempId:Int = temp["id"]!! as! Int
-            //print(tempId)
             
             var tempDescription:String = "No description available"
             if(temp["description"]! == nil) {
-                print("temp[description]!!  == nil - Replacing Description")
+                //print("temp[description]!!  == nil - Replacing Description")
             } else
                 if(temp["description"]!!.isKindOfClass(NSNull)) {
-                    print("temp[description]!! isKindOfClass(NSNull)  - Replacing Description")
+                   // print("temp[description]!! isKindOfClass(NSNull)  - Replacing Description")
             }
             if (temp["description"]! != nil && !temp["description"]!!.isKindOfClass(NSNull)) {
                 tempDescription = temp["description"]! as! String
             }
             
             guard temp["name"]! != nil else {
-                print("name is nil - Skipping Object")
+                //print("name is nil - Skipping Object")
                 continue
             }
             let tempName:String = temp["name"]!! as! String
@@ -113,19 +125,19 @@ public class Product {
             
             var tempImages = [String]()
             if (temp["images"]! == nil) {
-                print("IMAGES IS NIL")
+                //print("IMAGES IS NIL")
             } else {
                 tempImages = temp["images"]! as! [String]
             }
             
             guard temp["price"]! != nil else {
-                print("price is nil")
+                //print("price is nil")
                 continue
             }
             let tempPrice:Double = temp["price"]! as! Double
             
             guard temp["stock_level"]! != nil else {
-                print("stock_level is nil")
+                //print("stock_level is nil")
                 continue
             }
             
@@ -135,13 +147,14 @@ public class Product {
             }
 
             let product = Product(id: tempId, description: tempDescription, name: tempName, images: tempImages, price: tempPrice, stock_level: stock_level, hasVariants: hasVariants)
-            print("Finished")
+           // print("Finished")
             products.append(product)
         }
         print("elabProducts is over! \n collected \(products.count) items!")
         return true
     }
     
+    //Elaborates only one product
     private static func elabOneProduct(mainList:NSDictionary) -> Bool {
         print("Did I crash? count -> \(mainList["count"])")
         if (mainList["data"] == nil) {
@@ -160,14 +173,14 @@ public class Product {
             //  print("temp[description]!!  == nil")
         } else
             if(temp["description"]!!.isKindOfClass(NSNull)) {
-                //   print("temp[description]!! isKindOfClass(NSNull)")
+                //print("temp[description]!! isKindOfClass(NSNull)")
         }
         if (temp["description"]! != nil && !temp["description"]!!.isKindOfClass(NSNull)) {
             tempDescription = temp["description"]! as! String
         }
         
         guard temp["name"]! != nil else {
-            //    print("name is nil -> returning\n------------------\n")
+            //print("name is nil -> returning\n------------------\n")
             return false
         }
         let tempName:String = temp["name"]!! as! String
@@ -180,7 +193,7 @@ public class Product {
         }
         
         guard temp["price"]! != nil else {
-            //  print("price is nil")
+            //print("price is nil")
             return false
         }
         let tempPrice:Double = temp["price"]! as! Double

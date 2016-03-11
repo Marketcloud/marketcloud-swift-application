@@ -1,5 +1,6 @@
 import UIKit
 
+//A controller for the custom cells in a tableView
 class CellCartController: UITableViewCell {
     
     @IBOutlet weak var imgCell: UIImageView!
