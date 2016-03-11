@@ -278,7 +278,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="B39735C8-21F0-48E7-B404-0B9E5C97C83E" translatesAutoresizingMaskIntoConstraints="NO" id="9Ea-62-16D">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5022C0D4-ABCF-45C7-994B-FC99495961F0" translatesAutoresizingMaskIntoConstraints="NO" id="9Ea-62-16D">
                                                     <rect key="frame" x="14" y="0.0" width="67" height="101"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="67" id="1SY-sl-eRk"/>
@@ -526,7 +526,7 @@ VG90YWw6IDAF4oKsA
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1B3AAEC5-C5D9-4E78-BD05-DD8B9EBABBA8" translatesAutoresizingMaskIntoConstraints="NO" id="dQx-Fg-KUK">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5D4B0DCE-3AB4-41B2-83E8-B83B8022D9FF" translatesAutoresizingMaskIntoConstraints="NO" id="dQx-Fg-KUK">
                                                     <rect key="frame" x="14" y="4" width="67" height="101"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="67" id="tBZ-rx-qlz"/>
@@ -1063,7 +1063,7 @@ Cantami, o diva, del Pelìde Achille  L’ira funesta che infiniti addusse  Lutt
         </scene>
     </scenes>
     <resources>
-        <image name="1B3AAEC5-C5D9-4E78-BD05-DD8B9EBABBA8" width="256" height="256">
+        <image name="5022C0D4-ABCF-45C7-994B-FC99495961F0" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -5486,7 +5486,7 @@ AAQKJAAECikABAoxAAQKNAAECjkABApBAAQKRAAEClYABApZAAQKXgAAAAAAAAQBAAAAAAAAAEEAAAAA
 AAAAAAAAAAAABApgA
 </mutableData>
         </image>
-        <image name="B39735C8-21F0-48E7-B404-0B9E5C97C83E" width="256" height="256">
+        <image name="5D4B0DCE-3AB4-41B2-83E8-B83B8022D9FF" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
