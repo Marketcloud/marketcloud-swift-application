@@ -12,9 +12,13 @@ public class Product {
     var stock_level:Int?
     var quantity:Int?
     var hasVariants:Bool?
+    var show:Bool
     
     //keeps track of the downloaded products
     public static var products = [Product]()
+    
+    
+    
     
     //initialize a Product object taken from the API. (not for user's cart)
     internal init(id:Int, description:String, name:String, images:[String], price:Double, stock_level:Int, hasVariants:Bool) {
@@ -25,6 +29,7 @@ public class Product {
         self.price = price
         self.stock_level = stock_level
         self.hasVariants = hasVariants
+        self.show = true
     }
     
     //Initialize a Product object for the user's cart
@@ -36,6 +41,7 @@ public class Product {
         self.price = price
         self.quantity = quantity
         self.hasVariants = hasVariants
+        self.show = true
     }
 
     //Method for filtering the products (not used yet...)
@@ -68,6 +74,8 @@ public class Product {
     public static func getProductsCount() -> Int {
         return products.count
     }
+    
+
     
     //downloads the products then calls elabProducts in order to make objects from them
     public static func getProducts(marketcloud:Marketcloud) -> Bool{
@@ -187,7 +195,7 @@ public class Product {
         
         var tempImages = [String]()
         if (temp["images"]! == nil) {
-            //    print("images is nil")
+            //print("images is nil")
         } else {
             tempImages = temp["images"]! as! [String]
         }
@@ -213,4 +221,27 @@ public class Product {
         products.append(product)
         return true
     }
+    
+    static func filter(var filter: String) {
+        filter = filter.lowercaseString
+        print("Filter method for \(filter)")
+        let itemsTotal = products.count
+        for var i = 0; i < itemsTotal; i++ {
+            if products[i].name!.lowercaseString.rangeOfString(filter) == nil {
+                products[i].show = false
+            }
+            else {
+                print("Ok for \(products[i].name!)")
+                products[i].show = true
+            }
+        }
+    }
+    
+    static func removeFilters() {
+        let itemsTotal = products.count
+        for var i = 0; i < itemsTotal; i++ {
+            products[i].show = true
+        }
+    }
+    
 }

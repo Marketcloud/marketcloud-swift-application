@@ -30,9 +30,19 @@ class ProductsViewController: UIViewController, UITextFieldDelegate,UITableViewD
         return  Product.getProductsCount()
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if (Product.products[indexPath.row].show == false) {
+            return 0
+        } else {
+            return 110
+        }
+    }
+
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //sincronizza le celle in base alla posizione nell'array tasks
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CellProductsController
+        
         cell.titleCell.text = Product.products[indexPath.row].name!
         //cell.descrCell.text = Products.products[indexPath.row].description
         cell.priceCell.text = "Price: \(String(Product.products[indexPath.row].price!))€";
@@ -60,11 +70,32 @@ class ProductsViewController: UIViewController, UITextFieldDelegate,UITableViewD
                     cell.imgCell.image = nil;
                     cell.imgCell.image = UIImage(named: "logo")
                 }
+                
                 cell.setNeedsLayout()
             }
         })
         return cell
     }
+    
+    //---------------------
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+    
+    //for filtering purposes
+    func textFieldDidEndEditing(textField: UITextField) {
+        let filter = textField.text!
+        if (filter == "") {
+            Product.removeFilters()
+        } else {
+            Product.filter(filter)
+            print("Filtering \(filter)")
+        }
+        tblProducts.reloadData()
+    }
+    //---------------------
+
     
     //-----------SEGUE
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
