@@ -89,6 +89,7 @@ public class Product {
     only valid objects...)
     */
     private static func elabProducts(mainList:NSDictionary) -> Bool {
+        print(mainList)
         products = [Product]()
         //print(mainList["data"]!.count)
         
@@ -104,7 +105,7 @@ public class Product {
             //print(temp)
             
             guard temp["id"]! != nil else {
-                //print("id is nil - Skipping Object")
+                print("id is nil - Skipping Object")
                 continue
             }
             let tempId:Int = temp["id"]!! as! Int
@@ -139,23 +140,19 @@ public class Product {
             }
             
             guard temp["price"]! != nil else {
-                //print("price is nil")
+                print("price is nil")
                 continue
             }
             let tempPrice:Double = temp["price"]! as! Double
             
-            guard temp["stock_level"]! != nil else {
-                //print("stock_level is nil")
-                continue
-            }
             
             var stock_level:Int = 100
-            if(!(temp["stock_level"] is NSNull)) {
+            if(!(temp["stock_level"] is NSNull) &&  temp["stock_level"]! != nil) {
              stock_level = temp["stock_level"]! as! Int
             }
 
             let product = Product(id: tempId, description: tempDescription, name: tempName, images: tempImages, price: tempPrice, stock_level: stock_level, hasVariants: hasVariants)
-           // print("Finished")
+           //print("Finished")
             products.append(product)
         }
         print("elabProducts is over! \n collected \(products.count) items!")
@@ -164,7 +161,7 @@ public class Product {
     
     //Elaborates only one product
     private static func elabOneProduct(mainList:NSDictionary) -> Bool {
-        print("Did I crash? count -> \(mainList["count"])")
+       // print("Did I crash? count -> \(mainList["count"])")
         if (mainList["data"] == nil) {
             print("Connection error")
             return false

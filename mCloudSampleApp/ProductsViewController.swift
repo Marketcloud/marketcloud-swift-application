@@ -46,6 +46,7 @@ class ProductsViewController: UIViewController, UITextFieldDelegate,UITableViewD
         cell.titleCell.text = Product.products[indexPath.row].name!
         //cell.descrCell.text = Products.products[indexPath.row].description
         cell.priceCell.text = "Price: \(String(Product.products[indexPath.row].price!))€";
+    
 
         dispatch_async(dispatch_get_main_queue(), {
             // check if the cell is still on screen, and only if it is, update the image.
