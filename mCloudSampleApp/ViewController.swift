@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //marketcloud object will be initialized only once
         if (marketcloud == nil) {
             print("Setting marketcloud variable")
-            MarketcloudMain.setMarketcloud("f84af487-a315-42e6-a57a-d79296bd9d99")
+            MarketcloudMain.setMarketcloud("691ad512-cd1d-420e-8ba0-433b2b02a357")
             marketcloud = (MarketcloudMain.getMcloud()!)
         }
         //calls the getProducts method only if products are not been downloaded yet
