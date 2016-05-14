@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                           = 'Stripe'
-  s.version                        = '6.2.0'
+  s.version                        = '7.0.1'
   s.summary                        = 'Stripe is a web-based API for accepting payments online.'
   s.license                        = { :type => 'MIT', :file => 'LICENSE' }
   s.homepage                       = 'https://stripe.com/docs/mobile/ios'
@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   s.default_subspecs               = 'Core'
 
   s.subspec 'Core' do |ss|
-    ss.public_header_files         = 'Stripe/PublicHeaders/*.h', 'Stripe/PublicHeaders/Checkout/*.h'
+    ss.public_header_files         = 'Stripe/PublicHeaders/*.h'
     ss.ios.public_header_files     = 'Stripe/PublicHeaders/ApplePay/*.h', 'Stripe/PublicHeaders/UI/*.h'
-    ss.source_files                = 'Stripe/PublicHeaders/*.h', 'Stripe/*.{h,m}', 'Stripe/PublicHeaders/Checkout/*.h', 'Stripe/Checkout/*.{h,m}'
+    ss.source_files                = 'Stripe/PublicHeaders/*.h', 'Stripe/*.{h,m}'
     ss.ios.source_files            = 'Stripe/PublicHeaders/ApplePay/*.h', 'Stripe/ApplePay/*.{h,m}', 'Stripe/PublicHeaders/UI/*.h', 'Stripe/UI/*.{h,m}', 'Stripe/Fabric/*'
     ss.resources                   = 'Stripe/Resources/**/*'
   end

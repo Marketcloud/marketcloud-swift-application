@@ -2,6 +2,8 @@ import Foundation
 
 public class Marketcloud {
     
+    public static var version:String = "0.2.1"
+    
     private var publicKey:String
     private var token:String
     private var user_id:Int
@@ -28,7 +30,7 @@ public class Marketcloud {
         users = Users(key:publicKey)
         orders = Orders(key:publicKey)
         utils = Utils()
-        //verranno reinizializzati se si fa il login
+        //these classes will be reinitialized if an user logs in
     }
     
     public func getKey() -> String {
@@ -161,15 +163,15 @@ public class Marketcloud {
         let r = users.logIn(datas)
         
         guard (r["token"] != nil || r["user_id"] != nil) else {
-            print("Critical error \(r)")
+            //print("Critical error \(r)")
             return
         }
         
         self.token = String(r["token"]!)
         self.user_id = Int(String(r["user_id"]!))!
         
-        print("Il token è stato settato a \(self.token)")
-        print("user_id è stato settato a \(self.user_id)")
+        //print( token setted -> \(self.token)")
+        //print("user_id setted -> \(self.user_id)")
         
         self.products = Product(key: publicKey, token: token)
         self.categories = Categories(key: publicKey, token: token)
@@ -179,7 +181,7 @@ public class Marketcloud {
         self.users = Users(key: publicKey, token:token)
         self.orders = Orders(key: publicKey, token:token)
         
-        print("Tutte le classi sono state reinizializzate!")
+        //print("ready!")
     }
     
     public func logOut() -> NSDictionary  {
@@ -187,8 +189,8 @@ public class Marketcloud {
             self.token = ""
             self.user_id = -1
             
-            print("Il token è stato settato a \(self.token)")
-            print("user_id è stato settato a \(self.user_id)")
+            //print("token setted -> \(self.token)")
+            //print("user_id setted -> \(self.user_id)")
             
             self.products = Product(key: publicKey)
             self.categories = Categories(key: publicKey)
@@ -197,10 +199,10 @@ public class Marketcloud {
             self.addresses = Addresses(key: publicKey)
             self.users = Users(key: publicKey)
             self.orders = Orders(key: publicKey)
-            print("Tutte le classi sono state reinizializzate!")
+            //print("logged out!")
             return ["Ok":"Logged Out"]
         } else {
-            return ["error":"unable to logOut. Are you sure you were logged In?"]
+            return ["Error":"unable to logOut. Are you sure you were logged In?"]
         }
     }
     //------------------------------------------------------

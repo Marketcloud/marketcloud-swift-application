@@ -4,20 +4,18 @@ import Marketcloud
 public class MarketcloudMain {
     
     internal static var marketcloud:Marketcloud? = nil
-    
-    //sets the marketcloud public key. Use it once just for initialize the SDK
-    static func setMarketcloud(key:String) {
-        marketcloud = Marketcloud(key:key)
-        print("setted marketcloud var with key \(key)")
-    }
-    
-    //returns the marketcloud object
+    private static let publicKey:String = "2cd15ec1-833c-4713-afbf-b7510e357bc8"
+        
+    //sets the marketcloud public key and returns the marketcloud object
     static func getMcloud() -> Marketcloud? {
+        marketcloud = Marketcloud(key:publicKey)
+        print("setted marketcloud var with key \(publicKey)")
+
         if(marketcloud != nil) {
             return marketcloud!
         }
         else {
-            print("Did you forget to call setMarketcloud first? \nReturning nil")
+            print("Error in setting marketcloud variable \nReturning nil")
             return nil
         }
     }

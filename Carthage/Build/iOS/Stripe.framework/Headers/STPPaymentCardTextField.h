@@ -203,7 +203,8 @@
  *  Whether or not the form currently contains a valid card number, expiration date, and CVC.
  *  @see STPCardValidator
  */
-@property(nonatomic, readonly, getter=isValid)BOOL valid;
+@property(nonatomic, readonly)BOOL isValid;
+@property(nonatomic, readonly)BOOL valid; // for backwards-compatibility
 
 /**
  *  Enable/disable selecting or editing the field. Useful when submitting card details to Stripe.
@@ -221,9 +222,19 @@
 @property(nonatomic, readonly) NSUInteger expirationMonth;
 
 /**
+ *  The current expiration month displayed by the field, as a string. This may or may not be a valid entry (i.e. "0", and may be 0-prefixed (i.e. "01" for January). You can use [STPCardValidator validationStateForExpirationMonth] to validate this value.
+ */
+@property(nonatomic, readonly, nullable) NSString *formattedExpirationMonth;
+
+/**
  *  The current expiration year displayed by the field, modulo 100 (e.g. the year 2015 will be represented as 15). May or may not be valid, unless isValid is true, in which case it is guaranteed to be valid.
  */
 @property(nonatomic, readonly) NSUInteger expirationYear;
+
+/**
+ *  The current expiration year displayed by the field, as a string. This is a 2-digit year (i.e. "15"), and may or may not be a valid entry. You can use [STPCardValidator validationStateForExpirationYear:inMonth] to validate this value.
+ */
+@property(nonatomic, readonly, nullable) NSString *formattedExpirationYear;
 
 /**
  *  The current card CVC displayed by the field. May or may not be valid, unless isValid is true, in which case it is guaranteed to be valid.

@@ -8,32 +8,17 @@
 
 #import "STPPaymentCardTextFieldViewModel.h"
 #import "STPCardValidator.h"
+#import "UIImage+Stripe.h"
+#import "NSString+Stripe.h"
 
 #define FAUXPAS_IGNORED_IN_METHOD(...)
-
-@interface NSString(StripeSubstring)
-- (NSString *)stp_safeSubstringToIndex:(NSUInteger)index;
-- (NSString *)stp_safeSubstringFromIndex:(NSUInteger)index;
-@end
-
-@implementation NSString(StripeSubstring)
-
-- (NSString *)stp_safeSubstringToIndex:(NSUInteger)index {
-    return [self substringToIndex:MIN(self.length, index)];
-}
-
-- (NSString *)stp_safeSubstringFromIndex:(NSUInteger)index {
-    return (index > self.length) ? @"" : [self substringFromIndex:index];
-}
-
-@end
 
 @implementation STPPaymentCardTextFieldViewModel
 
 - (void)setCardNumber:(NSString *)cardNumber {
     NSString *sanitizedNumber = [STPCardValidator sanitizedNumericStringForString:cardNumber];
     STPCardBrand brand = [STPCardValidator brandForNumber:sanitizedNumber];
-    NSInteger maxLength = [STPCardValidator lengthForCardBrand:brand];
+    NSInteger maxLength = [[[STPCardValidator lengthsForCardBrand:brand] lastObject] integerValue];
     _cardNumber = [sanitizedNumber stp_safeSubstringToIndex:maxLength];
 }
 

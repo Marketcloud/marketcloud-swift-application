@@ -30,7 +30,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //marketcloud object will be initialized only once
         if (marketcloud == nil) {
             print("Setting marketcloud variable")
-            MarketcloudMain.setMarketcloud("691ad512-cd1d-420e-8ba0-433b2b02a357")
             marketcloud = (MarketcloudMain.getMcloud()!)
         }
         //calls the getProducts method only if products are not been downloaded yet
@@ -142,7 +141,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //Shows a popup with useful informations about the app
     @IBAction func aboutPopUp(sender: UIButton) {
         let connectionInfos:String = Reachability.checkConnectionType()
-        let alertController = UIAlertController(title: "Informazioni", message: " Marketcloud - A Sample Application written in Swift 2.1 with <3 \n\n Connessione -> \(connectionInfos)\n Marketcloud SDK \n Public key: \(marketcloud!.getKey())", preferredStyle: .Alert)
+        let versionInfos:String = marketcloud!.utils.getVersion()
+        let alertController = UIAlertController(title: "Informazioni", message: " Marketcloud - A Sample Application written in Swift 2.1 with <3 \n\n Connessione -> \(connectionInfos)\n Marketcloud SDK \(versionInfos) \n Public key: \(marketcloud!.getKey())", preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "Close",
             style: UIAlertActionStyle.Destructive,
             handler: nil))

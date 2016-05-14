@@ -1,2 +1,2 @@
-github "Marketcloud/marketcloud-swift-sdk" "v0.1.5"
-github "stripe/stripe-ios" "v6.2.0"
+github "Marketcloud/marketcloud-swift-sdk" "v0.2.1"
+github "stripe/stripe-ios" "v7.0.1"
