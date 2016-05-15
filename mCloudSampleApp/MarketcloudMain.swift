@@ -8,15 +8,14 @@ public class MarketcloudMain {
         
     //sets the marketcloud public key and returns the marketcloud object
     static func getMcloud() -> Marketcloud? {
-        marketcloud = Marketcloud(key:publicKey)
-        print("setted marketcloud var with key \(publicKey)")
-
+        
         if(marketcloud != nil) {
             return marketcloud!
         }
         else {
-            print("Error in setting marketcloud variable \nReturning nil")
-            return nil
+            marketcloud = Marketcloud(key:publicKey)
+            print("setted marketcloud var with key \(publicKey)")
+            return marketcloud!
         }
     }
     

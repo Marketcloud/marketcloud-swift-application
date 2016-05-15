@@ -10,7 +10,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     
+    
     var marketcloud:Marketcloud? = MarketcloudMain.getMcloud()
+
     var downloadProducts:Bool = true
     var load:Bool = false
     
@@ -44,6 +46,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 self.loginButton.enabled = true
                 self.loadingAct.stopAnimating()
                 self.loadingAct.hidden = true
+                    if (UserData.getData() != nil) {
+                        self.emailField.text = UserData.getData()!["email"]
+                        self.passwordField.text = UserData.getData()!["password"]
+                        self.logIn(nil)
+                    }
                     }
                 } else {
                     //errors are occurred
@@ -106,36 +113,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.presentViewController(alertController, animated: true, completion: nil)
             return;
         }
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            let loginTest:[String:String] = ["email":self.emailField.text!, "password":self.passwordField.text!]
-             print("Ok! \(self.emailField.text!) - \(self.passwordField.text!)")
-            
-                dispatch_async(dispatch_get_main_queue()) {
-                     SwiftSpinner.show("Loggin' in...")
-                }
-            
-            //go for the login
-            self.marketcloud!.logIn(loginTest)
-            let userId = self.marketcloud!.getUserId()
-            
-            dispatch_async(dispatch_get_main_queue()) {
-                SwiftSpinner.hide()
-                guard userId != -1 else {
-                    let alertController = UIAlertController(title: "Error", message: "Incorrect login attempt\n Please try again.", preferredStyle: .Alert)
-                    alertController.addAction(UIAlertAction(title: "Close",
-                    style: UIAlertActionStyle.Destructive,
-                    handler: nil))
-                    self.presentViewController(alertController, animated: true, completion: nil)
-                    print("Login failed")
-                    return
-                }
-                //Sets data about the last registered user. Will be used when back in ViewController
-                UserData.setLastRegisteredUser(self.emailField.text!, password: self.passwordField.text!)
-                //obtains cart
-                Cart.getCart()
-                self.performSegueWithIdentifier("next", sender: sender)
-            }
-        })
+        logIn(sender)
     }
     
     //Shows a popup with useful informations about the app
@@ -156,6 +134,49 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     internal func closeApp() {
         UIControl().sendAction(Selector("suspend"), to: UIApplication.sharedApplication(), forEvent: nil)
+    }
+    
+    private func logIn(sender:UIButton?) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            let loginTest:[String:String] = ["email":self.emailField.text!, "password":self.passwordField.text!]
+            print("datas -> \(self.emailField.text!) - \(self.passwordField.text!)")
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                SwiftSpinner.show("Loggin' in...")
+            }
+            
+            //go for the login
+            print("Sending \(loginTest) to marketcloud.logIn")
+            print(self.marketcloud!.logIn(loginTest))
+            let userId = self.marketcloud!.getUserId()
+            
+            print("Ok! UserId is \(userId)")
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                SwiftSpinner.hide()
+                guard userId != -1 else {
+                    let alertController = UIAlertController(title: "Error", message: "Incorrect login attempt\n Please try again.", preferredStyle: .Alert)
+                    alertController.addAction(UIAlertAction(title: "Close",
+                        style: UIAlertActionStyle.Destructive,
+                        handler: nil))
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                    print("Login failed")
+                    return
+                }
+                //Sets data about the last registered user. Will be used when back in ViewController
+                UserData.setLastLoggedUser(self.emailField.text!, password: self.passwordField.text!)
+                
+                
+                //obtains cart
+                Cart.getCart()
+                if(sender != nil) {
+                self.performSegueWithIdentifier("next", sender: sender)
+                }
+                else {
+                    self.performSegueWithIdentifier("next", sender: nil)
+                }
+            }
+        })
     }
 }
 

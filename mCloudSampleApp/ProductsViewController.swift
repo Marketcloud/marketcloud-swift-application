@@ -1,16 +1,27 @@
 import UIKit
+import Marketcloud
 
 //Controller for the products list view
 class ProductsViewController: UIViewController, UITextFieldDelegate,UITableViewDelegate, UITableViewDataSource {
     
+    var marketcloud:Marketcloud? = MarketcloudMain.getMcloud()
+
     @IBOutlet weak var tblProducts: UITableView!
     
     //logs out, destroyes the cart and returns to the login view
     @IBAction func logoutPressed(sender: UIBarButtonItem) {
-        print("Logout button Pressed")
-        Cart.products.removeAll()
-        Cart.lastCart = nil
-        Cart.cartId = -1
+        let res = marketcloud!.logOut()
+        if(res["Ok"] != nil ) {
+            print(res)
+            print("Logout button Pressed")
+            Cart.products.removeAll()
+            Cart.lastCart = nil
+            Cart.cartId = -1
+            print("CartId is now \(Cart.cartId)")
+        }
+        else {
+            print(res)
+        }
         navigationController?.popToRootViewControllerAnimated(true)
     }
 
@@ -54,7 +65,7 @@ class ProductsViewController: UIViewController, UITextFieldDelegate,UITableViewD
             if updateCell != nil {
                 if(Product.products[indexPath.row].images!.count != 0) {
                     if(ImageCache.isInCache(Product.products[indexPath.row].id!)) {
-                        print("Image is in Cache")
+                        //print("Image is in Cache")
                         let image = ImageCache.get(Product.products[indexPath.row].id!)
                         cell.imgCell.image = nil;
                         cell.imgCell.image = image
