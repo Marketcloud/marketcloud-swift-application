@@ -49,13 +49,24 @@ class Checkout1ViewCtrl: UIViewController, UITextFieldDelegate
             let city = (cityLabel.text!)
             let address = (addressLabel.text!)
             let postalCode = (postalcodeLabel.text!)
-            let email = UserData.getLastRegistedUserEmail()
+            let email = UserData.getLastLoggedUserEmail()
             
             print("validator is ok. \n email is \(email)")
-            let testAddress:[String:String] = ["email":UserData.getLastRegistedUserEmail(),"full_name": fullname,"country" : country, "state": state, "city": city, "address1": address, "postal_code": postalCode]
+            let testAddress:[String:String] = ["email":email,"full_name": fullname,"country" : country, "state": state, "city": city, "address1": address, "postal_code": postalCode]
             
             let shippingAddress = MarketcloudMain.getMcloud()!.createAddress(testAddress)
             print(shippingAddress)
+            
+            guard (shippingAddress["status"] != nil) else {
+                
+                let alertController = UIAlertController(title: "Error", message: "All fields must be filled", preferredStyle: .Alert)
+                alertController.addAction(UIAlertAction(title: "Close",
+                    style: UIAlertActionStyle.Destructive,
+                    handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+                return
+            }
+
             
             guard (shippingAddress["status"] as! Int != 0) else {
 

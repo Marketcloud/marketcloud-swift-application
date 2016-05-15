@@ -33,8 +33,16 @@ public class UserData {
         return lastRegisteredUser["password"]!
     }
     
+    public static func getLastLoggedUserEmail() -> String {
+        return lastLoggedUser["email"]!
+    }
+    
+    public static func getLastLoggedUserPassword() -> String {
+        return lastLoggedUser["password"]!
+    }
+
+    
     public static func getData() -> [String:String]? {
-        return nil
         let email:String = defaults.objectForKey("email") as? String ?? String()
         let password:String = defaults.objectForKey("password") as? String ?? String()
         

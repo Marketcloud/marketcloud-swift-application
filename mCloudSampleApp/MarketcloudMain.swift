@@ -66,7 +66,19 @@ extension String {
             return false
         }
     }
+    
+    func stripHtmlTags() -> String {
+        let regex = try! NSRegularExpression(pattern: "<.*?>", options: [.CaseInsensitive])
+        
+        let range = NSMakeRange(0, self.characters.count)
+        let htmlLessString :String = regex.stringByReplacingMatchesInString(self, options: [],
+            range:range ,
+            withTemplate: "")
+        
+        return htmlLessString
+    }
 }
+
 
 //Extends the UIScrollView class adding a method to scroll the view to the top.
 extension UIScrollView {

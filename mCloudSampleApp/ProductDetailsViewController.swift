@@ -31,7 +31,7 @@ class ProductDetailsViewController: UIViewController {
         } else {
             imgView.image = UIImage(named: "logo")
         }
-        labelDesc.text = product!.description
+        labelDesc.text = product!.description?.stripHtmlTags()
         priceLabel.text = "Price: \(String(product!.price!))€";
     }
     
