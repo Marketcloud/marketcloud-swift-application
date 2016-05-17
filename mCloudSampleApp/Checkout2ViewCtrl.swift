@@ -36,9 +36,9 @@ class Checkout2ViewCtrl: UIViewController, UITextFieldDelegate
                 NSLog("Error creating token: %@", error!.localizedDescription);
                 return
             }
-
-            // TODO: send the token to your server so it can create a charge
-            let alert = UIAlertController(title: "Welcome to Stripe", message: "Token created: \(stripeToken)", preferredStyle: .Alert)
+            UserData.lastStripeToken = stripeToken.tokenId
+            //TODO: send the token to your server so it can create a charge
+            let alert = UIAlertController(title: "Welcome to Stripe", message: "Token created: \(stripeToken.tokenId)", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "OK", style: .Default,  handler: {(action:UIAlertAction) in
                 self.performSegueWithIdentifier("check3", sender: sender)
             }))

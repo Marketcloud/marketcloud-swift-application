@@ -3,15 +3,17 @@ import Foundation
 //keeps tracks of the user data in order to share between the views
 public class UserData {
     
-    private static var lastRegisteredUser = ["email":"", "password":""]
-    private static var lastLoggedUser = ["email":"", "password":""]
+    private static var lastRegisteredUser:[String:String] = ["email":"", "password":""]
+    private static var lastLoggedUser:[String:String] = ["email":"", "password":""]
 
     public static var lastAddressId:Int = -1
     public static var lastAddressInfos:String? = nil
     
     public static var selectedProduct:Product? = nil
     
-    public static let defaults = NSUserDefaults.standardUserDefaults()
+    public static let defaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    
+    public static var lastStripeToken:String = ""
     
     public static func setLastRegisteredUser(email:String, password:String) {
         lastRegisteredUser = ["email":email, "password":password]

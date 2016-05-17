@@ -20,9 +20,17 @@ class Checkout3ViewCtrl: UIViewController
         print("Confirmed!")
         
         let order = MarketcloudMain.getMcloud()?.createOrder(UserData.lastAddressId, billingId: UserData.lastAddressId, items: Cart.lastCart!["data"]!["items"]!! as! NSArray)
-        print(order)
+        print("Printing order")
+        print(order!)
         
         if(order!["status"] as! Int == 1) {
+            
+            print("Elaborating stripeToken + order")
+            print("Order id is \(order!["data"]!["id"]) and stripeToken is \(UserData.lastStripeToken)")
+            print(MarketcloudMain.getMcloud()?.completeOrder(order!["data"]!["id"] as! Int, stripeToken: UserData.lastStripeToken))
+            
+            UserData.lastStripeToken = ""
+            
             Cart.emptyCart()
             let alertController = UIAlertController(title: "Ok", message: "Order went fine. You will be redirect to main page", preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "Close",
