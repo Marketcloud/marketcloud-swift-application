@@ -29,6 +29,8 @@ class ProductsViewController: UIViewController, UITextFieldDelegate,UITableViewD
         self.automaticallyAdjustsScrollViewInsets = false
         self.navigationItem.setHidesBackButton(true, animated: false)
         self.title = "Products List"
+        print("printing cart")
+        print(marketcloud!.getCart())
     }
     
     //-------------TABLEVIEW
@@ -107,8 +109,6 @@ class ProductsViewController: UIViewController, UITextFieldDelegate,UITableViewD
         tblProducts.reloadData()
     }
     //---------------------
-
-    
     //-----------SEGUE
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "detail"){

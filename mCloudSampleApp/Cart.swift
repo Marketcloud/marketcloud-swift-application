@@ -14,7 +14,7 @@ public class Cart {
         let cartItems = lastCart!["data"]!["items"]
         let itemsCount = cartItems!!.count
         
-        for var i = 0; i < itemsCount; i++ {
+        for i in 0 ..< itemsCount {
             let temp = cartItems!![i]!
             
             guard temp["id"]! != nil else {
@@ -106,7 +106,7 @@ public class Cart {
         let itemsTotal = products.count
       //  print("Items total is \(itemsTotal)")
         var total:Double = 0
-        for var i = 0; i < itemsTotal; i++ {
+        for i in 0 ..< itemsTotal {
             total += (products[i].price! * Double(products[i].quantity!))
         }
         return total
@@ -118,7 +118,7 @@ public class Cart {
     public static func generateTextRecap() -> String {
         var ret:String = ""
         let itemsTotal = products.count
-        for var i = 0; i < itemsTotal; i++ {
+        for i in 0 ..< itemsTotal {
             ret += "Item: \(products[i].name!) - Quantity \(products[i].quantity!)\n"
             ret += "price: \(products[i].price! * Double(products[i].quantity!))\n\n"
         }
@@ -129,7 +129,7 @@ public class Cart {
     public static func emptyCart() {
         var itemArray = [AnyObject]()
         let itemsTotal = products.count
-        for var i = 0; i < itemsTotal; i++ {
+        for i in 0 ..< itemsTotal {
             if(products[i].hasVariants!) {
             itemArray.append(["product_id":products[i].id!,"variant_id":1])
             } else {

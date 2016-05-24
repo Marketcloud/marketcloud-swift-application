@@ -15,6 +15,8 @@ public class UserData {
     
     public static var lastStripeToken:String = ""
     
+    public static var currencies:NSDictionary? = nil
+    
     public static func setLastRegisteredUser(email:String, password:String) {
         lastRegisteredUser = ["email":email, "password":password]
         

@@ -44,7 +44,7 @@ class ProductDetailsViewController: UIViewController {
                 //print("stock_quantity is \(product!.stock_level!)");
                 if(quantity != product!.stock_level){
                 quantityLabel.text = String(quantity + 1);
-                quantity++;
+                quantity += 1;
                // print("Quantity is now \(quantity)")
                 addToCartButton.enabled = true
                 }
@@ -54,7 +54,7 @@ class ProductDetailsViewController: UIViewController {
             case 0:
                 if(quantity != 0){
                     quantityLabel.text = String(quantity - 1);
-                    quantity--
+                    quantity -= 1
                     if (quantity == 0) {
                         addToCartButton.enabled = false
                     }
@@ -83,9 +83,10 @@ class ProductDetailsViewController: UIViewController {
         else {
             itemArray.append(["product_id":id,"quantity":quantity])
         }
-        
+        print("Printing itemArray")
+        print(itemArray)
         let newCart = (marketcloud?.addToCart(Cart.cartId, data: itemArray))
-        
+        print(newCart)
         guard (newCart!["status"] != nil) else {
             let alertController = UIAlertController(title: "Error", message: "Network Error. The application will now terminate.", preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "Close",
@@ -94,8 +95,6 @@ class ProductDetailsViewController: UIViewController {
             self.presentViewController(alertController, animated: true, completion: nil)
             exit(0)
         }
-        
-        
         let statusInt:Int = newCart!["status"] as! Int
         //print("Status number = \(statusInt)")
         guard (statusInt != 0 ) else {

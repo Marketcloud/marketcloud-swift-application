@@ -53,7 +53,7 @@ ________________________________________________________________________________
 
 Here you can find all the methods explained and a tutorial about how to work with the sdk
 
-Are you in a hurry? Or maybe you just want to try yourself? Here's a playground with every method available to be tested -> [download me!](https://www.dropbox.com/s/7djiiwsnx20a0kt/Marketcloud_Playground.playground.rar?dl=0 "Marketcloud's Playground")
+Are you in a hurry? Or maybe you just want to try yourself? Here's a playground with every method available to be tested -> [Playground](https://github.com/Marketcloud/marketcloud-swift-playground "Marketcloud's Playground")
 
 If you managed to import the library via Carthage you could import the SDK with  ```import Marketcloud ```
 
@@ -65,6 +65,21 @@ And.... you are good to go!
 
 
 ```marketcloud.getProducts() ``` returns a NSDictionary with all the products in your store
+
+```marketcloud.getProducts(filter:[String: AnyObject]) ```
+Use this method to filter the products.
+
+Example:
+
+```
+var itemArray = [String: AnyObject]()
+itemArray.append(["Author":"Tolkien","Pages":"213"])
+
+marketcloud.getProducts(itemArray)
+```
+returns a NSDictionary with all the products that match with the filters.
+
+
 
 ```marketcloud.getProductById(id:Int) ``` returns a NSDictionary with the informations about the product with that Id
 ```marketcloud.getProductById(id:String) ``` same as before, but you can insert the Id as a String instead of an Integer
@@ -83,8 +98,8 @@ And.... you are good to go!
 
 ```marketcloud.getBrands() ``` returns a NSDictionary with all the brands in your store
 
-```marketcloud.getBrandsById(id:Int) ``` returns a NSDictionary with the informations about the brand with that Id
-```marketcloud.getBrandsById(id:String) ``` same as before, but you can insert the Id as a String instead of an Integer
+```marketcloud.getBrandById(id:Int) ``` returns a NSDictionary with the informations about the brand with that Id
+```marketcloud.getBrandById(id:String) ``` same as before, but you can insert the Id as a String instead of an Integer
 
 ## Carts
 
@@ -162,7 +177,7 @@ Accepted fields:
 
 ```marketcloud.getAddresses() ``` !!!**_ONLY FOR LOGGED USERS_**!!! Returns a NSDictionary with the informations about the user's addresses
 
-```marketcloud.getAddress(id:Int) ``` Returns a NSDictionary with the informations about the address
+```marketcloud.getAddress(id:Int) ``` Returns a NSDictionary with the informations about the selected address
 ```marketcloud.getAddress(id:String) ``` Same, but you can insert a String instead of an Integer
 
 ```marketcloud.updateAddress(id:Int, datas:[String:AnyObject]) ``` updates an address given its Id. Accepts an array in the same way as the createAddress one. Returns an NSDictionary with the information about the updated address
@@ -225,9 +240,30 @@ let r  = (marketcloud.getCart()["data"]!["items"]!!) as! NSArray
 marketcloud.createOrder(13320, billingId: 13320, items: r)
 //Note that the shipping and the billing address Ids could be different!
 ```
+Returns a NSDictionary with informations about the order.
 
+```marketcloud.completeOrder(orderId:Int, stripeToken:String) ``` . 
+
+This method completes an order and needs  the order's id and a valid Stripe Token.
+Call it after createOrder() and when you have a valid Stripe Token (using Stripe's SDK).
 
 Returns a NSDictionary with informations about the order.
+
+##Currencies
+```marketcloud.getCurrencies() ```
+
+Returns a NSDictionary with informations about the actual currencies.
+
+##Shippings
+```marketcloud.getShippings() ```
+
+Returns a NSDictionary with informations about the available shipping methods.
+
+```marketcloud.getShippingById(id:Int) ```
+Returns a NSDictionary with informations about a shipping method given its Id
+
+```marketcloud.getShippingById(id:String) ```
+Same as marketcloud.getShippingById(id:Int) but you can insert a String instead of a Int.
 
 ##Utils
 There are some useful methods that could help you in using the SDK.
@@ -247,13 +283,13 @@ ________________________________________________________________________________
 
 ##PLAYGROUND
 
-I _strongly_ recommend to check the [SDK's Playground](https://www.dropbox.com/s/7djiiwsnx20a0kt/Marketcloud_Playground.playground.rar?dl=0 "Marketcloud SDK's Playground").
+I _strongly_ recommend to check the [SDK's Playground](https://github.com/Marketcloud/marketcloud-swift-playground "Marketcloud SDK's Playground").
 There are almost all methods explained, and you can test them in real time (there is a key with a sample store for testing purposes).
 
 ___________________________________________________________________________________________________________________________
 ##Sample application
 
-[Sample Swifth application using the SDK](https://github.com/Marketcloud/marketcloud-swift-application "Sample Swifth application using the SDK")
+[Sample Swift application using the SDK](https://github.com/Marketcloud/marketcloud-swift-application "Sample Swifth application using the SDK")
 ___________________________________________________________________________________________________________________________
 ## HTTPS##
 This SDK uses HTTPS for every communication with the API!

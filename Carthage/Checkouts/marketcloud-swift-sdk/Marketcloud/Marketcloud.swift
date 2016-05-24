@@ -2,19 +2,21 @@ import Foundation
 
 public class Marketcloud {
     
-    public static var version:String = "0.2.4.1"
+    public static var version:String = "0.2.8"
     
     private var publicKey:String
     private var token:String
     private var user_id:Int
     
     private var products:Product
+    private var currencies:Currencies
     private var categories:Categories
     private var brands:Brands
     private var carts:Carts
     private var addresses:Addresses
     private var users:Users
     private var orders:Orders
+    private var shippings:Shippings
     public var utils:Utils
     
     public init(key: String) {
@@ -23,11 +25,14 @@ public class Marketcloud {
         user_id = -1
         
         products = Product(key: publicKey)
+        currencies = Currencies(key: publicKey)
         categories = Categories(key: publicKey)
         brands = Brands(key: publicKey)
         carts = Carts(key:publicKey)
         addresses = Addresses(key:publicKey)
         users = Users(key:publicKey)
+        shippings = Shippings(key:publicKey)
+        
         orders = Orders(key:publicKey)
         utils = Utils()
         //these classes will be reinitialized if an user logs in
@@ -43,10 +48,14 @@ public class Marketcloud {
         return self.token
     }
     
-    
     //-------------------------------------------------------
+    
     public func getProducts() -> NSDictionary {
         return products.getProducts()
+    }
+    
+    public func getProducts(filter:[String: AnyObject]) -> NSDictionary {
+        return products.getProducts(filter)
     }
     
     public func getProductById(id:Int) -> NSDictionary {
@@ -64,6 +73,7 @@ public class Marketcloud {
     }
     
     //-------------------------------------------------------
+    
     public func getCategories() -> NSDictionary {
         return categories.getCategories()
     }
@@ -75,17 +85,19 @@ public class Marketcloud {
         return categories.getCategoryById(Int(id)!)
     }
     //-------------------------------------------------------
+    
     public func getBrands() -> NSDictionary {
         return brands.getBrands()
     }
     
-    public func getBrandsById(id:Int) -> NSDictionary {
+    public func getBrandById(id:Int) -> NSDictionary {
         return brands.getBrandById(id)
     }
-    public func getBrandsById(id:String) -> NSDictionary {
+    public func getBrandById(id:String) -> NSDictionary {
         return brands.getBrandById(Int(id)!)
     }
     //-------------------------------------------------------
+    
     public func createEmptyCart() -> NSDictionary {
         return carts.createEmptyCart()
     }
@@ -122,6 +134,7 @@ public class Marketcloud {
     }
     
     //---------------------------------------------------------
+    
     public func createAddress(datas:[String:AnyObject]) -> NSDictionary {
         return addresses.createAddress(datas)
     }
@@ -150,7 +163,9 @@ public class Marketcloud {
     public func removeAddress(id:String) -> NSDictionary {
         return addresses.removeAddress(Int(id)!)
     }
+    
     //---------------------------------------------------------
+    
     public func createUser(datas:[String:String]) -> NSDictionary {
         return users.createUser(datas)
     }
@@ -174,17 +189,19 @@ public class Marketcloud {
         //print("user_id setted -> \(self.user_id)")
         
         self.products = Product(key: publicKey, token: token)
+        self.currencies = Currencies(key: publicKey, token: token)
         self.categories = Categories(key: publicKey, token: token)
         self.brands = Brands(key: publicKey, token: token)
         self.carts = Carts(key: publicKey, token: token)
         self.addresses = Addresses(key: publicKey, token: token)
         self.users = Users(key: publicKey, token:token)
         self.orders = Orders(key: publicKey, token:token)
+        self.shippings = Shippings(key: publicKey, token:token)
+        
         
         //print("ready!")
         return ["Ok":"Logged In"]
     }
-    
     
     public func logOut() -> NSDictionary  {
         if(users.logOut()) {
@@ -195,12 +212,15 @@ public class Marketcloud {
             //print("user_id setted -> \(self.user_id)")
             
             self.products = Product(key: publicKey)
+            self.currencies = Currencies(key: publicKey)
             self.categories = Categories(key: publicKey)
             self.brands = Brands(key: publicKey)
             self.carts = Carts(key: publicKey)
             self.addresses = Addresses(key: publicKey)
             self.users = Users(key: publicKey)
             self.orders = Orders(key: publicKey)
+            self.shippings = Shippings(key: publicKey)
+            
             //print("logged out!")
             return ["Ok":"Logged Out"]
         } else {
@@ -208,11 +228,35 @@ public class Marketcloud {
         }
     }
     //------------------------------------------------------
+    
     public func createOrder(shippingId:Int, billingId:Int, items:NSArray) -> NSDictionary{
         return orders.createOrder(shippingId, billingId: billingId, items: items)
     }
+    public func createOrder(shippingId:String, billingId:String, items:NSArray) -> NSDictionary{
+        return orders.createOrder(Int(shippingId)!, billingId: Int(billingId)!, items: items)
+    }
+    
     
     public func completeOrder(orderId:Int, stripeToken:String) -> NSDictionary {
         return orders.completeOrder(orderId, stripeToken: stripeToken)
+    }
+    public func completeOrder(orderId:String, stripeToken:String) -> NSDictionary {
+        return orders.completeOrder(Int(orderId)!, stripeToken: stripeToken)
+    }
+    //------------------------------------------------------
+    
+    public func getCurrencies() -> NSDictionary {
+        return currencies.getCurrencies()
+    }
+    //------------------------------------------------------
+    
+    public func getShippings() -> NSDictionary {
+        return shippings.getShippings()
+    }
+    public func getShippingById(id:Int) -> NSDictionary {
+        return shippings.getShippingById(id)
+    }
+    public func getShippingById(id:String) -> NSDictionary {
+        return shippings.getShippingById(Int(id)!)
     }
 }

@@ -9,11 +9,11 @@ class Checkout3ViewCtrl: UIViewController
         orderRecapLabel.text = Cart.generateTextRecap()
         shippingAddressRecapLabel.text = UserData.lastAddressInfos!
     }
-
+    
     @IBOutlet weak var orderRecapLabel: UILabel!
-
+    
     @IBOutlet weak var shippingAddressRecapLabel: UILabel!
-
+    
     //sets the order data then calls the createOrder method.
     //Eventually, if the order went fine empties the cart.
     @IBAction func confirmButton(sender: UIButton) {
@@ -49,11 +49,16 @@ class Checkout3ViewCtrl: UIViewController
     
     //returns to the product's list view
     func returnToProducts() {
-        for (var i = 0; i < self.navigationController?.viewControllers.count; i++) {
-            if(self.navigationController?.viewControllers[i].isKindOfClass(ProductsViewController) == true) {
-                self.navigationController?.popToViewController(self.navigationController!.viewControllers[i] as! ProductsViewController, animated: true)
-                break;
+        if(self.navigationController == nil) {
+            print("Aborting! navigationController is nil!")
+            return
+        } else {
+            for i in 0 ..< self.navigationController!.viewControllers.count {
+                if(self.navigationController?.viewControllers[i].isKindOfClass(ProductsViewController) == true) {
+                    self.navigationController?.popToViewController(self.navigationController!.viewControllers[i] as! ProductsViewController, animated: true)
+                    break;
+                }
             }
-    }
+        }
     }
 }

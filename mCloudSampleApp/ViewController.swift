@@ -34,14 +34,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
             print("Setting marketcloud variable")
             marketcloud = (MarketcloudMain.getMcloud()!)
         }
+        
         //calls the getProducts method only if products are not been downloaded yet
         if(downloadProducts){
             print("Downloading Products")
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
                 let result = (Product.getProducts(self.marketcloud!))
+                UserData.currencies = (self.marketcloud?.getCurrencies())
                     
-                if (result) {
+                if (result) && (UserData.currencies != nil) {
                 print("Products have been downloaded")
+                print("Currencies have been downloaded")
+                    print(UserData.currencies)
                 dispatch_async(dispatch_get_main_queue()) {
                 self.loginButton.enabled = true
                 self.loadingAct.stopAnimating()
@@ -120,7 +124,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func aboutPopUp(sender: UIButton) {
         let connectionInfos:String = Reachability.checkConnectionType()
         let versionInfos:String = marketcloud!.utils.getVersion()
-        let alertController = UIAlertController(title: "Informazioni", message: " Marketcloud - A Sample Application written in Swift 2.1 with <3 \n\n Connessione -> \(connectionInfos)\n Marketcloud SDK \(versionInfos) \n Public key: \(marketcloud!.getKey())", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "Informazioni", message: " Marketcloud - A Sample Application written in Swift 2.2 with <3 \n\n Connessione -> \(connectionInfos)\n Marketcloud SDK \(versionInfos) \n Public key: \(marketcloud!.getKey())", preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "Close",
             style: UIAlertActionStyle.Destructive,
             handler: nil))
@@ -133,7 +137,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     internal func closeApp() {
-        UIControl().sendAction(Selector("suspend"), to: UIApplication.sharedApplication(), forEvent: nil)
+        UIControl().sendAction(#selector(NSURLSessionTask.suspend), to: UIApplication.sharedApplication(), forEvent: nil)
     }
     
     private func logIn(sender:UIButton?) {

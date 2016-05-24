@@ -25,6 +25,9 @@ class Checkout2ViewCtrl: UIViewController, UITextFieldDelegate
             self.presentViewController(alertController, animated: true, completion: nil)
             return
         }
+        dispatch_async(dispatch_get_main_queue()) {
+            SwiftSpinner.show("Loading")
+        }
         //Obtains datas about the credit cards in Stripe card object
         let card = STPCardParams() //creating a stripe card object
         card.number = creditCardField.text!
@@ -33,10 +36,16 @@ class Checkout2ViewCtrl: UIViewController, UITextFieldDelegate
         card.expYear = UInt(yearExpField.text!)!
         STPAPIClient.sharedClient().createTokenWithCard(card) { token, error in
             guard let stripeToken = token else {
+                dispatch_async(dispatch_get_main_queue()) {
+                    SwiftSpinner.hide()
+                }
                 NSLog("Error creating token: %@", error!.localizedDescription);
                 return
             }
             UserData.lastStripeToken = stripeToken.tokenId
+            dispatch_async(dispatch_get_main_queue()) {
+                SwiftSpinner.hide()
+            }
             //TODO: send the token to your server so it can create a charge
             let alert = UIAlertController(title: "Welcome to Stripe", message: "Token created: \(stripeToken.tokenId)", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "OK", style: .Default,  handler: {(action:UIAlertAction) in

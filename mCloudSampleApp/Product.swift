@@ -99,7 +99,7 @@ public class Product {
         }
         let items = mainList["data"]!.count
         
-        for var i = 0; i < items; i++ {
+        for i in 0 ..< items {
             //print("Cycle \(i)")
             let temp = mainList["data"]![i]
             //print(temp)
@@ -219,12 +219,12 @@ public class Product {
         return true
     }
     
-    static func filter(var filter: String) {
-        filter = filter.lowercaseString
-        print("Filter method for \(filter)")
+    static func filter(filter: String) {
+        let newFilter = filter.lowercaseString
+        print("Filter method for \(newFilter)")
         let itemsTotal = products.count
-        for var i = 0; i < itemsTotal; i++ {
-            if products[i].name!.lowercaseString.rangeOfString(filter) == nil {
+        for i in 0 ..< itemsTotal {
+            if products[i].name!.lowercaseString.rangeOfString(newFilter) == nil {
                 products[i].show = false
             }
             else {
@@ -236,7 +236,7 @@ public class Product {
     
     static func removeFilters() {
         let itemsTotal = products.count
-        for var i = 0; i < itemsTotal; i++ {
+        for i in 0 ..< itemsTotal {
             products[i].show = true
         }
     }
