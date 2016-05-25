@@ -1,4 +1,4 @@
-# Marketcloud Sample Swift 2.1 Application
+# Marketcloud Sample Swift 2.2 Application
 
 ## Sample Swift application that implements the Marketcloud Swift SDK ##
 
