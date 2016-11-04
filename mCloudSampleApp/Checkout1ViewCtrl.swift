@@ -77,7 +77,8 @@ class Checkout1ViewCtrl: UIViewController, UITextFieldDelegate
                 self.present(alertController, animated: true, completion: nil)
                 return
             }
-            UserData.lastAddressId = shippingAddress["data"]!["id"] as! Int
+            
+            UserData.lastAddressId = (shippingAddress.value(forKey: "data") as! NSDictionary).value(forKey: "id") as! Int
             UserData.lastAddressInfos = "\(fullname) \n\(country),\(state) \n\(city), \(address) - \(postalCode)"
             self.performSegue(withIdentifier: "check2", sender: sender)
         }

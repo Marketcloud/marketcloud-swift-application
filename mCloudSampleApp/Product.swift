@@ -51,7 +51,7 @@ open class Product {
             let mainList = marketcloud.getProductById(filterField)
             print(mainList)
             if (mainList["errors"] == nil) {
-                elabProducts(mainList)
+                elabProducts(mainList: mainList)
             } else {
                 print("no results")
                 return
@@ -59,7 +59,7 @@ open class Product {
         case 2  :
             let mainList = marketcloud.getProductsByCategory(filterField)
             if (mainList["count"]! as! Int != 0) {
-                elabProducts(mainList)
+                elabProducts(mainList: mainList)
             }
             else {
                 print("no results")
@@ -80,7 +80,7 @@ open class Product {
     //downloads the products then calls elabProducts in order to make objects from them
     open static func getProducts(_ marketcloud:Marketcloud) -> Bool{
         let productList = marketcloud.getProducts()
-        return(elabProducts(productList))
+        return(elabProducts(mainList: productList))
     }
     
     /*
@@ -88,7 +88,7 @@ open class Product {
     If some fields are missing the object won't be created (there will be
     only valid objects...)
     */
-    fileprivate static func elabProducts(_ mainList:NSDictionary) -> Bool {
+    fileprivate static func elabProducts(mainList:NSDictionary) -> Bool {
         print(mainList)
         products = [Product]()
         //print(mainList["data"]!.count)
@@ -101,54 +101,59 @@ open class Product {
         
         for i in 0 ..< items {
             //print("Cycle \(i)")
-            let temp = mainList["data"]![i]
+            //let temp:NSDictionary = (mainList["data"]! as! NSDictionary)[i] as! NSDictionary
+            
+            let preTemp:NSArray = mainList["data"]! as! NSArray
+            
+            let temp:NSDictionary = preTemp[i] as! NSDictionary
+            
+            
             //print(temp)
             
-            guard temp["id"]! != nil else {
+            guard temp.value(forKey: "id") != nil else {
                 print("id is nil - Skipping Object")
                 continue
             }
-            let tempId:Int = temp["id"]!! as! Int
+            let tempId:Int = temp.value(forKey: "id") as! Int
             
             var tempDescription:String = "No description available"
-            if(temp["description"]! == nil) {
-                //print("temp[description]!!  == nil - Replacing Description")
-            } else
-                if(temp["description"]!!.isKind(of: NSNull)) {
-                   // print("temp[description]!! isKindOfClass(NSNull)  - Replacing Description")
-            }
-            if (temp["description"]! != nil && !temp["description"]!!.isKind(of: NSNull)) {
-                tempDescription = temp["description"]! as! String
+            if(temp.value(forKey: "description") == nil) {
+                print("temp[description]!!  == nil - Replacing Description")
             }
             
-            guard temp["name"]! != nil else {
+            if (temp.value(forKey: "description")  != nil ) {
+                tempDescription = temp.value(forKey: "description") as! String
+            }
+            
+            guard temp.value(forKey: "name")  != nil else {
                 //print("name is nil - Skipping Object")
                 continue
             }
-            let tempName:String = temp["name"]!! as! String
+            
+            let tempName:String = temp.value(forKey: "name") as! String
             
             var hasVariants:Bool = false
-            if (temp["has_variants"]! != nil) {
-                hasVariants = temp["has_variants"] as! Bool
+            if (temp.value(forKey: "has_variants") != nil) {
+                hasVariants = temp.value(forKey: "has_variants") as! Bool
             }
             
             var tempImages = [String]()
-            if (temp["images"]! == nil) {
+            if (temp.value(forKey: "images") == nil) {
                 //print("IMAGES IS NIL")
             } else {
-                tempImages = temp["images"]! as! [String]
+                tempImages = temp.value(forKey: "images") as! [String]
             }
             
-            guard temp["price"]! != nil else {
+            guard temp.value(forKey: "price") != nil else {
                 print("price is nil")
                 continue
             }
-            let tempPrice:Double = temp["price"]! as! Double
+            let tempPrice:Double = temp.value(forKey: "price") as! Double
             
             
             var stock_level:Int = 100
-            if(!(temp["stock_level"] is NSNull) &&  temp["stock_level"]! != nil) {
-             stock_level = temp["stock_level"]! as! Int
+            if(!(temp.value(forKey: "stock_level") is NSNull) &&  temp.value(forKey: "stock_level") != nil) {
+             stock_level = temp.value(forKey: "stock_level") as! Int
             }
 
             let product = Product(id: tempId, description: tempDescription, name: tempName, images: tempImages, price: tempPrice, stock_level: stock_level, hasVariants: hasVariants)
@@ -166,53 +171,51 @@ open class Product {
             print("Connection error")
             return false
         }
-        let temp = mainList["data"]!
-        guard temp["id"] != nil else {
+        let temp:NSDictionary = mainList["data"]! as! NSDictionary
+        guard temp.value(forKey: "id") != nil else {
             return false
         }
-        let tempId:Int = temp["id"]!! as! Int
+        let tempId:Int = temp.value(forKey: "id")  as! Int
         // print(tempId)
         
         var tempDescription:String = "No description available"
-        if(temp["description"]! == nil) {
-            //  print("temp[description]!!  == nil")
-        } else
-            if(temp["description"]!!.isKind(of: NSNull)) {
-                //print("temp[description]!! isKindOfClass(NSNull)")
+        if(temp.value(forKey: "description") == nil) {
+             print("temp[description]!!  == nil")
         }
-        if (temp["description"]! != nil && !temp["description"]!!.isKind(of: NSNull)) {
+        
+        if (temp["description"]! != nil) {
             tempDescription = temp["description"]! as! String
         }
         
-        guard temp["name"]! != nil else {
+        guard temp.value(forKey: "name") != nil else {
             //print("name is nil -> returning\n------------------\n")
             return false
         }
-        let tempName:String = temp["name"]!! as! String
+        let tempName:String = temp.value(forKey: "name") as! String
         
         var tempImages = [String]()
-        if (temp["images"]! == nil) {
+        if (temp.value(forKey: "images")  == nil) {
             //print("images is nil")
         } else {
             tempImages = temp["images"]! as! [String]
         }
         
-        guard temp["price"]! != nil else {
+        guard temp.value(forKey: "price")  != nil else {
             //print("price is nil")
             return false
         }
         let tempPrice:Double = temp["price"]! as! Double
         
         var hasVariants:Bool = false
-        if (temp["has_variants"]! != nil) {
-            hasVariants = temp["has_variants"] as! Bool
+        if (temp.value(forKey: "has_variants")  != nil) {
+            hasVariants = temp.value(forKey: "has_variants")  as! Bool
         }
         
-        guard temp["stock_level"]! != nil else {
+        guard temp.value(forKey: "stock_level") != nil else {
             //print("stock_quantity is nil")
             return false
         }
-        let stock_level:Int = temp["stock_level"]! as! Int
+        let stock_level:Int = temp.value(forKey: "stock_level") as! Int
         
         let product = Product(id: tempId, description: tempDescription, name: tempName, images: tempImages, price: tempPrice, stock_level:stock_level, hasVariants: hasVariants)
         products.append(product)

@@ -13,9 +13,10 @@ open class Cart {
         // print("Before crash : lastCart is \(lastCart)")
         
         
-        //let cartItems = lastCart!["data"]!["items"]
+        let cartDataItems:NSDictionary = (lastCart!["data"]! as! NSDictionary)
+        let cartItems:NSArray = cartDataItems["items"] as! NSArray
         
-        let cartItems:NSDictionary = (lastCart!.value(forKey: "data") as!NSDictionary).value(forKey: "items") as! NSDictionary
+        //let cartItems:NSArray = (lastCart!.value(forKey: "data") as! NSDictionary).value(forKey: "items") as! NSArray
         
         //let cartId:Int = (cart.value(forKey: "data") as! NSDictionary).value(forKey: "id") as! Int
         
@@ -23,7 +24,7 @@ open class Cart {
         let itemsCount:Int = cartItems.count
         
         for i in 0 ..< itemsCount {
-            let temp:NSDictionary = cartItems[i]! as! NSDictionary
+            let temp:NSDictionary = cartItems[i] as! NSDictionary
             
             guard temp.value(forKey: "id") != nil else {
                 continue
