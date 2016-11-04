@@ -1,2 +1,3 @@
-github "Marketcloud/marketcloud-swift-sdk" "0.2.8"
-github "stripe/stripe-ios" "v7.0.1"
+github "facebook/ios-snapshot-test-case" "2.1.4"
+github "Marketcloud/marketcloud-swift-sdk" "v0.3.3"
+github "stripe/stripe-ios" "v9.1.0"

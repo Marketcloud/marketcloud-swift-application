@@ -12,22 +12,22 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         let total = String(Cart.calcTotal())
         totalLabel.text = "Total: \(total)"
         if(Cart.products.count == 0) {
-            checkOutButton.enabled = false
+            checkOutButton.isEnabled = false
         }
     }
     
     //-------------TABLEVIEW
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         tblDatas.reloadData()
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return  Cart.products.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CellCartController
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CellCartController
         cell.titleCell.text = Cart.products[indexPath.row].name!
         cell.priceCell.text = "Price: \(String(Cart.products[indexPath.row].price!))€";
         let quantity:String = String(Cart.products[indexPath.row].quantity!)
@@ -59,11 +59,11 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     
     //slide left to delete a product when in the list
-    func tableView(TableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if(editingStyle == UITableViewCellEditingStyle.Delete) {
+    func tableView(_ TableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == UITableViewCellEditingStyle.delete) {
             print("I'm going to delete @ row \(indexPath.row) \n Object is \(Cart.products[indexPath.row].name)")
             
-            var itemArray = [AnyObject]()
+            var itemArray = [Any]()
             
             if(Cart.products[indexPath.row].hasVariants!) {
                 itemArray.append(["product_id":Cart.products[indexPath.row].id!,"variant_id":1])
@@ -77,30 +77,30 @@ class CartViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             let statusInt:Int = newCart!["status"] as! Int
             print("Status number = \(statusInt)")
             guard (statusInt != 0 ) else {
-                let alertController = UIAlertController(title: "Error", message: "Error in removing product(s) from the cart.", preferredStyle: .Alert)
+                let alertController = UIAlertController(title: "Error", message: "Error in removing product(s) from the cart.", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Close",
-                    style: UIAlertActionStyle.Destructive,
+                    style: UIAlertActionStyle.destructive,
                     handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
+                self.present(alertController, animated: true, completion: nil)
                 return
             }
             //refreshes cart with the deleted object
             Cart.refreshCart(newCart!)
             if(Cart.products.isEmpty) {
-                checkOutButton.enabled = false
+                checkOutButton.isEnabled = false
             }
             else {
-                checkOutButton.enabled = true
+                checkOutButton.isEnabled = true
             }
             //recalulates total
             let total = String(Cart.calcTotal())
             totalLabel.text = "Total: \(total)"
             
-            let alertController = UIAlertController(title: "Ok!", message: "Item(s) removed from cart!", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Ok!", message: "Item(s) removed from cart!", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Close",
-                style: UIAlertActionStyle.Default,
+                style: UIAlertActionStyle.default,
                 handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
             //refreshes table
             tblDatas.reloadData()
         }

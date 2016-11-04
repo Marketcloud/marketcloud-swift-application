@@ -18,12 +18,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         if(downloadProducts) {
-        loginButton.enabled = false
-        loadingAct.hidden = false
+        loginButton.isEnabled = false
+        loadingAct.isHidden = false
         loadingAct.startAnimating()
         }
         else {
-            loadingAct.hidden = true
+            loadingAct.isHidden = true
         }
         
         self.automaticallyAdjustsScrollViewInsets = false
@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //calls the getProducts method only if products are not been downloaded yet
         if(downloadProducts){
             print("Downloading Products")
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: {
                 let result = (Product.getProducts(self.marketcloud!))
                 UserData.currencies = (self.marketcloud?.getCurrencies())
                     
@@ -46,10 +46,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 print("Products have been downloaded")
                 print("Currencies have been downloaded")
                     print(UserData.currencies)
-                dispatch_async(dispatch_get_main_queue()) {
-                self.loginButton.enabled = true
+                DispatchQueue.main.async {
+                self.loginButton.isEnabled = true
                 self.loadingAct.stopAnimating()
-                self.loadingAct.hidden = true
+                self.loadingAct.isHidden = true
                     if (UserData.getData() != nil) {
                         self.emailField.text = UserData.getData()!["email"]
                         self.passwordField.text = UserData.getData()!["password"]
@@ -58,13 +58,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     }
                 } else {
                     //errors are occurred
-                    let alertController = UIAlertController(title: "Error", message: "Connection Error ", preferredStyle: .Alert)
+                    let alertController = UIAlertController(title: "Error", message: "Connection Error ", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Close",
-                        style: UIAlertActionStyle.Destructive,
+                        style: UIAlertActionStyle.destructive,
                         handler: {(action:UIAlertAction) in
                             self.closeApp();
                         }))
-                    self.presentViewController(alertController, animated: true, completion: nil)
+                    self.present(alertController, animated: true, completion: nil)
                 }
             })
         }
@@ -81,71 +81,71 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func logOutButtonPressed(sender: UIBarButtonItem) {
+    @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
         print("Logout Pressed")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        let alertController = UIAlertController(title: "Error", message: "Memory Warning!!\n Program will now terminate", preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Destructive, handler: {(action:UIAlertAction) in
+        let alertController = UIAlertController(title: "Error", message: "Memory Warning!!\n Program will now terminate", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.destructive, handler: {(action:UIAlertAction) in
             self.closeApp();
         }));
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     //---------------TEXTFIELD
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         //Do nothing :)
     }
     
     //---------------Buttons
 
     
-    @IBAction func loginButton(sender: UIButton) {
+    @IBAction func loginButton(_ sender: UIButton) {
         //verifies if there are empty fields
         guard (!emailField.text!.isEmpty && !passwordField.text!.isEmpty)  else {
-            let alertController = UIAlertController(title: "Error", message: "Please fill both email and password fields.", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Error", message: "Please fill both email and password fields.", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Close",
-                style: UIAlertActionStyle.Destructive,
+                style: UIAlertActionStyle.destructive,
                 handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
             return;
         }
         logIn(sender)
     }
     
     //Shows a popup with useful informations about the app
-    @IBAction func aboutPopUp(sender: UIButton) {
+    @IBAction func aboutPopUp(_ sender: UIButton) {
         let connectionInfos:String = Reachability.checkConnectionType()
         let versionInfos:String = marketcloud!.utils.getVersion()
-        let alertController = UIAlertController(title: "Informazioni", message: " Marketcloud - A Sample Application written in Swift 2.2 with <3 \n\n Connessione -> \(connectionInfos)\n Marketcloud SDK \(versionInfos) \n Public key: \(marketcloud!.getKey())", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "Informazioni", message: " Marketcloud - A Sample Application written in Swift 2.2 with <3 \n\n Connessione -> \(connectionInfos)\n Marketcloud SDK \(versionInfos) \n Public key: \(marketcloud!.getKey())", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Close",
-            style: UIAlertActionStyle.Destructive,
+            style: UIAlertActionStyle.destructive,
             handler: nil))
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     
-    @IBAction func closeApplication(sender: UIButton) {
+    @IBAction func closeApplication(_ sender: UIButton) {
         closeApp()
     }
     
     internal func closeApp() {
-        UIControl().sendAction(#selector(NSURLSessionTask.suspend), to: UIApplication.sharedApplication(), forEvent: nil)
+        UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
     }
     
-    private func logIn(sender:UIButton?) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+    fileprivate func logIn(_ sender:UIButton?) {
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: {
             let loginTest:[String:String] = ["email":self.emailField.text!, "password":self.passwordField.text!]
             print("datas -> \(self.emailField.text!) - \(self.passwordField.text!)")
             
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 SwiftSpinner.show("Loggin' in...")
             }
             
@@ -156,14 +156,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             print("Ok! UserId is \(userId)")
             
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 SwiftSpinner.hide()
                 guard userId != -1 else {
-                    let alertController = UIAlertController(title: "Error", message: "Incorrect login attempt\n Please try again.", preferredStyle: .Alert)
+                    let alertController = UIAlertController(title: "Error", message: "Incorrect login attempt\n Please try again.", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Close",
-                        style: UIAlertActionStyle.Destructive,
+                        style: UIAlertActionStyle.destructive,
                         handler: nil))
-                    self.presentViewController(alertController, animated: true, completion: nil)
+                    self.present(alertController, animated: true, completion: nil)
                     print("Login failed")
                     return
                 }
@@ -174,10 +174,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 //obtains cart
                 Cart.getCart()
                 if(sender != nil) {
-                self.performSegueWithIdentifier("next", sender: sender)
+                self.performSegue(withIdentifier: "next", sender: sender)
                 }
                 else {
-                    self.performSegueWithIdentifier("next", sender: nil)
+                    self.performSegue(withIdentifier: "next", sender: nil)
                 }
             }
         })

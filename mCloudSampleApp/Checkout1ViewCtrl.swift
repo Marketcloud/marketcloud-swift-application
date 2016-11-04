@@ -23,12 +23,12 @@ class Checkout1ViewCtrl: UIViewController, UITextFieldDelegate
     
     //---------------TEXTFIELD
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         /* 
         print(fullnameLabel.text!)
         print(countryLabel.text!)
@@ -41,7 +41,7 @@ class Checkout1ViewCtrl: UIViewController, UITextFieldDelegate
     }
     
     //validates fields, saves the address then goes to the next view
-    @IBAction func nextButton(sender: UIButton) {
+    @IBAction func nextButton(_ sender: UIButton) {
         if(validator()) {
             let fullname = (fullnameLabel.text!)
             let country = (countryLabel.text!)
@@ -59,38 +59,38 @@ class Checkout1ViewCtrl: UIViewController, UITextFieldDelegate
             
             guard (shippingAddress["status"] != nil) else {
                 
-                let alertController = UIAlertController(title: "Error", message: "All fields must be filled", preferredStyle: .Alert)
+                let alertController = UIAlertController(title: "Error", message: "All fields must be filled", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Close",
-                    style: UIAlertActionStyle.Destructive,
+                    style: UIAlertActionStyle.destructive,
                     handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
+                self.present(alertController, animated: true, completion: nil)
                 return
             }
 
             
             guard (shippingAddress["status"] as! Int != 0) else {
 
-                let alertController = UIAlertController(title: "Error", message: "Critical error in creating new address", preferredStyle: .Alert)
+                let alertController = UIAlertController(title: "Error", message: "Critical error in creating new address", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Close",
-                    style: UIAlertActionStyle.Destructive,
+                    style: UIAlertActionStyle.destructive,
                     handler: nil))
-                self.presentViewController(alertController, animated: true, completion: nil)
+                self.present(alertController, animated: true, completion: nil)
                 return
             }
             UserData.lastAddressId = shippingAddress["data"]!["id"] as! Int
             UserData.lastAddressInfos = "\(fullname) \n\(country),\(state) \n\(city), \(address) - \(postalCode)"
-            self.performSegueWithIdentifier("check2", sender: sender)
+            self.performSegue(withIdentifier: "check2", sender: sender)
         }
     }
     
     //validates the fields
     func validator() -> Bool {
         guard (!fullnameLabel.text!.isEmpty && !countryLabel.text!.isEmpty && !stateLabel.text!.isEmpty && !cityLabel.text!.isEmpty && !addressLabel.text!.isEmpty && !postalcodeLabel.text!.isEmpty)  else {
-            let alertController = UIAlertController(title: "Error", message: "All fields must be filled out in order to process the request", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Error", message: "All fields must be filled out in order to process the request", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Close",
-                style: UIAlertActionStyle.Destructive,
+                style: UIAlertActionStyle.destructive,
                 handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
             return false
         }
         self.view.endEditing(true)

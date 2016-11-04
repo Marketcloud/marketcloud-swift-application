@@ -2,8 +2,8 @@ import Foundation
 
 internal class Users {
     
-    private var headers:[String : String]
-    private var loggedIn:Bool
+    fileprivate var headers:[String : String]
+    fileprivate var loggedIn:Bool
     
     internal init(key: String) {
         headers = ["accept":"application/json","content-type":"application/json","authorization":key]
@@ -15,7 +15,7 @@ internal class Users {
         loggedIn = true
     }
     
-    internal func createUser(datas:[String:String]) -> NSDictionary {
+    internal func createUser(_ datas:[String:String]) -> NSDictionary {
         guard Reachability.isConnectedToNetwork() == true else {
             return [
                 "Error" : "No Connection"]
@@ -46,7 +46,7 @@ internal class Users {
             newDatas["image_url"] = ""
         }
         
-        guard let shouldReturn:HTTPResult = Just.post("https://api.marketcloud.it/v0/users", headers:headers, data: datas) else {
+        guard let shouldReturn:HTTPResult = Just.post("https://api.marketcloud.it/v0/users", data: datas as [String : Any], headers:headers) else {
             return[
                 "Error" : "Critical Error in HTTP request (post)"]
         }
@@ -59,7 +59,7 @@ internal class Users {
         return shouldReturn.json as! NSDictionary
     }
     
-    internal func logIn(datas:[String:String]) -> NSDictionary {
+    internal func logIn(_ datas:[String:String]) -> NSDictionary {
         guard Reachability.isConnectedToNetwork() == true else {
             return [
                 "Error" : "No Connection"]
@@ -76,7 +76,7 @@ internal class Users {
                 "Error" : "'password' field MUST be filled"]
         }
         
-        guard let shouldReturn:HTTPResult = Just.post("https://api.marketcloud.it/v0/users/authenticate", headers:headers, data: datas) else {
+        guard let shouldReturn:HTTPResult = Just.post("https://api.marketcloud.it/v0/users/authenticate", data: datas as [String : Any], headers:headers) else {
             return[
                 "Error" : "Critical Error in HTTP request (post)"]
         }
@@ -86,14 +86,34 @@ internal class Users {
                 "Error" : "Returned JSON is nil"]
         }
         
-        if (shouldReturn.json!["status"] as! Bool == false) {
+        var test  = shouldReturn.json as? [String:Any]
+        if (test?["status"]! as! Bool == false) {
+            return ["Error":"Wrong credentials"]
+        }
+        
+        var boolTest:Bool = (((shouldReturn.json! as? NSDictionary)?["status"]) != nil)
+        
+        //print("BoolTest printing...")
+        //print(boolTest)
+
+        if (boolTest == false) {
             return ["Error":"Wrong credentials"]
         }
         //print(shouldReturn.json!)
         
-        let token:String = String(shouldReturn.json!["data"]!!["token"]!!)
-        let userId:String = String(shouldReturn.json!["data"]!!["user"]!!["id"]!!)
+        let data:NSDictionary = (shouldReturn.json as! NSDictionary)["data"]! as! NSDictionary
         
+        let token = data["token"]!
+       // print("Printing token")
+       // print(token)
+        
+        let userdata:NSDictionary = data["user"] as! NSDictionary
+        let userId = userdata["id"]!
+       // print("Printing id")
+       // print(userId)
+
+
+        //return ["token":token, "user_id":userId]
         return ["token":token, "user_id":userId]
     }
     
@@ -107,7 +127,7 @@ internal class Users {
     }
     
     
-    internal func updateUser(datas:[String:String], userId:Int) -> NSDictionary {
+    internal func updateUser(_ datas:[String:String], userId:Int) -> NSDictionary {
         guard Reachability.isConnectedToNetwork() == true else {
             return [
                 "Error" : "No Connection"]
@@ -132,7 +152,7 @@ internal class Users {
                 "Error" : "'password' field MUST be filled"]
         }
         
-        guard let shouldReturn:HTTPResult = Just.put("https://api.marketcloud.it/v0/users/\(userId)", headers:headers, data: datas) else {
+        guard let shouldReturn:HTTPResult = Just.put("https://api.marketcloud.it/v0/users/\(userId)", data: datas as [String : Any], headers:headers) else {
             return[
                 "Error" : "Critical Error in HTTP request (put)"]
         }

@@ -36,7 +36,7 @@ class ProductDetailsViewController: UIViewController {
     }
     
     //sets the quantity of the product
-    @IBAction func changeQuantity(sender: UISegmentedControl) {
+    @IBAction func changeQuantity(_ sender: UISegmentedControl) {
         var quantity:Int = Int(quantityLabel.text!)!
             switch segmentedControl.selectedSegmentIndex
             {
@@ -46,7 +46,7 @@ class ProductDetailsViewController: UIViewController {
                 quantityLabel.text = String(quantity + 1);
                 quantity += 1;
                // print("Quantity is now \(quantity)")
-                addToCartButton.enabled = true
+                addToCartButton.isEnabled = true
                 }
                 else {
                     NSLog("OUT OF STOCK")
@@ -56,7 +56,7 @@ class ProductDetailsViewController: UIViewController {
                     quantityLabel.text = String(quantity - 1);
                     quantity -= 1
                     if (quantity == 0) {
-                        addToCartButton.enabled = false
+                        addToCartButton.isEnabled = false
                     }
                 }
             default:
@@ -66,13 +66,13 @@ class ProductDetailsViewController: UIViewController {
     }
     
     //adds an object to the cart
-    @IBAction func addToCart(sender: UIButton) {
+    @IBAction func addToCart(_ sender: UIButton) {
         let id:Int = (product?.id)!
         let quantity:Int = Int(quantityLabel.text!)!
         
         print("Selected id \(id) and quantity \(quantity)")
         
-        var itemArray = [AnyObject]()
+        var itemArray = [Any]()
         
         //if has variants, auto-select the first one.
         //Variant support will be improved in the next versions
@@ -88,30 +88,30 @@ class ProductDetailsViewController: UIViewController {
         let newCart = (marketcloud?.addToCart(Cart.cartId, data: itemArray))
         print(newCart)
         guard (newCart!["status"] != nil) else {
-            let alertController = UIAlertController(title: "Error", message: "Network Error. The application will now terminate.", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Error", message: "Network Error. The application will now terminate.", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Close",
-                style: UIAlertActionStyle.Destructive,
+                style: UIAlertActionStyle.destructive,
                 handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
             exit(0)
         }
         let statusInt:Int = newCart!["status"] as! Int
         //print("Status number = \(statusInt)")
         guard (statusInt != 0 ) else {
             //print(newCart)
-            let alertController = UIAlertController(title: "Error", message: "Unable to add the item to the cart. Probably it's out of stock.", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Error", message: "Unable to add the item to the cart. Probably it's out of stock.", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Close",
-                style: UIAlertActionStyle.Destructive,
+                style: UIAlertActionStyle.destructive,
                 handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
             return
         }
         //sets the new cart with the new object
         Cart.refreshCart(newCart!)
-        let alertController = UIAlertController(title: "Ok!", message: "Item added to cart!", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "Ok!", message: "Item added to cart!", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Close",
-            style: UIAlertActionStyle.Default,
+            style: UIAlertActionStyle.default,
             handler: nil))
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
 }

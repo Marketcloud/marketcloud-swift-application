@@ -13,6 +13,9 @@
 #define FAUXPAS_IGNORED_IN_FILE(...)
 FAUXPAS_IGNORED_IN_FILE(APIAvailability)
 
+/**
+ *  STPAPIClient extensions to create Stripe tokens from Apple Pay PKPayment objects.
+ */
 @interface STPAPIClient (ApplePay)
 
 /**
@@ -22,7 +25,7 @@ FAUXPAS_IGNORED_IN_FILE(APIAvailability)
  *  @param completion  The callback to run with the returned Stripe token (and any errors that may have occurred).
  */
 - (void)createTokenWithPayment:(nonnull PKPayment *)payment
-                    completion:(nonnull STPTokenCompletionBlock)completion;
+                    completion:(nonnull STPTokenCompletionBlock)completion NS_AVAILABLE_IOS(8_0);
 
 @end
 

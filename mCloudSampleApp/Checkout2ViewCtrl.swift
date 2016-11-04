@@ -14,18 +14,18 @@ class Checkout2ViewCtrl: UIViewController, UITextFieldDelegate
     
     @IBOutlet weak var totalLabel: UILabel!
     
-    @IBAction func nextButton(sender: UIButton) {
+    @IBAction func nextButton(_ sender: UIButton) {
         print("Going next...")
         guard(validator()) else {
             
-            let alertController = UIAlertController(title: "Error", message: "All of the fields must be filled correctly", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Error", message: "All of the fields must be filled correctly", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Close",
-                style: UIAlertActionStyle.Destructive,
+                style: UIAlertActionStyle.destructive,
                 handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.present(alertController, animated: true, completion: nil)
             return
         }
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             SwiftSpinner.show("Loading")
         }
         //Obtains datas about the credit cards in Stripe card object
@@ -34,24 +34,24 @@ class Checkout2ViewCtrl: UIViewController, UITextFieldDelegate
         card.cvc = cvcField.text!
         card.expMonth = UInt(monthExpField.text!)!
         card.expYear = UInt(yearExpField.text!)!
-        STPAPIClient.sharedClient().createTokenWithCard(card) { token, error in
+        STPAPIClient.shared().createToken(withCard: card) { token, error in
             guard let stripeToken = token else {
-                dispatch_async(dispatch_get_main_queue()) {
+                DispatchQueue.main.async {
                     SwiftSpinner.hide()
                 }
                 NSLog("Error creating token: %@", error!.localizedDescription);
                 return
             }
             UserData.lastStripeToken = stripeToken.tokenId
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 SwiftSpinner.hide()
             }
             //TODO: send the token to your server so it can create a charge
-            let alert = UIAlertController(title: "Welcome to Stripe", message: "Token created: \(stripeToken.tokenId)", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default,  handler: {(action:UIAlertAction) in
-                self.performSegueWithIdentifier("check3", sender: sender)
+            let alert = UIAlertController(title: "Welcome to Stripe", message: "Token created: \(stripeToken.tokenId)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default,  handler: {(action:UIAlertAction) in
+                self.performSegue(withIdentifier: "check3", sender: sender)
             }))
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
             
         }
         
@@ -73,7 +73,7 @@ class Checkout2ViewCtrl: UIViewController, UITextFieldDelegate
     }
     
     //TEXTFIELDS
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
     }

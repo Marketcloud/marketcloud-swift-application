@@ -1,7 +1,7 @@
 import Foundation
 
 internal class Orders {
-    private var headers:[String : String]
+    fileprivate var headers:[String : String]
     
     internal init(key: String) {
         headers = ["accept":"application/json","content-type":"application/json","authorization":key]
@@ -12,7 +12,7 @@ internal class Orders {
     }
     
     //adds an order
-    internal func createOrder(shippingId:Int, billingId:Int, items:NSArray) -> NSDictionary {
+    internal func createOrder(_ shippingId:Int, billingId:Int, cart_id:Int) -> NSDictionary {
         
         guard Reachability.isConnectedToNetwork() == true else {
             return [
@@ -26,12 +26,15 @@ internal class Orders {
         "items" : {type : "array", required:true},
         })*/
         
-        var finalArray = [String:AnyObject]()
+        var finalArray = [String:Int]()
         finalArray["shipping_address_id"] = shippingId
         finalArray["billing_address_id"] = billingId
-        finalArray["items"] = items
+        finalArray["cart_id"] = cart_id 
         
-        guard let shouldReturn:HTTPResult = Just.post("https://api.marketcloud.it/v0/orders", headers:headers, data:finalArray) else {
+        print("Final array from SDK --> createOrder")
+        print(finalArray)
+        
+        guard let shouldReturn:HTTPResult = Just.post("https://api.marketcloud.it/v0/orders", data:finalArray, headers:headers) else {
             return[
                 "Error" : "Critical Error in HTTP request (post)"]
         }
@@ -46,18 +49,18 @@ internal class Orders {
     }
     
     //complete an order sending the stripeToken to the API
-    internal func completeOrder(orderId:Int, stripeToken:String) -> NSDictionary {
+    internal func completeOrder(_ orderId:Int, stripeToken:String) -> NSDictionary {
         
         guard Reachability.isConnectedToNetwork() == true else {
             return [
                 "Error" : "No Connection"]
         }
         
-        var finalArray = [String:AnyObject]()
-        finalArray["order_id"] = orderId
-        finalArray["source"] = stripeToken
+        var finalArray = [String:Any]()
+        finalArray["order_id"] = orderId as Any?
+        finalArray["source"] = stripeToken as Any?
         
-        guard let shouldReturn:HTTPResult = Just.post("https://api.marketcloud.it/v0/integrations/stripe/charges", headers:headers, data:finalArray) else {
+        guard let shouldReturn:HTTPResult = Just.post("https://api.marketcloud.it/v0/integrations/stripe/charges", data:finalArray, headers:headers) else {
             return[
                 "Error" : "Critical Error in HTTP request (post)"]
         }

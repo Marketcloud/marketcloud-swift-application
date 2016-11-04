@@ -1,10 +1,10 @@
 import Foundation
 import Marketcloud
 
-public class MarketcloudMain {
+open class MarketcloudMain {
     
     internal static var marketcloud:Marketcloud? = nil
-    private static let publicKey:String = "2cd15ec1-833c-4713-afbf-b7510e357bc8"
+    fileprivate static let publicKey:String = "2cd15ec1-833c-4713-afbf-b7510e357bc8"
         
     //sets the marketcloud public key and returns the marketcloud object
     static func getMcloud() -> Marketcloud? {
@@ -32,13 +32,13 @@ public class MarketcloudMain {
 //The imageId field is to cache the image
 extension UIImageView {
     
-    func load_image(urlString:String, imageId:Int)
+    func load_image(_ urlString:String, imageId:Int)
     {
-        let imgURL: NSURL = NSURL(string: urlString)!
-        let request: NSURLRequest = NSURLRequest(URL: imgURL)
+        let imgURL: URL = URL(string: urlString)!
+        let request: URLRequest = URLRequest(url: imgURL)
         
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithRequest(request){
+        let session = URLSession.shared
+        let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) -> Void in
             if (error == nil && data != nil)
             {
@@ -49,9 +49,9 @@ extension UIImageView {
                     ImageCache.push(imageId, image: self.image!)
                     print("Messo in cache id \(imageId)")
                 }
-                dispatch_async(dispatch_get_main_queue(), display_image)
+                DispatchQueue.main.async(execute: display_image)
             }
-        }
+        })
         task.resume()
     }
 }
@@ -60,18 +60,18 @@ extension UIImageView {
 extension String {
     func isValidEmail() -> Bool {
         do {
-            let regex = try NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}", options: .CaseInsensitive)
-            return regex.firstMatchInString(self, options: NSMatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count)) != nil
+            let regex = try NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}", options: .caseInsensitive)
+            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count)) != nil
         } catch {
             return false
         }
     }
     
     func stripHtmlTags() -> String {
-        let regex = try! NSRegularExpression(pattern: "<.*?>", options: [.CaseInsensitive])
+        let regex = try! NSRegularExpression(pattern: "<.*?>", options: [.caseInsensitive])
         
         let range = NSMakeRange(0, self.characters.count)
-        let htmlLessString :String = regex.stringByReplacingMatchesInString(self, options: [],
+        let htmlLessString :String = regex.stringByReplacingMatches(in: self, options: [],
             range:range ,
             withTemplate: "")
         

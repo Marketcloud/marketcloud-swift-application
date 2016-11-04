@@ -2,7 +2,7 @@ import UIKit
 import Marketcloud
 
 //Product class
-public class Product {
+open class Product {
     
     var id: Int?
     var description: String?
@@ -15,7 +15,7 @@ public class Product {
     var show:Bool
     
     //keeps track of the downloaded products
-    public static var products = [Product]()
+    open static var products = [Product]()
     
     
     
@@ -45,7 +45,7 @@ public class Product {
     }
 
     //Method for filtering the products (not used yet...)
-    public static func getProductsByFilters(marketcloud:Marketcloud, filter:Int, filterField:Int){
+    open static func getProductsByFilters(_ marketcloud:Marketcloud, filter:Int, filterField:Int){
         switch filter {
         case 1  :
             let mainList = marketcloud.getProductById(filterField)
@@ -71,14 +71,14 @@ public class Product {
     }
     
     //counts how many products have been downloaded
-    public static func getProductsCount() -> Int {
+    open static func getProductsCount() -> Int {
         return products.count
     }
     
 
     
     //downloads the products then calls elabProducts in order to make objects from them
-    public static func getProducts(marketcloud:Marketcloud) -> Bool{
+    open static func getProducts(_ marketcloud:Marketcloud) -> Bool{
         let productList = marketcloud.getProducts()
         return(elabProducts(productList))
     }
@@ -88,7 +88,7 @@ public class Product {
     If some fields are missing the object won't be created (there will be
     only valid objects...)
     */
-    private static func elabProducts(mainList:NSDictionary) -> Bool {
+    fileprivate static func elabProducts(_ mainList:NSDictionary) -> Bool {
         print(mainList)
         products = [Product]()
         //print(mainList["data"]!.count)
@@ -97,7 +97,7 @@ public class Product {
         guard (mainList["count"] != nil && mainList["data"] != nil) else {
             return elabOneProduct(mainList)
         }
-        let items = mainList["data"]!.count
+        let items:Int = (mainList["data"]! as AnyObject).count
         
         for i in 0 ..< items {
             //print("Cycle \(i)")
@@ -114,10 +114,10 @@ public class Product {
             if(temp["description"]! == nil) {
                 //print("temp[description]!!  == nil - Replacing Description")
             } else
-                if(temp["description"]!!.isKindOfClass(NSNull)) {
+                if(temp["description"]!!.isKind(of: NSNull)) {
                    // print("temp[description]!! isKindOfClass(NSNull)  - Replacing Description")
             }
-            if (temp["description"]! != nil && !temp["description"]!!.isKindOfClass(NSNull)) {
+            if (temp["description"]! != nil && !temp["description"]!!.isKind(of: NSNull)) {
                 tempDescription = temp["description"]! as! String
             }
             
@@ -160,7 +160,7 @@ public class Product {
     }
     
     //Elaborates only one product
-    private static func elabOneProduct(mainList:NSDictionary) -> Bool {
+    fileprivate static func elabOneProduct(_ mainList:NSDictionary) -> Bool {
        // print("Did I crash? count -> \(mainList["count"])")
         if (mainList["data"] == nil) {
             print("Connection error")
@@ -177,10 +177,10 @@ public class Product {
         if(temp["description"]! == nil) {
             //  print("temp[description]!!  == nil")
         } else
-            if(temp["description"]!!.isKindOfClass(NSNull)) {
+            if(temp["description"]!!.isKind(of: NSNull)) {
                 //print("temp[description]!! isKindOfClass(NSNull)")
         }
-        if (temp["description"]! != nil && !temp["description"]!!.isKindOfClass(NSNull)) {
+        if (temp["description"]! != nil && !temp["description"]!!.isKind(of: NSNull)) {
             tempDescription = temp["description"]! as! String
         }
         
@@ -219,12 +219,12 @@ public class Product {
         return true
     }
     
-    static func filter(filter: String) {
-        let newFilter = filter.lowercaseString
+    static func filter(_ filter: String) {
+        let newFilter = filter.lowercased()
         print("Filter method for \(newFilter)")
         let itemsTotal = products.count
         for i in 0 ..< itemsTotal {
-            if products[i].name!.lowercaseString.rangeOfString(newFilter) == nil {
+            if products[i].name!.lowercased().range(of: newFilter) == nil {
                 products[i].show = false
             }
             else {
